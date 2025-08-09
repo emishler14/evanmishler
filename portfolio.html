@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Evan Mishler</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Evan Mishler</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Portfolio Header -->
+        <section class="section">
+            <div class="container">
+                <h1 class="text-center mb-2">My Portfolio</h1>
+                <p class="text-center" style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 3rem;">Explore my diverse range of projects spanning eLearning development, graphic design, video production, and interactive media.</p>
+                
+                <!-- Filter Controls -->
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="articulate-storyline">Articulate Storyline</button>
+                    <button class="filter-btn" data-filter="graphic-design">Graphic Design</button>
+                    <button class="filter-btn" data-filter="video">Video</button>
+                    <button class="filter-btn" data-filter="articulate-rise">Articulate Rise</button>
+                    <button class="filter-btn" data-filter="pdf">PDF</button>
+                    <button class="filter-btn" data-filter="photography">Photography</button>
+                    <button class="filter-btn" data-filter="ai-code">AI Code</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Grid -->
+        <section class="section">
+            <div class="container">
+                <div class="grid grid-3" id="portfolioGrid">
+                    
+                    <!-- Articulate Storyline Projects -->
+                    <div class="project-card" data-category="articulate-storyline">
+                        <div class="project-image">
+                            <img src="assets/images/City Life Layout-01.png" alt="Interactive Safety Training - City Life Template" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Articulate Storyline</span>
+                            <h3 class="project-title">Interactive Safety Training - City Life</h3>
+                            <p class="project-description">Modern workplace safety training using the City Life template. Features urban workplace scenarios, interactive hotspots, and immediate feedback with realistic city-based situations.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="articulate-storyline">
+                        <div class="project-image">
+                            <img src="assets/images/Cool Morning Layout-01.png" alt="Leadership Development - Cool Morning Template" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Articulate Storyline</span>
+                            <h3 class="project-title">Leadership Development - Cool Morning</h3>
+                            <p class="project-description">Executive leadership training using the Cool Morning template. Features character-driven scenarios, decision trees, and progress tracking with a clean, professional aesthetic.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="articulate-storyline">
+                        <div class="project-image">
+                            <img src="assets/images/Gradient Layout-01.png" alt="Technical Skills Assessment - Gradient Template" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Articulate Storyline</span>
+                            <h3 class="project-title">Technical Skills Assessment - Gradient</h3>
+                            <p class="project-description">Interactive skills evaluation using the Gradient template. Features adaptive questioning, real-time scoring, and personalized learning recommendations with modern visual design.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="articulate-storyline">
+                        <div class="project-image">
+                            <img src="assets/images/Pop Layout-01.png" alt="Product Training - Pop Template" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Articulate Storyline</span>
+                            <h3 class="project-title">Product Training - Pop</h3>
+                            <p class="project-description">Engaging product training module using the vibrant Pop template. Features interactive product demos, knowledge checks, and colorful visual elements.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="articulate-storyline">
+                        <div class="project-image">
+                            <img src="assets/images/Watercolor Layout-01.png" alt="Soft Skills Training - Watercolor Template" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Articulate Storyline</span>
+                            <h3 class="project-title">Soft Skills Training - Watercolor</h3>
+                            <p class="project-description">Creative soft skills development using the Watercolor template. Features empathy-building scenarios, communication exercises, and artistic visual design.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="articulate-storyline">
+                        <div class="project-image">
+                            <img src="assets/images/Minimalist Layout-01.png" alt="Compliance Training - Minimalist Template" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Articulate Storyline</span>
+                            <h3 class="project-title">Compliance Training - Minimalist</h3>
+                            <p class="project-description">Clean compliance training using the Minimalist template. Focuses on clear regulatory content, policy understanding, and streamlined user experience.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+
+                    <!-- Graphic Design Projects -->
+                    <div class="project-card" data-category="graphic-design">
+                        <div class="project-image">
+                            <img src="assets/images/Minimalist Layout-01.png" alt="Learning Template Collection" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Graphic Design</span>
+                            <h3 class="project-title">Learning Template Collection</h3>
+                            <p class="project-description">Custom visual frameworks and design templates that enhance learner engagement and create cohesive, professional learning experiences across multiple styles and themes.</p>
+                            <a href="graphic-design-templates.html" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+
+                    <!-- Video Projects -->
+                    <div class="project-card" data-category="video">
+                        <div class="project-image">
+                            <img src="assets/images/video-project-1.jpg" alt="Product Demo Video Series" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Video</span>
+                            <h3 class="project-title">Product Demo Video Series</h3>
+                            <p class="project-description">Professional product demonstration videos with motion graphics, screen recordings, and clear voice-over narration. Optimized for multiple platforms and devices.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="video">
+                        <div class="project-image">
+                            <img src="assets/images/video-project-2.jpg" alt="Training Video Library" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Video</span>
+                            <h3 class="project-title">Training Video Library</h3>
+                            <p class="project-description">Comprehensive library of micro-learning videos covering software tutorials, process explanations, and best practices with consistent branding and style.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+
+                    <!-- Articulate Rise Projects -->
+                    <div class="project-card" data-category="articulate-rise">
+                        <div class="project-image">
+                            <img src="assets/images/rise-project-1.jpg" alt="Mobile Learning Modules" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Articulate Rise</span>
+                            <h3 class="project-title">Mobile Learning Modules</h3>
+                            <p class="project-description">Responsive learning modules designed for mobile-first consumption, featuring bite-sized content, interactive elements, and progress tracking.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="articulate-rise">
+                        <div class="project-image">
+                            <img src="assets/images/rise-project-2.jpg" alt="Onboarding Learning Path" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Articulate Rise</span>
+                            <h3 class="project-title">Employee Onboarding Path</h3>
+                            <p class="project-description">Multi-week onboarding learning experience with adaptive content, embedded videos, knowledge checks, and manager feedback integration.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+
+                    <!-- PDF Projects -->
+                    <div class="project-card" data-category="pdf">
+                        <div class="project-image">
+                            <img src="assets/images/pdf-project-1.jpg" alt="Interactive Learning Guides" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">PDF</span>
+                            <h3 class="project-title">Interactive Learning Guides</h3>
+                            <p class="project-description">Comprehensive PDF learning materials with interactive forms, navigation bookmarks, embedded multimedia, and assessment tools.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="pdf">
+                        <div class="project-image">
+                            <img src="assets/images/pdf-project-2.jpg" alt="Job Aid Templates" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">PDF</span>
+                            <h3 class="project-title">Job Aid Templates</h3>
+                            <p class="project-description">Professional job aid templates and quick reference guides designed for print and digital use, featuring clear visual hierarchy and practical workflows.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+
+                    <!-- Photography Projects -->
+                    <div class="project-card" data-category="photography">
+                        <div class="project-image">
+                            <img src="assets/images/photo-project-1.jpg" alt="Corporate Photography" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Photography</span>
+                            <h3 class="project-title">Corporate Photography</h3>
+                            <p class="project-description">Professional corporate photography including headshots, event coverage, and workplace documentation with consistent style and lighting.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="photography">
+                        <div class="project-image">
+                            <img src="assets/images/photo-project-2.jpg" alt="Product Photography" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Photography</span>
+                            <h3 class="project-title">Product Photography</h3>
+                            <p class="project-description">High-quality product photography for marketing and educational materials, featuring creative lighting, composition, and post-processing techniques.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+
+                    <!-- AI Code Projects -->
+                    <div class="project-card" data-category="ai-code">
+                        <div class="project-image">
+                            <img src="assets/images/ai-project-1.jpg" alt="Learning Analytics Dashboard" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">AI Code</span>
+                            <h3 class="project-title">Learning Analytics Dashboard</h3>
+                            <p class="project-description">Custom learning analytics dashboard built with AI assistance, featuring data visualization, progress tracking, and predictive learning recommendations.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="ai-code">
+                        <div class="project-image">
+                            <img src="assets/images/ai-project-2.jpg" alt="Content Generation Tool" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">AI Code</span>
+                            <h3 class="project-title">AI Content Generation Tool</h3>
+                            <p class="project-description">Automated content generation tool that assists in creating learning materials, quiz questions, and course outlines using AI technologies.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Evan Mishler. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
