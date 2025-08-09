@@ -1,0 +1,34 @@
+# Default index files
+DirectoryIndex index.html index.htm
+
+# Set proper MIME types
+AddType text/html .html
+AddType text/css .css
+AddType application/javascript .js
+
+# Enable file access
+Options +Indexes +FollowSymLinks
+
+# Set file permissions
+<Files "*.html">
+    Require all granted
+</Files>
+
+<Files "*.css">
+    Require all granted
+</Files>
+
+<Files "*.js">
+    Require all granted
+</Files>
+
+<Files "*.png">
+    Require all granted
+</Files>
+
+<Files "*.jpg">
+    Require all granted
+</Files>
+
+# Error handling
+ErrorDocument 403 /index.html
