@@ -225,25 +225,103 @@ function closeLightbox() {
     }, 300);
 }
 
-// Close lightbox with Escape key
+// Close lightboxes with Escape key (image + video)
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
-        closeLightbox();
+        // Image lightbox (if present)
+        if (typeof closeLightbox === 'function') {
+            const imageLightbox = document.getElementById('lightbox');
+            if (imageLightbox && imageLightbox.classList.contains('show')) {
+                closeLightbox();
+            }
+        }
+        // Video lightbox (if present)
+        if (typeof closeVideoLightbox === 'function') {
+            const videoLightbox = document.getElementById('videoLightbox');
+            if (videoLightbox && videoLightbox.classList.contains('show')) {
+                closeVideoLightbox();
+            }
+        }
+        // Course lightbox removed
     }
 });
 
 // Prevent lightbox from closing when clicking on the image
 document.addEventListener('DOMContentLoaded', function() {
-    const lightboxContent = document.querySelector('.lightbox-content');
-    if (lightboxContent) {
-        lightboxContent.addEventListener('click', function(event) {
+    const lightboxContents = document.querySelectorAll('.lightbox-content');
+    if (lightboxContents && lightboxContents.length) {
+        lightboxContents.forEach(lb => lb.addEventListener('click', function(event) {
             event.stopPropagation();
-        });
+        }));
     }
 });
+
+// Video lightbox functionality
+function openVideoLightbox(youtubeIdOrUrl, title) {
+    const videoLightbox = document.getElementById('videoLightbox');
+    const iframe = document.getElementById('video-lightbox-iframe');
+    const caption = document.getElementById('video-lightbox-caption');
+
+    if (!videoLightbox || !iframe) return;
+
+    const extractYouTubeId = (input) => {
+        if (!input) return '';
+        // If it's already an ID-like string
+        if (/^[a-zA-Z0-9_-]{11}$/.test(input)) return input;
+        // Try to parse common YouTube URL formats
+        try {
+            const url = new URL(input);
+            if (url.hostname.includes('youtu.be')) {
+                return url.pathname.replace('/', '').slice(0, 11);
+            }
+            if (url.hostname.includes('youtube.com')) {
+                const v = url.searchParams.get('v');
+                if (v) return v.slice(0, 11);
+                // Handle /embed/VIDEO_ID
+                const parts = url.pathname.split('/');
+                const embedIndex = parts.indexOf('embed');
+                if (embedIndex !== -1 && parts[embedIndex + 1]) {
+                    return parts[embedIndex + 1].slice(0, 11);
+                }
+            }
+        } catch (e) {
+            // Not a URL; fall through
+        }
+        return '';
+    };
+
+    const videoId = extractYouTubeId(youtubeIdOrUrl);
+    const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0` : '';
+
+    iframe.src = embedUrl;
+    if (caption && title) caption.textContent = title;
+
+    videoLightbox.classList.add('show');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeVideoLightbox() {
+    const videoLightbox = document.getElementById('videoLightbox');
+    const iframe = document.getElementById('video-lightbox-iframe');
+    if (!videoLightbox || !iframe) return;
+
+    videoLightbox.classList.remove('show');
+    document.body.style.overflow = 'auto';
+
+    // Clear the video to stop playback after animation
+    setTimeout(() => {
+        if (!videoLightbox.classList.contains('show')) {
+            iframe.src = '';
+            const caption = document.getElementById('video-lightbox-caption');
+            if (caption) caption.textContent = '';
+        }
+    }, 300);
+}
 
 // Console log for developers
 console.log('🎨 Evan Mishler Portfolio Website');
 console.log('Built with vanilla HTML, CSS, and JavaScript');
 console.log('Modern-retro design with responsive layout');
 console.log('Contact: mishler.evan@gmail.com');
+
+// Course lightbox functions removed (unused)
