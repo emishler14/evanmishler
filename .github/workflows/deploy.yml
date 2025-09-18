@@ -2,8 +2,8 @@ name: Deploy to Bluehost (SSH/rsync)
 
 on:
   push:
-    branches: [ main ]          # change if needed
-  workflow_dispatch:            # allow manual runs
+    branches: [ main ]
+  workflow_dispatch:
 
 concurrency:
   group: bluehost-deploy
@@ -12,7 +12,6 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout (with LFS)
         uses: actions/checkout@v4
@@ -20,37 +19,35 @@ jobs:
           lfs: true
           fetch-depth: 0
 
-      # Force SSH to use ONLY our key (prevents "Too many authentication failures")
-      - name: Configure SSH
+      # If you build a static site, add your build here and set SOURCE below to the build folder.
+
+      - name: Configure SSH (force only our key)
         run: |
           mkdir -p ~/.ssh
-          printf "Host %s\n  HostName %s\n  User %s\n  Port 22\n  IdentitiesOnly yes\n  PreferredAuthentications publickey\n" \
-            "${{ secrets.BH_HOST }}" "${{ secrets.BH_HOST }}" "${{ secrets.BH_USER }}" >> ~/.ssh/config
-          chmod 600 ~/.ssh/config
-          # Preload host key so we don't get an interactive prompt
+          chmod 700 ~/.ssh
+          # Preload host key to avoid interactive prompt
           ssh-keyscan -p 22 "${{ secrets.BH_HOST }}" >> ~/.ssh/known_hosts
-
-      # If your site is built (Vite/Next export/etc.), insert the build here and set SOURCE below accordingly.
-      # - name: Build
-      #   run: |
-      #     npm ci
-      #     npm run build
-      #   env:
-      #     CI: true
+          # Use only our key for this host
+          {
+            echo "Host ${{ secrets.BH_HOST }}"
+            echo "  HostName ${{ secrets.BH_HOST }}"
+            echo "  User ${{ secrets.BH_USER }}"
+            echo "  Port 22"
+            echo "  IdentitiesOnly yes"
+            echo "  PreferredAuthentications publickey"
+          } >> ~/.ssh/config
+          chmod 600 ~/.ssh/config ~/.ssh/known_hosts
 
       - name: Deploy via SSH (rsync)
         uses: easingthemes/ssh-deploy@v2
         env:
           SSH_PRIVATE_KEY: ${{ secrets.BH_PRIVATE_KEY }}
-          SSH_PASSPHRASE: ${{ secrets.BH_PASSPHRASE }}   # omit if your key has no passphrase
           REMOTE_HOST: ${{ secrets.BH_HOST }}
           REMOTE_USER: ${{ secrets.BH_USER }}
           REMOTE_PORT: "22"
-          # If you build, set SOURCE to your build output, e.g. "./dist/" or "./out/"
+          # If you build, change SOURCE to your build output, e.g. "./dist/" or "./out/"
           SOURCE: "./"
-          TARGET: ${{ secrets.BH_REMOTE_PATH }}          # e.g., /home2/evanmish/public_html/
-          # rsync flags:
-          #  -a archive; -z compress; --delete mirror target; --checksum safer updates
-          #  --omit-dir-times avoids odd mtimes; no perms/owner/group for shared hosts
+          TARGET: ${{ secrets.BH_REMOTE_PATH }}   # e.g., /home2/evanmish/public_html/
+          # rsync args:
           ARGS: "-az --delete --checksum --omit-dir-times --no-perms --no-owner --no-group"
           EXCLUDE: ".git*,.github,node_modules,.DS_Store"
