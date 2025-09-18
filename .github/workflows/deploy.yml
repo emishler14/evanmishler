@@ -2,7 +2,7 @@ name: Deploy to Bluehost (SSH/rsync)
 
 on:
   push:
-    branches: [ main ]          # change if you deploy from another branch
+    branches: [ main ]          # change if needed
   workflow_dispatch:            # allow manual runs
 
 concurrency:
@@ -12,6 +12,7 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout (with LFS)
         uses: actions/checkout@v4
@@ -19,36 +20,37 @@ jobs:
           lfs: true
           fetch-depth: 0
 
-      # ─── If you have a build step, add it here ───────────────────────────────
-      # - name: Build site
+      # Force SSH to use ONLY our key (prevents "Too many authentication failures")
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh
+          printf "Host %s\n  HostName %s\n  User %s\n  Port 22\n  IdentitiesOnly yes\n  PreferredAuthentications publickey\n" \
+            "${{ secrets.BH_HOST }}" "${{ secrets.BH_HOST }}" "${{ secrets.BH_USER }}" >> ~/.ssh/config
+          chmod 600 ~/.ssh/config
+          # Preload host key so we don't get an interactive prompt
+          ssh-keyscan -p 22 "${{ secrets.BH_HOST }}" >> ~/.ssh/known_hosts
+
+      # If your site is built (Vite/Next export/etc.), insert the build here and set SOURCE below accordingly.
+      # - name: Build
       #   run: |
       #     npm ci
       #     npm run build
       #   env:
       #     CI: true
-      # Set SOURCE below to your build output (e.g., ./dist or ./out)
-
-      - name: Quick listing (debug)
-        run: |
-          ls -lah
-          test -d dist && ls -lah dist || true
-          test -d out && ls -lah out || true
 
       - name: Deploy via SSH (rsync)
         uses: easingthemes/ssh-deploy@v2
         env:
           SSH_PRIVATE_KEY: ${{ secrets.BH_PRIVATE_KEY }}
-          SSH_PASSPHRASE: ${{ secrets.BH_PASSPHRASE }}   # omit if none
+          SSH_PASSPHRASE: ${{ secrets.BH_PASSPHRASE }}   # omit if your key has no passphrase
           REMOTE_HOST: ${{ secrets.BH_HOST }}
           REMOTE_USER: ${{ secrets.BH_USER }}
           REMOTE_PORT: "22"
-          # If you build, change SOURCE to your build folder (e.g., "./dist/")
+          # If you build, set SOURCE to your build output, e.g. "./dist/" or "./out/"
           SOURCE: "./"
           TARGET: ${{ secrets.BH_REMOTE_PATH }}          # e.g., /home2/evanmish/public_html/
           # rsync flags:
-          #  -a  archive mode; -z compress; --delete mirror target; --checksum safe updates
-          #  --omit-dir-times avoid weird mtime perms on shared hosts
-          #  --no-perms/owner/group so Bluehost keeps default perms/ownership
+          #  -a archive; -z compress; --delete mirror target; --checksum safer updates
+          #  --omit-dir-times avoids odd mtimes; no perms/owner/group for shared hosts
           ARGS: "-az --delete --checksum --omit-dir-times --no-perms --no-owner --no-group"
           EXCLUDE: ".git*,.github,node_modules,.DS_Store"
-
