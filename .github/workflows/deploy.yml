@@ -1,9 +1,9 @@
-name: Deploy to Bluehost (SSH/rsync)
+name: Deploy to Bluehost (SFTP)
 
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:
+  workflow_dispatch: {}
 
 concurrency:
   group: bluehost-deploy
@@ -19,35 +19,17 @@ jobs:
           lfs: true
           fetch-depth: 0
 
-      # If you build a static site, add your build here and set SOURCE below to the build folder.
+      # If you build a static site, insert the build here and set local_path below to that folder (e.g., ./dist/* or ./out/*)
 
-      - name: Configure SSH (force only our key)
-        run: |
-          mkdir -p ~/.ssh
-          chmod 700 ~/.ssh
-          # Preload host key to avoid interactive prompt
-          ssh-keyscan -p 22 "${{ secrets.BH_HOST }}" >> ~/.ssh/known_hosts
-          # Use only our key for this host
-          {
-            echo "Host ${{ secrets.BH_HOST }}"
-            echo "  HostName ${{ secrets.BH_HOST }}"
-            echo "  User ${{ secrets.BH_USER }}"
-            echo "  Port 22"
-            echo "  IdentitiesOnly yes"
-            echo "  PreferredAuthentications publickey"
-          } >> ~/.ssh/config
-          chmod 600 ~/.ssh/config ~/.ssh/known_hosts
-
-      - name: Deploy via SSH (rsync)
-        uses: easingthemes/ssh-deploy@v2
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.BH_PRIVATE_KEY }}
-          REMOTE_HOST: ${{ secrets.BH_HOST }}
-          REMOTE_USER: ${{ secrets.BH_USER }}
-          REMOTE_PORT: "22"
-          # If you build, change SOURCE to your build output, e.g. "./dist/" or "./out/"
-          SOURCE: "./"
-          TARGET: ${{ secrets.BH_REMOTE_PATH }}   # e.g., /home2/evanmish/public_html/
-          # rsync args:
-          ARGS: "-az --delete --checksum --omit-dir-times --no-perms --no-owner --no-group"
-          EXCLUDE: ".git*,.github,node_modules,.DS_Store"
+      - name: Deploy via SFTP (SSH key)
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
+        with:
+          server: ${{ secrets.BH_HOST }}              # e.g., evanmishler.com or box####.bluehost.com
+          username: ${{ secrets.BH_USER }}            # your cPanel username
+          port: 22
+          ssh_private_key: ${{ secrets.BH_PRIVATE_KEY }}
+          sftp_only: true
+          local_path: "./*"                           # change to "./dist/*" or "./out/*" if you build
+          remote_path: ${{ secrets.BH_REMOTE_PATH }}  # e.g., /home2/evanmish/public_html/
+          sftpArgs: "-o StrictHostKeyChecking=no -o ConnectTimeout=10"
+          rsyncArgs: "--exclude=.git* --exclude=.github --exclude=node_modules --exclude=.DS_Store"
