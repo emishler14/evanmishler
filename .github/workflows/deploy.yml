@@ -1,24 +1,42 @@
-# Name of your workflow
-name: 🚀 Deploy Website to Bluehost
+name: Deploy to Bluehost (SFTP)
 
-# This workflow runs on a push to the 'main' branch
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]          # change if your default branch differs
+
+concurrency:
+  group: bluehost-deploy
+  cancel-in-progress: true
 
 jobs:
-  web-deploy:
-    name: 🎉 Deploy
-    runs-on: ubuntu-latest # Use a standard virtual machine
+  deploy:
+    runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v4 # Checks out your repository code
+      - name: Checkout (with LFS)
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+          fetch-depth: 0
 
-    - name: 📂 Sync files to server
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: /public_html/ # The destination folder on your server
+      # If your site is built (e.g., Vite/Next static export), insert build here
+      # and set local-dir below to that output folder (e.g., ./dist or ./out)
+
+      - name: Deploy via SFTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.BH_HOST }}
+          username: ${{ secrets.BH_USER }}
+          protocol: sftp
+          port: 22
+          privateKey: ${{ secrets.BH_PRIVATE_KEY }}
+          # uncomment if your key has a passphrase:
+          # passphrase: ${{ secrets.BH_PASSPHRASE }}
+          server-dir: ${{ secrets.BH_SERVER_DIR }}   # e.g., public_html/
+          # local-dir: ./dist/                       # set if you deploy build output
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/node_modules/**
+            **/.DS_Store
+          # Run ONCE if you're realigning/cleaning the target, then remove:
+          # dangerous-clean-slate: true
