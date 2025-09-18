@@ -1,8 +1,9 @@
-name: Deploy to Bluehost (SFTP)
+name: Deploy to Bluehost (SSH/rsync)
 
 on:
   push:
-    branches: [ main ]          # change if your default branch differs
+    branches: [ main ]          # change if you deploy from another branch
+  workflow_dispatch:            # allow manual runs
 
 concurrency:
   group: bluehost-deploy
@@ -18,25 +19,36 @@ jobs:
           lfs: true
           fetch-depth: 0
 
-      # If your site is built (e.g., Vite/Next static export), insert build here
-      # and set local-dir below to that output folder (e.g., ./dist or ./out)
+      # ─── If you have a build step, add it here ───────────────────────────────
+      # - name: Build site
+      #   run: |
+      #     npm ci
+      #     npm run build
+      #   env:
+      #     CI: true
+      # Set SOURCE below to your build output (e.g., ./dist or ./out)
 
-      - name: Deploy via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ${{ secrets.BH_HOST }}
-          username: ${{ secrets.BH_USER }}
-          protocol: sftp
-          port: 22
-          privateKey: ${{ secrets.BH_PRIVATE_KEY }}
-          # uncomment if your key has a passphrase:
-          # passphrase: ${{ secrets.BH_PASSPHRASE }}
-          server-dir: ${{ secrets.BH_SERVER_DIR }}   # e.g., public_html/
-          # local-dir: ./dist/                       # set if you deploy build output
-          exclude: |
-            **/.git*
-            **/.github/**
-            **/node_modules/**
-            **/.DS_Store
-          # Run ONCE if you're realigning/cleaning the target, then remove:
-          # dangerous-clean-slate: true
+      - name: Quick listing (debug)
+        run: |
+          ls -lah
+          test -d dist && ls -lah dist || true
+          test -d out && ls -lah out || true
+
+      - name: Deploy via SSH (rsync)
+        uses: easingthemes/ssh-deploy@v2
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.BH_PRIVATE_KEY }}
+          SSH_PASSPHRASE: ${{ secrets.BH_PASSPHRASE }}   # omit if none
+          REMOTE_HOST: ${{ secrets.BH_HOST }}
+          REMOTE_USER: ${{ secrets.BH_USER }}
+          REMOTE_PORT: "22"
+          # If you build, change SOURCE to your build folder (e.g., "./dist/")
+          SOURCE: "./"
+          TARGET: ${{ secrets.BH_REMOTE_PATH }}          # e.g., /home2/evanmish/public_html/
+          # rsync flags:
+          #  -a  archive mode; -z compress; --delete mirror target; --checksum safe updates
+          #  --omit-dir-times avoid weird mtime perms on shared hosts
+          #  --no-perms/owner/group so Bluehost keeps default perms/ownership
+          ARGS: "-az --delete --checksum --omit-dir-times --no-perms --no-owner --no-group"
+          EXCLUDE: ".git*,.github,node_modules,.DS_Store"
+
