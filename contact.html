@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Evan Mishler</title>
+    <meta name="description" content="Get in touch with Evan Mishler for learning experience design projects, instructional design consulting, or collaborations.">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -16,30 +17,27 @@
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
-            <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+            </button>
         </nav>
     </header>
 
     <main>
-        <!-- Contact Header -->
-        <section class="section">
+        <section class="section contact-section" style="padding-top: 140px; min-height: 70vh; display: flex; align-items: center;">
             <div class="container">
-                <h1 class="text-center mb-2">Get In Touch</h1>
-            </div>
-        </section>
+                <h1>Get In Touch</h1>
+                <p class="contact-intro">I'd love to hear from you. Whether you have a project in mind or just want to connect, feel free to reach out.</p>
 
-        <!-- Contact Information -->
-        <section class="section">
-            <div class="container">
-                <div class="contact-info" style="justify-content: center;">
-                    <div class="contact-item" style="text-align: center;">
-                        <h3>📧 Email</h3>
-                        <p><a href="mailto:mishler.evan@gmail.com">mishler.evan@gmail.com</a></p>
+                <div class="contact-grid">
+                    <div class="contact-card fade-in">
+                        <h3>Email</h3>
+                        <a href="mailto:mishler.evan@gmail.com">mishler.evan@gmail.com</a>
                     </div>
 
-                    <div class="contact-item" style="text-align: center;">
-                        <h3>💼 LinkedIn</h3>
-                        <p><a href="https://linkedin.com/in/evan-mishler" target="_blank" rel="noopener noreferrer">linkedin.com/in/evan-mishler</a></p>
+                    <div class="contact-card fade-in">
+                        <h3>LinkedIn</h3>
+                        <a href="https://linkedin.com/in/evan-mishler" target="_blank" rel="noopener noreferrer">linkedin.com/in/evan-mishler</a>
                     </div>
                 </div>
             </div>
@@ -48,7 +46,8 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Evan Mishler. All rights reserved.</p>
+            <div class="logo">Evan Mishler</div>
+            <p>&copy; 2026 All rights reserved.</p>
         </div>
     </footer>
 

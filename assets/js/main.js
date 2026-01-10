@@ -1,327 +1,311 @@
-// Mobile Navigation Toggle
-document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    const navLinks = document.querySelector('.nav-links');
-    
-    if (mobileMenuToggle && navLinks) {
-        mobileMenuToggle.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            
-            // Update button text for accessibility
-            const isOpen = navLinks.classList.contains('active');
-            mobileMenuToggle.textContent = isOpen ? '✕' : '☰';
-            mobileMenuToggle.setAttribute('aria-expanded', isOpen);
+/**
+ * Evan Mishler Portfolio
+ * Main JavaScript
+ */
+
+(function() {
+    'use strict';
+
+    // ============================================
+    // Mobile Navigation
+    // ============================================
+
+    function initMobileNav() {
+        const toggle = document.getElementById('mobileMenuToggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (!toggle || !navLinks) return;
+
+        // Set initial hamburger icon
+        toggle.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+
+        toggle.addEventListener('click', function() {
+            const isOpen = navLinks.classList.toggle('active');
+
+            // Update icon
+            if (isOpen) {
+                toggle.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>';
+            } else {
+                toggle.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+            }
+
+            toggle.setAttribute('aria-expanded', isOpen);
         });
 
-        // Close mobile menu when clicking on a link
-        const navLinkItems = navLinks.querySelectorAll('a');
-        navLinkItems.forEach(link => {
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
-                mobileMenuToggle.textContent = '☰';
-                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                toggle.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+                toggle.setAttribute('aria-expanded', 'false');
             });
         });
 
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const isClickInsideNav = navLinks.contains(event.target) || mobileMenuToggle.contains(event.target);
-            
-            if (!isClickInsideNav && navLinks.classList.contains('active')) {
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navLinks.contains(e.target) && !toggle.contains(e.target) && navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
-                mobileMenuToggle.textContent = '☰';
-                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                toggle.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+                toggle.setAttribute('aria-expanded', 'false');
             }
         });
     }
-});
 
-// Portfolio Filter Functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const portfolioGrid = document.getElementById('portfolioGrid');
-    const projectCards = document.querySelectorAll('.project-card');
+    // ============================================
+    // Header Scroll Behavior
+    // ============================================
 
-    if (filterButtons.length > 0 && portfolioGrid && projectCards.length > 0) {
-        
-        // Add click event listeners to filter buttons
-        filterButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const filterValue = this.getAttribute('data-filter');
-                
-                // Update active button
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-                
-                // Filter projects with animation
-                filterProjects(filterValue);
-            });
+    function initHeaderScroll() {
+        const header = document.querySelector('header');
+        if (!header) return;
+
+        let lastScroll = 0;
+        let ticking = false;
+
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    const currentScroll = window.pageYOffset;
+
+                    if (currentScroll > lastScroll && currentScroll > 100) {
+                        header.style.transform = 'translateY(-100%)';
+                    } else {
+                        header.style.transform = 'translateY(0)';
+                    }
+
+                    lastScroll = currentScroll;
+                    ticking = false;
+                });
+                ticking = true;
+            }
         });
+    }
 
-        function filterProjects(filterValue) {
-            projectCards.forEach(card => {
-                const cardCategory = card.getAttribute('data-category');
-                const shouldShow = filterValue === 'all' || cardCategory === filterValue;
-                
-                if (shouldShow) {
-                    // Show card with fade in effect
-                    card.style.display = 'block';
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(20px)';
-                    
-                    // Animate in
-                    setTimeout(() => {
-                        card.style.transition = 'all 0.3s ease';
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }, 50);
-                } else {
-                    // Hide card with fade out effect
-                    card.style.transition = 'all 0.3s ease';
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(-20px)';
-                    
-                    setTimeout(() => {
-                        card.style.display = 'none';
-                    }, 300);
+    // ============================================
+    // Fade-In Animations
+    // ============================================
+
+    function initFadeAnimations() {
+        const fadeElements = document.querySelectorAll('.fade-in');
+        if (!fadeElements.length) return;
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
                 }
             });
-        }
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
 
-        // Initialize with all projects visible
-        filterProjects('all');
+        fadeElements.forEach(el => observer.observe(el));
     }
-});
 
-// Smooth scrolling for anchor links
-document.addEventListener('DOMContentLoaded', function() {
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
-    
-    anchorLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-            
-            if (targetElement) {
-                const headerHeight = document.querySelector('header').offsetHeight;
-                const targetPosition = targetElement.offsetTop - headerHeight - 20;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
+    // ============================================
+    // Portfolio Filter
+    // ============================================
+
+    function initPortfolioFilter() {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const grid = document.getElementById('portfolioGrid');
+        const cards = document.querySelectorAll('.project-card');
+
+        if (!filterBtns.length || !grid || !cards.length) return;
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const filter = this.dataset.filter;
+
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                // Filter cards
+                cards.forEach(card => {
+                    const category = card.dataset.category;
+                    const shouldShow = filter === 'all' || category === filter;
+
+                    if (shouldShow) {
+                        card.style.display = '';
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+
+                        requestAnimationFrame(() => {
+                            card.style.transition = 'opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1), transform 0.4s cubic-bezier(0.22, 1, 0.36, 1)';
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        });
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(-10px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
                 });
-            }
+            });
         });
-    });
-});
+    }
 
-// Add scroll effect to header
-document.addEventListener('DOMContentLoaded', function() {
-    const header = document.querySelector('header');
-    let lastScrollTop = 0;
-    
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
-            // Scrolling down
-            header.style.transform = 'translateY(-100%)';
-        } else {
-            // Scrolling up
-            header.style.transform = 'translateY(0)';
-        }
-        
-        lastScrollTop = scrollTop;
-    });
-});
+    // ============================================
+    // Smooth Scroll for Anchor Links
+    // ============================================
 
-// Add intersection observer for animations
-document.addEventListener('DOMContentLoaded', function() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+    function initSmoothScroll() {
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href').slice(1);
+                if (!targetId) return;
+
+                const target = document.getElementById(targetId);
+                if (target) {
+                    e.preventDefault();
+                    const headerHeight = document.querySelector('header')?.offsetHeight || 0;
+                    const targetPos = target.offsetTop - headerHeight - 20;
+
+                    window.scrollTo({
+                        top: targetPos,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    }
+
+    // ============================================
+    // Lightbox Functions
+    // ============================================
+
+    window.openLightbox = function(imageSrc, caption) {
+        const lightbox = document.getElementById('lightbox');
+        const img = document.getElementById('lightbox-image');
+        const cap = document.getElementById('lightbox-caption');
+
+        if (!lightbox || !img) return;
+
+        img.src = imageSrc;
+        img.alt = caption || '';
+        if (cap) cap.textContent = caption || '';
+
+        lightbox.classList.add('show');
+        document.body.style.overflow = 'hidden';
     };
 
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
+    window.closeLightbox = function() {
+        const lightbox = document.getElementById('lightbox');
+        if (!lightbox) return;
 
-    // Observe cards and sections for animation
-    const animatedElements = document.querySelectorAll('.card, .project-card, .experience-item');
-    animatedElements.forEach(element => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(30px)';
-        element.style.transition = 'all 0.6s ease';
-        observer.observe(element);
-    });
-});
+        lightbox.classList.remove('show');
+        document.body.style.overflow = '';
 
-// Form validation (if contact form is added later)
-function validateEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
-
-// Utility function for debouncing
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
+        setTimeout(() => {
+            const img = document.getElementById('lightbox-image');
+            const cap = document.getElementById('lightbox-caption');
+            if (img) img.src = '';
+            if (cap) cap.textContent = '';
+        }, 300);
     };
-}
 
-// Add loading states for external links
-document.addEventListener('DOMContentLoaded', function() {
-    const externalLinks = document.querySelectorAll('a[href^="http"], a[href^="https"]');
-    
-    externalLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            // Add loading state if needed
-            this.style.opacity = '0.7';
-            setTimeout(() => {
-                this.style.opacity = '1';
-            }, 200);
-        });
-    });
-});
+    // ============================================
+    // Video Lightbox Functions
+    // ============================================
 
-// Lightbox functionality
-function openLightbox(imageSrc, caption) {
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.getElementById('lightbox-image');
-    const lightboxCaption = document.getElementById('lightbox-caption');
-    
-    lightboxImage.src = imageSrc;
-    lightboxImage.alt = caption;
-    lightboxCaption.textContent = caption;
-    
-    lightbox.classList.add('show');
-    document.body.style.overflow = 'hidden'; // Prevent background scrolling
-}
-
-function closeLightbox() {
-    const lightbox = document.getElementById('lightbox');
-    lightbox.classList.remove('show');
-    document.body.style.overflow = 'auto'; // Restore scrolling
-    
-    // Clear the image after animation
-    setTimeout(() => {
-        if (!lightbox.classList.contains('show')) {
-            document.getElementById('lightbox-image').src = '';
-            document.getElementById('lightbox-caption').textContent = '';
-        }
-    }, 300);
-}
-
-// Close lightboxes with Escape key (image + video)
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        // Image lightbox (if present)
-        if (typeof closeLightbox === 'function') {
-            const imageLightbox = document.getElementById('lightbox');
-            if (imageLightbox && imageLightbox.classList.contains('show')) {
-                closeLightbox();
-            }
-        }
-        // Video lightbox (if present)
-        if (typeof closeVideoLightbox === 'function') {
-            const videoLightbox = document.getElementById('videoLightbox');
-            if (videoLightbox && videoLightbox.classList.contains('show')) {
-                closeVideoLightbox();
-            }
-        }
-        // Course lightbox removed
-    }
-});
-
-// Prevent lightbox from closing when clicking on the image
-document.addEventListener('DOMContentLoaded', function() {
-    const lightboxContents = document.querySelectorAll('.lightbox-content');
-    if (lightboxContents && lightboxContents.length) {
-        lightboxContents.forEach(lb => lb.addEventListener('click', function(event) {
-            event.stopPropagation();
-        }));
-    }
-});
-
-// Video lightbox functionality
-function openVideoLightbox(youtubeIdOrUrl, title) {
-    const videoLightbox = document.getElementById('videoLightbox');
-    const iframe = document.getElementById('video-lightbox-iframe');
-    const caption = document.getElementById('video-lightbox-caption');
-
-    if (!videoLightbox || !iframe) return;
-
-    const extractYouTubeId = (input) => {
+    function extractYouTubeId(input) {
         if (!input) return '';
-        // If it's already an ID-like string
+
+        // Already an ID
         if (/^[a-zA-Z0-9_-]{11}$/.test(input)) return input;
-        // Try to parse common YouTube URL formats
+
         try {
             const url = new URL(input);
+
             if (url.hostname.includes('youtu.be')) {
-                return url.pathname.replace('/', '').slice(0, 11);
+                return url.pathname.slice(1, 12);
             }
+
             if (url.hostname.includes('youtube.com')) {
                 const v = url.searchParams.get('v');
                 if (v) return v.slice(0, 11);
-                // Handle /embed/VIDEO_ID
+
                 const parts = url.pathname.split('/');
-                const embedIndex = parts.indexOf('embed');
-                if (embedIndex !== -1 && parts[embedIndex + 1]) {
-                    return parts[embedIndex + 1].slice(0, 11);
+                const embedIdx = parts.indexOf('embed');
+                if (embedIdx !== -1 && parts[embedIdx + 1]) {
+                    return parts[embedIdx + 1].slice(0, 11);
                 }
             }
         } catch (e) {
-            // Not a URL; fall through
+            // Not a URL
         }
+
         return '';
+    }
+
+    window.openVideoLightbox = function(youtubeIdOrUrl, title) {
+        const lightbox = document.getElementById('videoLightbox');
+        const iframe = document.getElementById('video-lightbox-iframe');
+        const caption = document.getElementById('video-lightbox-caption');
+
+        if (!lightbox || !iframe) return;
+
+        const videoId = extractYouTubeId(youtubeIdOrUrl);
+        const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0` : '';
+
+        iframe.src = embedUrl;
+        if (caption && title) caption.textContent = title;
+
+        lightbox.classList.add('show');
+        document.body.style.overflow = 'hidden';
     };
 
-    const videoId = extractYouTubeId(youtubeIdOrUrl);
-    const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0` : '';
+    window.closeVideoLightbox = function() {
+        const lightbox = document.getElementById('videoLightbox');
+        const iframe = document.getElementById('video-lightbox-iframe');
 
-    iframe.src = embedUrl;
-    if (caption && title) caption.textContent = title;
+        if (!lightbox) return;
 
-    videoLightbox.classList.add('show');
-    document.body.style.overflow = 'hidden';
-}
+        lightbox.classList.remove('show');
+        document.body.style.overflow = '';
 
-function closeVideoLightbox() {
-    const videoLightbox = document.getElementById('videoLightbox');
-    const iframe = document.getElementById('video-lightbox-iframe');
-    if (!videoLightbox || !iframe) return;
-
-    videoLightbox.classList.remove('show');
-    document.body.style.overflow = 'auto';
-
-    // Clear the video to stop playback after animation
-    setTimeout(() => {
-        if (!videoLightbox.classList.contains('show')) {
-            iframe.src = '';
+        setTimeout(() => {
+            if (iframe) iframe.src = '';
             const caption = document.getElementById('video-lightbox-caption');
             if (caption) caption.textContent = '';
+        }, 300);
+    };
+
+    // Close lightboxes with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            const imageLightbox = document.getElementById('lightbox');
+            const videoLightbox = document.getElementById('videoLightbox');
+
+            if (imageLightbox?.classList.contains('show')) {
+                closeLightbox();
+            }
+            if (videoLightbox?.classList.contains('show')) {
+                closeVideoLightbox();
+            }
         }
-    }, 300);
-}
+    });
 
-// Console log for developers
-console.log('🎨 Evan Mishler Portfolio Website');
-console.log('Built with vanilla HTML, CSS, and JavaScript');
-console.log('Modern-retro design with responsive layout');
-console.log('Contact: mishler.evan@gmail.com');
+    // Prevent lightbox close when clicking content
+    document.querySelectorAll('.lightbox-content').forEach(content => {
+        content.addEventListener('click', e => e.stopPropagation());
+    });
 
-// Course lightbox functions removed (unused)
+    // ============================================
+    // Initialize
+    // ============================================
+
+    document.addEventListener('DOMContentLoaded', function() {
+        initMobileNav();
+        initHeaderScroll();
+        initFadeAnimations();
+        initPortfolioFilter();
+        initSmoothScroll();
+    });
+
+})();

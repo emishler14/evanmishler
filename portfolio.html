@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Evan Mishler</title>
+    <meta name="description" content="Browse Evan Mishler's portfolio of eLearning courses, instructional design projects, and video production work.">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -16,140 +17,136 @@
                 <li><a href="portfolio.html" class="active">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+            </button>
         </nav>
     </header>
 
     <main>
         <!-- Portfolio Header -->
-        <section class="section">
+        <section class="section" style="padding-top: 140px; padding-bottom: var(--space-lg);">
             <div class="container">
-                <h1 class="text-center mb-2">My Portfolio</h1>
-                <p class="text-center" style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 3rem;">Explore my diverse range of projects spanning eLearning development, graphic design, video production, and interactive media.</p>
-                
-                <!-- Filter Controls -->
+                <div class="text-center">
+                    <h1>Portfolio</h1>
+                    <p style="font-size: 1.15rem; max-width: 600px; margin: 0 auto;">Explore my work spanning eLearning development, graphic design, video production, and interactive media.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter Controls -->
+        <section style="padding-bottom: var(--space-lg);">
+            <div class="container">
                 <div class="filter-controls">
                     <button class="filter-btn active" data-filter="all">All</button>
                     <button class="filter-btn" data-filter="articulate-storyline">Articulate Storyline</button>
-                    
-                    <button class="filter-btn" data-filter="video">Video</button>
                     <button class="filter-btn" data-filter="articulate-rise">Articulate Rise</button>
+                    <button class="filter-btn" data-filter="video">Video</button>
                     <button class="filter-btn" data-filter="pdf">PDF</button>
-                    
                 </div>
             </div>
         </section>
 
         <!-- Portfolio Grid -->
-        <section class="section">
+        <section class="section" style="padding-top: 0;">
             <div class="container">
                 <div class="grid grid-3" id="portfolioGrid">
-                    
-                    <!-- Articulate Storyline Templates (Consolidated) -->
-                    <div class="project-card" data-category="articulate-storyline">
+
+                    <!-- Articulate Storyline Templates -->
+                    <div class="project-card fade-in" data-category="articulate-storyline">
                         <div class="project-image">
-                            <img src="assets/images/Cool Morning Layout-01.png" alt="Articulate Storyline templates — Cool Morning thumbnail" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="assets/images/Cool Morning Layout-01.png" alt="Articulate Storyline templates preview" loading="lazy">
                         </div>
                         <div class="project-content">
                             <span class="project-category">Articulate Storyline</span>
-                            <h3 class="project-title">Articulate Storyline Design Mock‑Ups & Templates</h3>
-                            <p class="project-description">A reusable set of Storyline templates designed for a variety of courses. This side project keeps my design skills sharp and showcases clean interactions and slide layouts for future builds and portfolio reference.</p>
+                            <h3 class="project-title">Storyline Design Templates</h3>
+                            <p class="project-description">A reusable set of Storyline templates designed for a variety of courses. This side project keeps my design skills sharp and showcases clean interactions and slide layouts for future builds.</p>
                             <a href="graphic-design-templates.html" class="btn btn-primary">View Project</a>
                         </div>
                     </div>
 
                     <!-- Articulate Rise Course -->
-                    <div class="project-card" data-category="articulate-rise">
+                    <div class="project-card fade-in" data-category="articulate-rise">
                         <div class="project-image">
-                            <img src="assets/images/AmazonS3.png" alt="Amazon S3 Course (Articulate Rise) — thumbnail" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="assets/images/AmazonS3.png" alt="Amazon S3 Course preview" loading="lazy">
                         </div>
                         <div class="project-content">
                             <span class="project-category">Articulate Rise</span>
-                            <h3 class="project-title">Amazon S3 Foundations: Interactive Mock Course</h3>
-                            <p class="project-description">Mock course on “What is Amazon S3?” built in Articulate Rise. Demonstrates my custom illustrations (Adobe Illustrator) and self‑produced video graphics—an end‑to‑end sample showing what I can build. See the accompanying <a href="assets/docs/aws-interview-presentation.pdf" target="_blank" rel="noopener noreferrer">ADDIE design presentation (PDF)</a> for the process behind this course.</p>
-                            <div class="cta-buttons" style="margin-top: 0.5rem;">
+                            <h3 class="project-title">Amazon S3 Foundations</h3>
+                            <p class="project-description">Mock course on "What is Amazon S3?" built in Articulate Rise. Features custom illustrations and self-produced video graphics. See the accompanying <a href="assets/docs/aws-interview-presentation.pdf" target="_blank" rel="noopener noreferrer">ADDIE presentation</a> for the process behind this course.</p>
+                            <div class="cta-buttons">
                                 <a href="https://portfolio-mishler.s3.us-east-1.amazonaws.com/amazon-simple-storage-service-s-3-scorm12-dlGyxMXv+(1)/scormcontent/index.html#/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Open Course</a>
                             </div>
                         </div>
                     </div>
 
-                    
-
-                    
-
-                    <!-- Video Projects -->
-                    <div class="project-card" data-category="video">
+                    <!-- Video: Prompt Engineering -->
+                    <div class="project-card fade-in" data-category="video">
                         <div class="project-image">
-                            <img src="https://img.youtube.com/vi/z3SW13BI75I/hqdefault.jpg" alt="YouTube Video Thumbnail" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" referrerpolicy="no-referrer">
+                            <img src="https://img.youtube.com/vi/z3SW13BI75I/hqdefault.jpg" alt="Prompt Engineering video thumbnail" loading="lazy" referrerpolicy="no-referrer">
                         </div>
                         <div class="project-content">
                             <span class="project-category">Video</span>
-                            <h3 class="project-title">Prompt Engineering Foundations: Motion Graphics Intro</h3>
+                            <h3 class="project-title">Prompt Engineering: Motion Graphics</h3>
                             <p class="project-description">Motion-graphics opener for a foundations course on prompt engineering, produced in Adobe Premiere Pro and Adobe After Effects.</p>
-                            <a href="#" class="btn btn-primary" onclick="openVideoLightbox('z3SW13BI75I', 'Prompt Engineering Foundations: Motion Graphics Intro'); return false;">Watch Video</a>
+                            <a href="#" class="btn btn-primary" onclick="openVideoLightbox('z3SW13BI75I', 'Prompt Engineering Foundations'); return false;">Watch Video</a>
                         </div>
                     </div>
 
-                    <div class="project-card" data-category="video">
+                    <!-- Video: Amazon Neptune -->
+                    <div class="project-card fade-in" data-category="video">
                         <div class="project-image">
-                            <img src="https://img.youtube.com/vi/3wmJUfle6EI/hqdefault.jpg" alt="YouTube Video Thumbnail" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" referrerpolicy="no-referrer">
+                            <img src="https://img.youtube.com/vi/3wmJUfle6EI/hqdefault.jpg" alt="Amazon Neptune video thumbnail" loading="lazy" referrerpolicy="no-referrer">
                         </div>
                         <div class="project-content">
                             <span class="project-category">Video</span>
-                            <h3 class="project-title">Amazon Neptune Essentials: Benefits Overview</h3>
-                            <p class="project-description">Introductory video for a course on Amazon Neptune, highlighting benefits such as native graph queries, performance, and AWS integration. Produced in Adobe Premiere Pro and After Effects, with vector graphics created in Adobe Illustrator.</p>
-                            <a href="#" class="btn btn-primary" onclick="openVideoLightbox('3wmJUfle6EI', 'Amazon Neptune Essentials: Benefits Overview'); return false;">Watch Video</a>
+                            <h3 class="project-title">Amazon Neptune: Benefits Overview</h3>
+                            <p class="project-description">Introductory video for a course on Amazon Neptune, highlighting benefits such as native graph queries, performance, and AWS integration. Vector graphics created in Adobe Illustrator.</p>
+                            <a href="#" class="btn btn-primary" onclick="openVideoLightbox('3wmJUfle6EI', 'Amazon Neptune Essentials'); return false;">Watch Video</a>
                         </div>
                     </div>
 
-                    <div class="project-card" data-category="video">
+                    <!-- Video: Personal Filmmaking -->
+                    <div class="project-card fade-in" data-category="video">
                         <div class="project-image">
-                            <img src="https://img.youtube.com/vi/i701lCj4bB8/hqdefault.jpg" alt="YouTube Video Thumbnail" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" referrerpolicy="no-referrer">
+                            <img src="https://img.youtube.com/vi/i701lCj4bB8/hqdefault.jpg" alt="Filmmaking project thumbnail" loading="lazy" referrerpolicy="no-referrer">
                         </div>
                         <div class="project-content">
                             <span class="project-category">Video</span>
-                            <h3 class="project-title">Filmmaking & Motion Graphics (Personal Project)</h3>
-                            <p class="project-description">A personal YouTube video filmed and edited by me in DaVinci Resolve, including all motion graphics. Demonstrates my equipment proficiency and end-to-end production workflow.</p>
-                            <a href="#" class="btn btn-primary" onclick="openVideoLightbox('i701lCj4bB8', 'Filmmaking & Motion Graphics (Personal Project)'); return false;">Watch Video</a>
+                            <h3 class="project-title">Filmmaking & Motion Graphics</h3>
+                            <p class="project-description">A personal YouTube video filmed and edited in DaVinci Resolve, including all motion graphics. Demonstrates my equipment proficiency and end-to-end production workflow.</p>
+                            <a href="#" class="btn btn-primary" onclick="openVideoLightbox('i701lCj4bB8', 'Filmmaking & Motion Graphics'); return false;">Watch Video</a>
                         </div>
                     </div>
 
-                    <div class="project-card" data-category="video">
+                    <!-- Video: Hybrid Cloud -->
+                    <div class="project-card fade-in" data-category="video">
                         <div class="project-image">
-                            <img src="https://img.youtube.com/vi/esGU4i85siY/hqdefault.jpg" alt="YouTube Video Thumbnail" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" referrerpolicy="no-referrer">
+                            <img src="https://img.youtube.com/vi/esGU4i85siY/hqdefault.jpg" alt="Hybrid Cloud video thumbnail" loading="lazy" referrerpolicy="no-referrer">
                         </div>
                         <div class="project-content">
                             <span class="project-category">Video</span>
-                            <h3 class="project-title">Hybrid Cloud Adoption Essentials: Motion Graphics Overview</h3>
+                            <h3 class="project-title">Hybrid Cloud Adoption Essentials</h3>
                             <p class="project-description">Module opener for a course on hybrid cloud adoption showcasing motion graphics. Built in Adobe After Effects and Adobe Premiere Pro.</p>
-                            <a href="#" class="btn btn-primary" onclick="openVideoLightbox('esGU4i85siY', 'Hybrid Cloud Adoption Essentials: Motion Graphics Overview'); return false;">Watch Video</a>
+                            <a href="#" class="btn btn-primary" onclick="openVideoLightbox('esGU4i85siY', 'Hybrid Cloud Adoption Essentials'); return false;">Watch Video</a>
                         </div>
                     </div>
 
-                    <!-- Articulate Rise Projects -->
-                    
-
-                    
-
-                    <!-- ADDIE Design Presentation (PDF) -->
-                    <div class="project-card" data-category="pdf">
+                    <!-- ADDIE Presentation -->
+                    <div class="project-card fade-in" data-category="pdf">
                         <div class="project-image">
-                            <img src="assets/images/ADDIE.png" alt="ADDIE Method Presentation — thumbnail" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="assets/images/ADDIE.png" alt="ADDIE Method Presentation preview" loading="lazy">
                         </div>
                         <div class="project-content">
                             <span class="project-category">PDF</span>
-                            <h3 class="project-title">ADDIE Method — Instructional Design Presentation</h3>
-                            <p class="project-description">Presentation outlining my ADDIE approach and adult learning principles, created for the Amazon interview process. It ties directly to the Amazon S3 course mock-up and documents the analysis, design, development, implementation, and evaluation decisions.</p>
+                            <h3 class="project-title">ADDIE Method Presentation</h3>
+                            <p class="project-description">Presentation outlining my ADDIE approach and adult learning principles. Documents the analysis, design, development, implementation, and evaluation decisions behind the Amazon S3 course.</p>
                             <div class="cta-buttons">
                                 <a href="assets/docs/aws-interview-presentation.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View PDF</a>
                                 <a href="https://portfolio-mishler.s3.us-east-1.amazonaws.com/amazon-simple-storage-service-s-3-scorm12-dlGyxMXv+(1)/scormcontent/index.html#/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View S3 Course</a>
                             </div>
                         </div>
                     </div>
-
-                    
-
-                    
 
                 </div>
             </div>
@@ -169,7 +166,8 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Evan Mishler. All rights reserved.</p>
+            <div class="logo">Evan Mishler</div>
+            <p>&copy; 2026 All rights reserved.</p>
         </div>
     </footer>
 

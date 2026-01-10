@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning Template Collection - Evan Mishler</title>
+    <meta name="description" content="Custom visual frameworks designed to enhance learner engagement and create cohesive, professional learning experiences.">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -16,29 +17,33 @@
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+            </button>
         </nav>
     </header>
 
     <main>
         <!-- Project Header -->
-        <section class="section">
+        <section class="section" style="padding-top: 140px;">
             <div class="container">
-                <h1 class="text-center mb-2">Learning Template Collection</h1>
-                <p class="text-center" style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 3rem; color: #666;">Custom visual frameworks designed to enhance learner engagement and create cohesive, professional learning experiences</p>
+                <div class="text-center">
+                    <h1>Learning Template Collection</h1>
+                    <p style="font-size: 1.15rem; max-width: 700px; margin: 0 auto;">Custom visual frameworks designed to enhance learner engagement and create cohesive, professional learning experiences.</p>
+                </div>
             </div>
         </section>
 
         <!-- Project Overview -->
-        <section class="section" style="background-color: rgba(78, 205, 196, 0.1);">
+        <section class="section skills-section">
             <div class="container">
-                <div class="card" style="max-width: 900px; margin: 0 auto;">
+                <div class="card" style="max-width: 850px; margin: 0 auto;">
                     <h2>Building the Visual Framework</h2>
-                    <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">I enjoy building the visual framework and components that form the foundation of exceptional learning experiences. Each template represents a carefully crafted design system that goes beyond aesthetics—it's about creating an environment where learners feel comfortable, engaged, and ready to absorb new information.</p>
-                    
-                    <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;"><strong>Visual aesthetic plays a crucial role in learners' overall satisfaction with training.</strong> When learners encounter a well-designed, professional interface, they immediately perceive the content as more credible and valuable. This psychological first impression sets the stage for deeper engagement and better learning outcomes.</p>
-                    
-                    <p style="font-size: 1.1rem; line-height: 1.7;">These templates serve as flexible frameworks that can be adapted to different learning contexts while maintaining visual consistency and professional polish. Each design considers color psychology, typography hierarchy, and spatial relationships to create optimal learning environments.</p>
+                    <p>I enjoy building the visual framework and components that form the foundation of exceptional learning experiences. Each template represents a carefully crafted design system that goes beyond aesthetics&mdash;it's about creating an environment where learners feel comfortable, engaged, and ready to absorb new information.</p>
+
+                    <p><strong>Visual aesthetic plays a crucial role in learners' overall satisfaction with training.</strong> When learners encounter a well-designed, professional interface, they immediately perceive the content as more credible and valuable. This psychological first impression sets the stage for deeper engagement and better learning outcomes.</p>
+
+                    <p style="margin-bottom: 0;">These templates serve as flexible frameworks that can be adapted to different learning contexts while maintaining visual consistency and professional polish. Each design considers color psychology, typography hierarchy, and spatial relationships to create optimal learning environments.</p>
                 </div>
             </div>
         </section>
@@ -46,85 +51,73 @@
         <!-- Template Gallery -->
         <section class="section">
             <div class="container">
-                <h2 class="text-center mb-3">Template Showcase</h2>
+                <h2 class="text-center mb-4">Template Showcase</h2>
                 <div class="grid grid-2">
-                    
+
                     <!-- City Life Template -->
-                    <div class="card">
-                        <div class="project-image" style="margin-bottom: 2rem; position: relative; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); background-color: #f8f8f8; cursor: pointer;" onclick="openLightbox('assets/images/City Life Layout-01.png', 'City Life Template Design')">
-                            <img src="assets/images/City Life Layout-01.png" alt="City Life Template Design" style="width: 100%; height: 500px; object-fit: contain; display: block; padding: 30px;">
+                    <div class="card fade-in">
+                        <div class="project-image" style="margin-bottom: 1.5rem; border-radius: 8px; background-color: var(--bg-secondary); cursor: pointer; height: auto;" onclick="openLightbox('assets/images/City Life Layout-01.png', 'City Life Template Design')">
+                            <img src="assets/images/City Life Layout-01.png" alt="City Life Template Design" style="width: 100%; height: 400px; object-fit: contain; display: block; padding: 1.5rem;">
                         </div>
-                        <div style="padding: 0 0.5rem;">
-                            <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">City Life Template</h3>
-                            <p style="margin-bottom: 0.75rem;"><strong>Theme:</strong> Urban, modern, dynamic</p>
-                            <p style="margin-bottom: 0.75rem;"><strong>Best for:</strong> Corporate training, workplace safety, professional development</p>
-                            <p style="margin-bottom: 0;">Features clean lines with urban-inspired color palette and contemporary typography. Perfect for engaging corporate learners with realistic workplace scenarios.</p>
-                        </div>
+                        <h3>City Life Template</h3>
+                        <p style="margin-bottom: 0.5rem;"><strong>Theme:</strong> Urban, modern, dynamic</p>
+                        <p style="margin-bottom: 0.5rem;"><strong>Best for:</strong> Corporate training, workplace safety, professional development</p>
+                        <p style="margin-bottom: 0; color: var(--text-muted);">Features clean lines with urban-inspired color palette and contemporary typography. Perfect for engaging corporate learners with realistic workplace scenarios.</p>
                     </div>
 
                     <!-- Cool Morning Template -->
-                    <div class="card">
-                        <div class="project-image" style="margin-bottom: 2rem; position: relative; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); background-color: #f8f8f8; cursor: pointer;" onclick="openLightbox('assets/images/Cool Morning Layout-01.png', 'Cool Morning Template Design')">
-                            <img src="assets/images/Cool Morning Layout-01.png" alt="Cool Morning Template Design" style="width: 100%; height: 500px; object-fit: contain; display: block; padding: 30px;">
+                    <div class="card fade-in">
+                        <div class="project-image" style="margin-bottom: 1.5rem; border-radius: 8px; background-color: var(--bg-secondary); cursor: pointer; height: auto;" onclick="openLightbox('assets/images/Cool Morning Layout-01.png', 'Cool Morning Template Design')">
+                            <img src="assets/images/Cool Morning Layout-01.png" alt="Cool Morning Template Design" style="width: 100%; height: 400px; object-fit: contain; display: block; padding: 1.5rem;">
                         </div>
-                        <div style="padding: 0 0.5rem;">
-                            <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Cool Morning Template</h3>
-                            <p style="margin-bottom: 0.75rem;"><strong>Theme:</strong> Professional, calm, sophisticated</p>
-                            <p style="margin-bottom: 0.75rem;"><strong>Best for:</strong> Leadership training, executive education, strategic planning</p>
-                            <p style="margin-bottom: 0;">Sophisticated design with cool tones that convey professionalism and trust. Ideal for executive-level content and leadership development programs.</p>
-                        </div>
+                        <h3>Cool Morning Template</h3>
+                        <p style="margin-bottom: 0.5rem;"><strong>Theme:</strong> Professional, calm, sophisticated</p>
+                        <p style="margin-bottom: 0.5rem;"><strong>Best for:</strong> Leadership training, executive education, strategic planning</p>
+                        <p style="margin-bottom: 0; color: var(--text-muted);">Sophisticated design with cool tones that convey professionalism and trust. Ideal for executive-level content and leadership development programs.</p>
                     </div>
 
                     <!-- Gradient Template -->
-                    <div class="card">
-                        <div class="project-image" style="margin-bottom: 2rem; position: relative; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); background-color: #f8f8f8; cursor: pointer;" onclick="openLightbox('assets/images/Gradient Layout-01.png', 'Gradient Template Design')">
-                            <img src="assets/images/Gradient Layout-01.png" alt="Gradient Template Design" style="width: 100%; height: 500px; object-fit: contain; display: block; padding: 30px;">
+                    <div class="card fade-in">
+                        <div class="project-image" style="margin-bottom: 1.5rem; border-radius: 8px; background-color: var(--bg-secondary); cursor: pointer; height: auto;" onclick="openLightbox('assets/images/Gradient Layout-01.png', 'Gradient Template Design')">
+                            <img src="assets/images/Gradient Layout-01.png" alt="Gradient Template Design" style="width: 100%; height: 400px; object-fit: contain; display: block; padding: 1.5rem;">
                         </div>
-                        <div style="padding: 0 0.5rem;">
-                            <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Gradient Template</h3>
-                            <p style="margin-bottom: 0.75rem;"><strong>Theme:</strong> Modern, tech-forward, innovative</p>
-                            <p style="margin-bottom: 0.75rem;"><strong>Best for:</strong> Technical training, software tutorials, innovation workshops</p>
-                            <p style="margin-bottom: 0;">Contemporary gradient design that appeals to tech-savvy learners. Perfect for digital literacy, software training, and technology adoption programs.</p>
-                        </div>
+                        <h3>Gradient Template</h3>
+                        <p style="margin-bottom: 0.5rem;"><strong>Theme:</strong> Modern, tech-forward, innovative</p>
+                        <p style="margin-bottom: 0.5rem;"><strong>Best for:</strong> Technical training, software tutorials, innovation workshops</p>
+                        <p style="margin-bottom: 0; color: var(--text-muted);">Contemporary gradient design that appeals to tech-savvy learners. Perfect for digital literacy, software training, and technology adoption programs.</p>
                     </div>
 
                     <!-- Minimalist Template -->
-                    <div class="card">
-                        <div class="project-image" style="margin-bottom: 2rem; position: relative; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); background-color: #f8f8f8; cursor: pointer;" onclick="openLightbox('assets/images/Minimalist Layout-01.png', 'Minimalist Template Design')">
-                            <img src="assets/images/Minimalist Layout-01.png" alt="Minimalist Template Design" style="width: 100%; height: 500px; object-fit: contain; display: block; padding: 30px;">
+                    <div class="card fade-in">
+                        <div class="project-image" style="margin-bottom: 1.5rem; border-radius: 8px; background-color: var(--bg-secondary); cursor: pointer; height: auto;" onclick="openLightbox('assets/images/Minimalist Layout-01.png', 'Minimalist Template Design')">
+                            <img src="assets/images/Minimalist Layout-01.png" alt="Minimalist Template Design" style="width: 100%; height: 400px; object-fit: contain; display: block; padding: 1.5rem;">
                         </div>
-                        <div style="padding: 0 0.5rem;">
-                            <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Minimalist Template</h3>
-                            <p style="margin-bottom: 0.75rem;"><strong>Theme:</strong> Clean, focused, distraction-free</p>
-                            <p style="margin-bottom: 0.75rem;"><strong>Best for:</strong> Compliance training, policy education, regulatory content</p>
-                            <p style="margin-bottom: 0;">Ultra-clean design that eliminates distractions and focuses attention on critical content. Excellent for compliance training where clarity is paramount.</p>
-                        </div>
+                        <h3>Minimalist Template</h3>
+                        <p style="margin-bottom: 0.5rem;"><strong>Theme:</strong> Clean, focused, distraction-free</p>
+                        <p style="margin-bottom: 0.5rem;"><strong>Best for:</strong> Compliance training, policy education, regulatory content</p>
+                        <p style="margin-bottom: 0; color: var(--text-muted);">Ultra-clean design that eliminates distractions and focuses attention on critical content. Excellent for compliance training where clarity is paramount.</p>
                     </div>
 
                     <!-- Pop Template -->
-                    <div class="card">
-                        <div class="project-image" style="margin-bottom: 2rem; position: relative; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); background-color: #f8f8f8; cursor: pointer;" onclick="openLightbox('assets/images/Pop Layout-01.png', 'Pop Template Design')">
-                            <img src="assets/images/Pop Layout-01.png" alt="Pop Template Design" style="width: 100%; height: 500px; object-fit: contain; display: block; padding: 30px;">
+                    <div class="card fade-in">
+                        <div class="project-image" style="margin-bottom: 1.5rem; border-radius: 8px; background-color: var(--bg-secondary); cursor: pointer; height: auto;" onclick="openLightbox('assets/images/Pop Layout-01.png', 'Pop Template Design')">
+                            <img src="assets/images/Pop Layout-01.png" alt="Pop Template Design" style="width: 100%; height: 400px; object-fit: contain; display: block; padding: 1.5rem;">
                         </div>
-                        <div style="padding: 0 0.5rem;">
-                            <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Pop Template</h3>
-                            <p style="margin-bottom: 0.75rem;"><strong>Theme:</strong> Vibrant, energetic, engaging</p>
-                            <p style="margin-bottom: 0.75rem;"><strong>Best for:</strong> Product training, sales enablement, customer service</p>
-                            <p style="margin-bottom: 0;">Bold, colorful design that energizes learners and maintains high engagement. Perfect for product launches, sales training, and customer-facing content.</p>
-                        </div>
+                        <h3>Pop Template</h3>
+                        <p style="margin-bottom: 0.5rem;"><strong>Theme:</strong> Vibrant, energetic, engaging</p>
+                        <p style="margin-bottom: 0.5rem;"><strong>Best for:</strong> Product training, sales enablement, customer service</p>
+                        <p style="margin-bottom: 0; color: var(--text-muted);">Bold, colorful design that energizes learners and maintains high engagement. Perfect for product launches, sales training, and customer-facing content.</p>
                     </div>
 
                     <!-- Watercolor Template -->
-                    <div class="card">
-                        <div class="project-image" style="margin-bottom: 2rem; position: relative; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); background-color: #f8f8f8; cursor: pointer;" onclick="openLightbox('assets/images/Watercolor Layout-01.png', 'Watercolor Template Design')">
-                            <img src="assets/images/Watercolor Layout-01.png" alt="Watercolor Template Design" style="width: 100%; height: 500px; object-fit: contain; display: block; padding: 30px;">
+                    <div class="card fade-in">
+                        <div class="project-image" style="margin-bottom: 1.5rem; border-radius: 8px; background-color: var(--bg-secondary); cursor: pointer; height: auto;" onclick="openLightbox('assets/images/Watercolor Layout-01.png', 'Watercolor Template Design')">
+                            <img src="assets/images/Watercolor Layout-01.png" alt="Watercolor Template Design" style="width: 100%; height: 400px; object-fit: contain; display: block; padding: 1.5rem;">
                         </div>
-                        <div style="padding: 0 0.5rem;">
-                            <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Watercolor Template</h3>
-                            <p style="margin-bottom: 0.75rem;"><strong>Theme:</strong> Creative, warm, approachable</p>
-                            <p style="margin-bottom: 0.75rem;"><strong>Best for:</strong> Soft skills training, creative workshops, team building</p>
-                            <p style="margin-bottom: 0;">Artistic watercolor elements create a warm, human-centered learning environment. Ideal for soft skills, creativity training, and interpersonal development.</p>
-                        </div>
+                        <h3>Watercolor Template</h3>
+                        <p style="margin-bottom: 0.5rem;"><strong>Theme:</strong> Creative, warm, approachable</p>
+                        <p style="margin-bottom: 0.5rem;"><strong>Best for:</strong> Soft skills training, creative workshops, team building</p>
+                        <p style="margin-bottom: 0; color: var(--text-muted);">Artistic watercolor elements create a warm, human-centered learning environment. Ideal for soft skills, creativity training, and interpersonal development.</p>
                     </div>
 
                 </div>
@@ -132,27 +125,34 @@
         </section>
 
         <!-- Design Philosophy -->
-        <section class="section" style="background-color: rgba(255, 107, 107, 0.1);">
+        <section class="section skills-section">
             <div class="container">
-                <div class="card" style="max-width: 900px; margin: 0 auto; text-align: center;">
-                    <h2>Design Philosophy</h2>
-                    <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem;">Every template is built with the understanding that <strong>learners form impressions within seconds</strong> of encountering training content. A thoughtfully designed visual framework communicates professionalism, builds trust, and creates an environment where learners are more receptive to new information.</p>
-                    
-                    <div class="grid grid-3" style="text-align: left; margin-top: 2rem;">
-                        <div>
-                            <h4 style="color: var(--accent-coral); margin-bottom: 0.5rem;">🎨 Visual Hierarchy</h4>
-                            <p style="font-size: 0.95rem;">Clear information structure guides learners through content naturally</p>
+                <div class="card" style="max-width: 900px; margin: 0 auto;">
+                    <h2 class="text-center">Design Philosophy</h2>
+                    <p class="text-center" style="max-width: 700px; margin: 0 auto var(--space-lg);">Every template is built with the understanding that <strong>learners form impressions within seconds</strong> of encountering training content. A thoughtfully designed visual framework communicates professionalism, builds trust, and creates an environment where learners are more receptive to new information.</p>
+
+                    <div class="grid grid-3" style="margin-top: var(--space-lg);">
+                        <div class="text-center">
+                            <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Visual Hierarchy</h4>
+                            <p style="font-size: 0.95rem; margin-bottom: 0; color: var(--text-muted);">Clear information structure guides learners through content naturally</p>
                         </div>
-                        <div>
-                            <h4 style="color: var(--accent-coral); margin-bottom: 0.5rem;">🎯 Purposeful Design</h4>
-                            <p style="font-size: 0.95rem;">Every element serves the learning objective, not just decoration</p>
+                        <div class="text-center">
+                            <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Purposeful Design</h4>
+                            <p style="font-size: 0.95rem; margin-bottom: 0; color: var(--text-muted);">Every element serves the learning objective, not just decoration</p>
                         </div>
-                        <div>
-                            <h4 style="color: var(--accent-coral); margin-bottom: 0.5rem;">✨ Learner-Centered</h4>
-                            <p style="font-size: 0.95rem;">Templates adapt to different learning preferences and contexts</p>
+                        <div class="text-center">
+                            <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Learner-Centered</h4>
+                            <p style="font-size: 0.95rem; margin-bottom: 0; color: var(--text-muted);">Templates adapt to different learning preferences and contexts</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Back to Portfolio -->
+        <section class="section" style="padding-top: 0;">
+            <div class="container text-center">
+                <a href="portfolio.html" class="btn btn-secondary">Back to Portfolio</a>
             </div>
         </section>
 
@@ -169,7 +169,8 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Evan Mishler. All rights reserved.</p>
+            <div class="logo">Evan Mishler</div>
+            <p>&copy; 2026 All rights reserved.</p>
         </div>
     </footer>
 
