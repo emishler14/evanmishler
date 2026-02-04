@@ -2,129 +2,628 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#008080">
     <title>Evan Mishler - Learning Experience Designer</title>
     <meta name="description" content="Senior Learning Experience Designer specializing in eLearning development, instructional design, and digital content creation for cloud technologies and generative AI.">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <link rel="stylesheet" href="assets/css/win98.css">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='1' y='1' width='6' height='6' fill='%23ff0000'/%3E%3Crect x='9' y='1' width='6' height='6' fill='%2300ff00'/%3E%3Crect x='1' y='9' width='6' height='6' fill='%230000ff'/%3E%3Crect x='9' y='9' width='6' height='6' fill='%23ffff00'/%3E%3C/svg%3E" type="image/svg+xml">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Evan Mishler</div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-                <span></span>
-            </button>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <span class="hero-label">Learning Experience Designer</span>
-                    <h1>
-                        <span>Hi, I'm <em class="accent">Evan</em></span>
-                    </h1>
-                    <p class="hero-description">
-                        I've spent the last 13 years making training that actually makes sense. These days I'm mostly working with cloud tech and generative AI — both as subject matter and as tools to build better learning experiences.
-                    </p>
-                    <div class="hero-cta">
-                        <a href="portfolio.html" class="btn btn-primary">View My Work</a>
-                        <a href="about.html" class="btn btn-secondary">About Me</a>
-                    </div>
+    <!-- Boot Screen -->
+    <div class="boot-screen" id="boot-screen">
+        <div class="boot-content">
+            <div class="boot-logo">
+                <div class="windows-flag">
+                    <div class="flag-red"></div>
+                    <div class="flag-green"></div>
+                    <div class="flag-blue"></div>
+                    <div class="flag-yellow"></div>
                 </div>
-                <div class="hero-decoration" aria-hidden="true"></div>
-            </div>
-        </section>
-
-        <!-- Featured Work Section -->
-        <section class="section">
-            <div class="container">
-                <div class="featured-header">
-                    <h2>Selected Work</h2>
-                    <a href="portfolio.html" class="btn-text">View all projects</a>
-                </div>
-
-                <div class="grid grid-3">
-                    <div class="project-card fade-in">
-                        <div class="project-image">
-                            <img src="assets/images/Cool Morning Layout-01.png" alt="Articulate Storyline templates preview" loading="lazy">
-                        </div>
-                        <div class="project-content">
-                            <span class="project-category">Articulate Storyline</span>
-                            <h3 class="project-title">Storyline Design Templates</h3>
-                            <p class="project-description">A reusable set of Storyline templates designed for a variety of courses, showcasing clean interactions and layouts for future builds.</p>
-                            <a href="graphic-design-templates.html" class="btn btn-primary">View Project</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card fade-in">
-                        <div class="project-image">
-                            <img src="assets/images/AmazonS3.png" alt="Amazon S3 Course preview" loading="lazy">
-                        </div>
-                        <div class="project-content">
-                            <span class="project-category">Articulate Rise</span>
-                            <h3 class="project-title">Amazon S3 Foundations</h3>
-                            <p class="project-description">Mock course built in Articulate Rise featuring custom illustrations and video graphics. Includes an accompanying ADDIE design presentation.</p>
-                            <a href="https://portfolio-mishler.s3.us-east-1.amazonaws.com/amazon-simple-storage-service-s-3-scorm12-dlGyxMXv+(1)/scormcontent/index.html#/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Open Course</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card fade-in">
-                        <div class="project-image">
-                            <img src="https://img.youtube.com/vi/z3SW13BI75I/hqdefault.jpg" alt="Prompt Engineering video thumbnail" loading="lazy" referrerpolicy="no-referrer">
-                        </div>
-                        <div class="project-content">
-                            <span class="project-category">Video</span>
-                            <h3 class="project-title">Prompt Engineering: Motion Graphics</h3>
-                            <p class="project-description">Motion-graphics opener for a foundations course on prompt engineering, produced in Adobe Premiere Pro and After Effects.</p>
-                            <a href="https://www.youtube.com/watch?v=z3SW13BI75I" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Watch Video</a>
-                        </div>
-                    </div>
+                <div class="boot-text">
+                    <span class="microsoft">Microsoft</span>
+                    <span class="windows">Windows 98</span>
                 </div>
             </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section class="section skills-section">
-            <div class="container">
-                <div class="text-center mb-4">
-                    <h2>Core Expertise</h2>
-                    <p style="max-width: 600px; margin: 0 auto;">A blend of classic and cutting-edge platforms that I use to create effective learning experiences.</p>
-                </div>
-
-                <div class="skills-grid" style="justify-content: center; max-width: 800px; margin: 0 auto;">
-                    <span class="skill-tag">Articulate Storyline</span>
-                    <span class="skill-tag">Articulate Rise</span>
-                    <span class="skill-tag">Adobe Creative Suite</span>
-                    <span class="skill-tag">Video Production</span>
-                    <span class="skill-tag">Instructional Design</span>
-                    <span class="skill-tag">Generative AI</span>
-                    <span class="skill-tag">AWS Cloud</span>
-                    <span class="skill-tag">UX/UI Design</span>
-                </div>
-
-                <div class="text-center mt-3">
-                    <a href="about.html" class="btn btn-secondary">View Full Background</a>
-                </div>
+            <div class="boot-progress">
+                <div class="boot-progress-bar"></div>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="logo">Evan Mishler</div>
-            <p>&copy; 2026 All rights reserved.</p>
+            <p class="boot-message">Starting Evan Mishler Portfolio...</p>
         </div>
-    </footer>
+    </div>
+    <!-- Desktop -->
+    <div class="desktop">
+        <!-- Desktop Icons -->
+        <div class="desktop-icons">
+            <button class="desktop-icon" data-window="welcome">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='6' width='24' height='18' fill='%23c0c0c0' stroke='%23000' stroke-width='1'/%3E%3Crect x='6' y='8' width='20' height='12' fill='%230000aa'/%3E%3Crect x='4' y='22' width='24' height='4' fill='%23c0c0c0' stroke='%23000' stroke-width='1'/%3E%3Crect x='12' y='24' width='8' height='2' fill='%23808080'/%3E%3C/svg%3E" alt="My Computer">
+                <span>Welcome</span>
+            </button>
 
-    <script src="assets/js/main.js"></script>
+            <button class="desktop-icon" data-window="about">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='6' y='4' width='20' height='24' fill='%23ffffcc' stroke='%23000' stroke-width='1'/%3E%3Crect x='6' y='4' width='20' height='4' fill='%230000aa'/%3E%3Cline x1='8' y1='12' x2='24' y2='12' stroke='%23000' stroke-width='1'/%3E%3Cline x1='8' y1='16' x2='24' y2='16' stroke='%23000' stroke-width='1'/%3E%3Cline x1='8' y1='20' x2='20' y2='20' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E" alt="About Me">
+                <span>About Me</span>
+            </button>
+
+            <button class="desktop-icon" data-window="portfolio">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 8 L4 26 L28 26 L28 8 L16 8 L14 6 L4 6 Z' fill='%23ffcc00' stroke='%23000' stroke-width='1'/%3E%3Crect x='4' y='10' width='24' height='16' fill='%23ffdd44' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E" alt="Portfolio">
+                <span>My Portfolio</span>
+            </button>
+
+            <button class="desktop-icon" data-window="contact">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='8' width='24' height='16' fill='%23ffffff' stroke='%23000' stroke-width='1'/%3E%3Cpath d='M4 8 L16 18 L28 8' fill='none' stroke='%23000' stroke-width='1'/%3E%3Cpath d='M4 24 L12 16' fill='none' stroke='%23000' stroke-width='1'/%3E%3Cpath d='M28 24 L20 16' fill='none' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E" alt="Contact">
+                <span>Contact</span>
+            </button>
+
+            <button class="desktop-icon" data-window="projects">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='8' y='4' width='18' height='22' fill='%23ffffff' stroke='%23000' stroke-width='1'/%3E%3Crect x='6' y='6' width='18' height='22' fill='%23ffffff' stroke='%23000' stroke-width='1'/%3E%3Crect x='4' y='8' width='18' height='22' fill='%23ffffff' stroke='%23000' stroke-width='1'/%3E%3Cline x1='6' y1='14' x2='20' y2='14' stroke='%23000' stroke-width='1'/%3E%3Cline x1='6' y1='18' x2='20' y2='18' stroke='%23000' stroke-width='1'/%3E%3Cline x1='6' y1='22' x2='16' y2='22' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E" alt="Projects">
+                <span>Projects</span>
+            </button>
+
+            <button class="desktop-icon" data-window="minesweeper">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='10' fill='%23404040'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23000'/%3E%3Cline x1='16' y1='4' x2='16' y2='10' stroke='%23404040' stroke-width='2'/%3E%3Cline x1='16' y1='22' x2='16' y2='28' stroke='%23404040' stroke-width='2'/%3E%3Cline x1='4' y1='16' x2='10' y2='16' stroke='%23404040' stroke-width='2'/%3E%3Cline x1='22' y1='16' x2='28' y2='16' stroke='%23404040' stroke-width='2'/%3E%3Cline x1='8' y1='8' x2='12' y2='12' stroke='%23404040' stroke-width='2'/%3E%3Cline x1='20' y1='20' x2='24' y2='24' stroke='%23404040' stroke-width='2'/%3E%3Cline x1='8' y1='24' x2='12' y2='20' stroke='%23404040' stroke-width='2'/%3E%3Cline x1='20' y1='12' x2='24' y2='8' stroke='%23404040' stroke-width='2'/%3E%3Ccircle cx='14' cy='14' r='2' fill='%23fff' opacity='0.4'/%3E%3C/svg%3E" alt="Minesweeper">
+                <span>Minesweeper</span>
+            </button>
+
+            <button class="desktop-icon" data-window="paint">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' fill='%23fff' stroke='%23000' stroke-width='1'/%3E%3Crect x='4' y='4' width='24' height='4' fill='%230000aa'/%3E%3Cellipse cx='12' cy='18' rx='4' ry='3' fill='%23ff0000'/%3E%3Cellipse cx='20' cy='15' rx='3' ry='4' fill='%2300ff00'/%3E%3Cellipse cx='16' cy='22' rx='5' ry='2' fill='%230000ff'/%3E%3Ccircle cx='10' cy='13' r='2' fill='%23ffff00'/%3E%3C/svg%3E" alt="Paint">
+                <span>Paint</span>
+            </button>
+        </div>
+
+        <!-- Welcome Window -->
+        <div class="window" id="window-welcome" style="width: 500px; top: 80px; left: 150px;">
+            <div class="title-bar">
+                <div class="title-bar-text">Welcome - Evan Mishler</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize" class="minimize-btn"></button>
+                    <button aria-label="Maximize" class="maximize-btn"></button>
+                    <button aria-label="Close" class="close-btn"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="welcome-content">
+                    <p class="welcome-label">Learning Experience Designer</p>
+                    <h1 class="welcome-title">Hi, I'm <span class="accent">Evan</span></h1>
+                    <p>I've spent the last 13 years making training that actually makes sense. These days I'm mostly working with cloud tech and generative AI — both as subject matter and as tools to build better learning experiences.</p>
+                    <div class="welcome-buttons">
+                        <button class="btn-win98" data-window="portfolio">View My Work</button>
+                        <button class="btn-win98" data-window="about">About Me</button>
+                    </div>
+                    <fieldset class="skills-fieldset">
+                        <legend>Core Expertise</legend>
+                        <div class="skill-pills">
+                            <span class="skill-pill">Articulate Storyline</span>
+                            <span class="skill-pill">Articulate Rise</span>
+                            <span class="skill-pill">Adobe Creative Suite</span>
+                            <span class="skill-pill">Video Production</span>
+                            <span class="skill-pill">Instructional Design</span>
+                            <span class="skill-pill">Generative AI</span>
+                            <span class="skill-pill">AWS Cloud</span>
+                            <span class="skill-pill">UX/UI Design</span>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="status-bar">
+                <p class="status-bar-field">Ready</p>
+                <p class="status-bar-field">Learning Experience Designer</p>
+            </div>
+        </div>
+
+        <!-- About Window -->
+        <div class="window hidden" id="window-about" style="width: 550px; top: 60px; left: 200px;">
+            <div class="title-bar">
+                <div class="title-bar-text">About Me - Notepad</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize" class="minimize-btn"></button>
+                    <button aria-label="Maximize" class="maximize-btn"></button>
+                    <button aria-label="Close" class="close-btn"></button>
+                </div>
+            </div>
+            <div class="window-body window-body-scroll">
+                <div class="about-content">
+                    <h2>About Me</h2>
+                    <p><strong>Hi, I'm Evan.</strong> My job is to bridge the gap between "What does this even do?" and "Now I get it, and here's how I can use it."</p>
+                    <p>For more than 13 years, I've specialized in instructional design, helping people understand complex or new topics. These days, I focus on cloud technologies and generative AI—not only as the learning material I build, but as the tools I use to make my work better and faster.</p>
+                    <p>My philosophy is simple: <strong>start with the human, not the tech</strong>. I believe the secret to great training is empathy. It's about understanding the learner's starting line to build a clear path to the finish line.</p>
+                    <p>With AWS certifications to back up my tech skills and an MBA to understand the business context, I'm ready to take on your complex learning project.</p>
+
+                    <fieldset style="margin-top: 16px;">
+                        <legend>Certifications</legend>
+                        <ul class="tree-view">
+                            <li>Google Cloud Generative AI Leader (2025)</li>
+                            <li>AWS Certified AI Practitioner (2024)</li>
+                            <li>AWS Certified Cloud Practitioner (2023)</li>
+                        </ul>
+                    </fieldset>
+
+                    <fieldset style="margin-top: 16px;">
+                        <legend>Education</legend>
+                        <ul class="tree-view">
+                            <li>MBA - Virginia Commonwealth University (2013)</li>
+                            <li>BA Economics - West Virginia University (2009)</li>
+                        </ul>
+                    </fieldset>
+
+                    <fieldset style="margin-top: 16px;">
+                        <legend>My Toolkit</legend>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px;">
+                            <div>
+                                <strong>Generative AI:</strong><br>
+                                Workflow Integration, Brainstorming, Content Creation, Automation
+                            </div>
+                            <div>
+                                <strong>eLearning:</strong><br>
+                                Articulate Storyline 360, Rise, SCORM, xAPI
+                            </div>
+                            <div>
+                                <strong>Adobe Suite:</strong><br>
+                                Premiere Pro, Audition, Photoshop, Illustrator
+                            </div>
+                            <div>
+                                <strong>Cloud:</strong><br>
+                                AWS Compute, Storage, Serverless, AI/ML
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="status-bar">
+                <p class="status-bar-field">13+ Years Experience</p>
+            </div>
+        </div>
+
+        <!-- Portfolio Window -->
+        <div class="window hidden" id="window-portfolio" style="width: 650px; top: 40px; left: 120px;">
+            <div class="title-bar">
+                <div class="title-bar-text">My Portfolio - Explorer</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize" class="minimize-btn"></button>
+                    <button aria-label="Maximize" class="maximize-btn"></button>
+                    <button aria-label="Close" class="close-btn"></button>
+                </div>
+            </div>
+            <div class="window-body window-body-scroll">
+                <p style="margin-bottom: 12px;">Explore my work spanning eLearning development, graphic design, video production, and interactive media.</p>
+
+                <menu role="tablist">
+                    <li role="tab" aria-selected="true" data-filter="all">All</li>
+                    <li role="tab" data-filter="storyline">Storyline</li>
+                    <li role="tab" data-filter="rise">Rise</li>
+                    <li role="tab" data-filter="video">Video</li>
+                    <li role="tab" data-filter="pdf">PDF</li>
+                </menu>
+
+                <div class="portfolio-grid" id="portfolio-grid">
+                    <!-- Storyline Templates -->
+                    <div class="portfolio-item" data-category="storyline">
+                        <div class="portfolio-thumb">
+                            <img src="assets/images/Cool Morning Layout-01.png" alt="Storyline templates">
+                        </div>
+                        <div class="portfolio-info">
+                            <strong>Storyline Design Templates</strong>
+                            <p>Reusable templates for clean interactions and layouts.</p>
+                            <button onclick="window.open('graphic-design-templates.html', '_blank')">View Project</button>
+                        </div>
+                    </div>
+
+                    <!-- S3 Course -->
+                    <div class="portfolio-item" data-category="rise">
+                        <div class="portfolio-thumb">
+                            <img src="assets/images/AmazonS3.png" alt="Amazon S3 Course">
+                        </div>
+                        <div class="portfolio-info">
+                            <strong>Amazon S3 Foundations</strong>
+                            <p>Mock course with custom illustrations and video graphics.</p>
+                            <button onclick="window.open('https://portfolio-mishler.s3.us-east-1.amazonaws.com/amazon-simple-storage-service-s-3-scorm12-dlGyxMXv+(1)/scormcontent/index.html#/', '_blank')">Open Course</button>
+                        </div>
+                    </div>
+
+                    <!-- Prompt Engineering -->
+                    <div class="portfolio-item" data-category="video">
+                        <div class="portfolio-thumb">
+                            <img src="https://img.youtube.com/vi/z3SW13BI75I/hqdefault.jpg" alt="Prompt Engineering">
+                        </div>
+                        <div class="portfolio-info">
+                            <strong>Prompt Engineering: Motion Graphics</strong>
+                            <p>Course opener produced in Premiere Pro and After Effects.</p>
+                            <button onclick="window.open('https://www.youtube.com/watch?v=z3SW13BI75I', '_blank')">Watch Video</button>
+                        </div>
+                    </div>
+
+                    <!-- Neptune -->
+                    <div class="portfolio-item" data-category="video">
+                        <div class="portfolio-thumb">
+                            <img src="https://img.youtube.com/vi/3wmJUfle6EI/hqdefault.jpg" alt="Amazon Neptune">
+                        </div>
+                        <div class="portfolio-info">
+                            <strong>Amazon Neptune: Benefits Overview</strong>
+                            <p>Introductory video with vector graphics from Illustrator.</p>
+                            <button onclick="window.open('https://www.youtube.com/watch?v=3wmJUfle6EI', '_blank')">Watch Video</button>
+                        </div>
+                    </div>
+
+                    <!-- Filmmaking -->
+                    <div class="portfolio-item" data-category="video">
+                        <div class="portfolio-thumb">
+                            <img src="https://img.youtube.com/vi/i701lCj4bB8/hqdefault.jpg" alt="Filmmaking">
+                        </div>
+                        <div class="portfolio-info">
+                            <strong>Filmmaking & Motion Graphics</strong>
+                            <p>Personal project filmed and edited in DaVinci Resolve.</p>
+                            <button onclick="window.open('https://www.youtube.com/watch?v=i701lCj4bB8', '_blank')">Watch Video</button>
+                        </div>
+                    </div>
+
+                    <!-- Hybrid Cloud -->
+                    <div class="portfolio-item" data-category="video">
+                        <div class="portfolio-thumb">
+                            <img src="https://img.youtube.com/vi/esGU4i85siY/hqdefault.jpg" alt="Hybrid Cloud">
+                        </div>
+                        <div class="portfolio-info">
+                            <strong>Hybrid Cloud Adoption Essentials</strong>
+                            <p>Module opener with motion graphics from After Effects.</p>
+                            <button onclick="window.open('https://www.youtube.com/watch?v=esGU4i85siY', '_blank')">Watch Video</button>
+                        </div>
+                    </div>
+
+                    <!-- ADDIE -->
+                    <div class="portfolio-item" data-category="pdf">
+                        <div class="portfolio-thumb">
+                            <img src="assets/images/ADDIE.png" alt="ADDIE Presentation">
+                        </div>
+                        <div class="portfolio-info">
+                            <strong>ADDIE Method Presentation</strong>
+                            <p>Outlining my approach and adult learning principles.</p>
+                            <button onclick="window.open('assets/docs/aws-interview-presentation.pdf', '_blank')">View PDF</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="status-bar">
+                <p class="status-bar-field">7 items</p>
+                <p class="status-bar-field">Portfolio</p>
+            </div>
+        </div>
+
+        <!-- Contact Window -->
+        <div class="window hidden" id="window-contact" style="width: 400px; top: 150px; left: 300px;">
+            <div class="title-bar">
+                <div class="title-bar-text">Contact - Address Book</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize" class="minimize-btn"></button>
+                    <button aria-label="Maximize" class="maximize-btn"></button>
+                    <button aria-label="Close" class="close-btn"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <h2 style="margin-bottom: 8px;">Get In Touch</h2>
+                <p style="margin-bottom: 16px;">I'd love to hear from you. Whether you have a project in mind or just want to connect, feel free to reach out.</p>
+
+                <fieldset>
+                    <legend>Email</legend>
+                    <div class="field-row">
+                        <input type="text" value="mishler.evan@gmail.com" readonly style="width: 100%;">
+                    </div>
+                    <button onclick="window.location.href='mailto:mishler.evan@gmail.com'" style="margin-top: 8px;">Send Email</button>
+                </fieldset>
+
+                <fieldset style="margin-top: 16px;">
+                    <legend>LinkedIn</legend>
+                    <div class="field-row">
+                        <input type="text" value="linkedin.com/in/evan-mishler" readonly style="width: 100%;">
+                    </div>
+                    <button onclick="window.open('https://linkedin.com/in/evan-mishler', '_blank')" style="margin-top: 8px;">Open Profile</button>
+                </fieldset>
+            </div>
+            <div class="status-bar">
+                <p class="status-bar-field">2 contacts</p>
+            </div>
+        </div>
+
+        <!-- Projects Window (Detail) -->
+        <div class="window hidden" id="window-projects" style="width: 500px; top: 100px; left: 250px;">
+            <div class="title-bar">
+                <div class="title-bar-text">Selected Projects</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize" class="minimize-btn"></button>
+                    <button aria-label="Maximize" class="maximize-btn"></button>
+                    <button aria-label="Close" class="close-btn"></button>
+                </div>
+            </div>
+            <div class="window-body window-body-scroll">
+                <p style="margin-bottom: 12px;">Quick links to featured work:</p>
+
+                <ul class="tree-view">
+                    <li>
+                        <details open>
+                            <summary>Articulate Storyline</summary>
+                            <ul>
+                                <li><a href="graphic-design-templates.html" target="_blank">Storyline Design Templates</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details open>
+                            <summary>Articulate Rise</summary>
+                            <ul>
+                                <li><a href="https://portfolio-mishler.s3.us-east-1.amazonaws.com/amazon-simple-storage-service-s-3-scorm12-dlGyxMXv+(1)/scormcontent/index.html#/" target="_blank">Amazon S3 Foundations</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details open>
+                            <summary>Video Production</summary>
+                            <ul>
+                                <li><a href="https://www.youtube.com/watch?v=z3SW13BI75I" target="_blank">Prompt Engineering: Motion Graphics</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=3wmJUfle6EI" target="_blank">Amazon Neptune: Benefits</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=i701lCj4bB8" target="_blank">Filmmaking & Motion Graphics</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=esGU4i85siY" target="_blank">Hybrid Cloud Adoption</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details open>
+                            <summary>Documentation</summary>
+                            <ul>
+                                <li><a href="assets/docs/aws-interview-presentation.pdf" target="_blank">ADDIE Method Presentation</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+            <div class="status-bar">
+                <p class="status-bar-field">8 projects</p>
+            </div>
+        </div>
+
+        <!-- Minesweeper Window -->
+        <div class="window hidden" id="window-minesweeper" style="width: 280px; top: 80px; left: 300px;">
+            <div class="title-bar">
+                <div class="title-bar-text">Minesweeper</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize" class="minimize-btn"></button>
+                    <button aria-label="Maximize" class="maximize-btn"></button>
+                    <button aria-label="Close" class="close-btn"></button>
+                </div>
+            </div>
+            <div class="ms-menu-bar">
+                <button data-difficulty="beginner">Beginner</button>
+                <button data-difficulty="intermediate">Intermediate</button>
+                <button data-difficulty="expert">Expert</button>
+            </div>
+            <div class="window-body">
+                <div class="ms-status-bar">
+                    <span class="ms-counter" id="mine-count">010</span>
+                    <button class="ms-face" id="ms-face">&#x1F642;</button>
+                    <button class="ms-flag-toggle" id="ms-flag-toggle" title="Flag mode OFF">&#x1F6A9;</button>
+                    <span class="ms-counter" id="ms-timer">000</span>
+                </div>
+                <div id="minesweeper-grid"></div>
+            </div>
+            <div class="status-bar">
+                <p class="status-bar-field">Ready</p>
+            </div>
+        </div>
+
+        <!-- Paint Window -->
+        <div class="window hidden" id="window-paint" style="width: 560px; top: 50px; left: 180px;">
+            <div class="title-bar">
+                <div class="title-bar-text">untitled - Paint</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize" class="minimize-btn"></button>
+                    <button aria-label="Maximize" class="maximize-btn"></button>
+                    <button aria-label="Close" class="close-btn"></button>
+                </div>
+            </div>
+            <div class="paint-menu-bar">
+                <button>File</button>
+                <button>Edit</button>
+                <button>View</button>
+                <button id="paint-clear">Clear</button>
+            </div>
+            <div class="window-body">
+                <div class="paint-container">
+                    <div class="paint-toolbar">
+                        <div class="paint-tools">
+                            <button class="paint-tool active" data-tool="pencil" title="Pencil">&#x270F;&#xFE0F;</button>
+                            <button class="paint-tool" data-tool="brush" title="Brush">&#x1F58C;&#xFE0F;</button>
+                            <button class="paint-tool" data-tool="eraser" title="Eraser">&#x1F9F9;</button>
+                            <button class="paint-tool" data-tool="fill" title="Fill">&#x1FAA3;</button>
+                            <button class="paint-tool" data-tool="picker" title="Color Picker">&#x1F4A7;</button>
+                            <button class="paint-tool" data-tool="airbrush" title="Airbrush">&#x1F4A8;</button>
+                            <button class="paint-tool" data-tool="line" title="Line">&#x2571;</button>
+                            <button class="paint-tool" data-tool="rectangle" title="Rectangle">&#x25AD;</button>
+                            <button class="paint-tool" data-tool="ellipse" title="Ellipse">&#x25CB;</button>
+                        </div>
+                        <div class="paint-sizes">
+                            <button class="paint-size" data-size="1" title="1px"><span class="paint-size-dot" style="width:2px;height:2px;"></span></button>
+                            <button class="paint-size active" data-size="3" title="3px"><span class="paint-size-dot" style="width:4px;height:4px;"></span></button>
+                            <button class="paint-size" data-size="5" title="5px"><span class="paint-size-dot" style="width:6px;height:6px;"></span></button>
+                            <button class="paint-size" data-size="8" title="8px"><span class="paint-size-dot" style="width:9px;height:9px;"></span></button>
+                        </div>
+                    </div>
+                    <div class="paint-canvas-area">
+                        <canvas id="paint-canvas" width="400" height="300"></canvas>
+                    </div>
+                </div>
+                <div class="paint-bottom-bar">
+                    <div class="paint-color-preview">
+                        <div class="paint-color-fg" id="paint-fg"></div>
+                        <div class="paint-color-bg" id="paint-bg"></div>
+                    </div>
+                    <div id="paint-palette"></div>
+                </div>
+            </div>
+            <div class="status-bar">
+                <p class="status-bar-field" id="paint-coords">0, 0px</p>
+                <p class="status-bar-field" id="paint-tool-name">Pencil</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Quick Access Bar -->
+    <div class="quick-access-bar" id="quick-access-bar">
+        <button class="quick-access-btn" data-window="welcome">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2' y='3' width='12' height='9' fill='%23c0c0c0' stroke='%23000'/%3E%3Crect x='3' y='4' width='10' height='6' fill='%230000aa'/%3E%3C/svg%3E" alt="">
+            <span>Home</span>
+        </button>
+        <button class="quick-access-btn" data-window="about">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='3' y='2' width='10' height='12' fill='%23ffffcc' stroke='%23000'/%3E%3Cline x1='5' y1='6' x2='11' y2='6' stroke='%23000'/%3E%3C/svg%3E" alt="">
+            <span>About</span>
+        </button>
+        <button class="quick-access-btn" data-window="portfolio">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2 4 L2 13 L14 13 L14 4 L8 4 L7 3 L2 3 Z' fill='%23ffcc00' stroke='%23000'/%3E%3C/svg%3E" alt="">
+            <span>Work</span>
+        </button>
+        <button class="quick-access-btn" data-window="contact">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2' y='4' width='12' height='8' fill='%23fff' stroke='%23000'/%3E%3Cpath d='M2 4 L8 9 L14 4' fill='none' stroke='%23000'/%3E%3C/svg%3E" alt="">
+            <span>Contact</span>
+        </button>
+    </div>
+
+    <!-- Taskbar -->
+    <div class="taskbar">
+        <button class="start-button" id="start-button">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='1' y='1' width='6' height='6' fill='%23ff0000'/%3E%3Crect x='9' y='1' width='6' height='6' fill='%2300ff00'/%3E%3Crect x='1' y='9' width='6' height='6' fill='%230000ff'/%3E%3Crect x='9' y='9' width='6' height='6' fill='%23ffff00'/%3E%3C/svg%3E" alt="">
+            <span>Start</span>
+        </button>
+
+        <div class="taskbar-divider"></div>
+
+        <div class="taskbar-windows" id="taskbar-windows">
+            <!-- Dynamically populated -->
+        </div>
+
+        <div class="system-tray">
+            <div class="tray-volume" title="Volume"></div>
+            <span class="tray-time" id="tray-time">12:00 PM</span>
+        </div>
+    </div>
+
+    <!-- Start Menu -->
+    <div class="start-menu hidden" id="start-menu">
+        <div class="start-menu-sidebar">
+            <span class="sidebar-text">Windows<strong>98</strong></span>
+        </div>
+        <div class="start-menu-items">
+            <button class="start-menu-item" data-window="welcome">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2' y='3' width='12' height='9' fill='%23c0c0c0' stroke='%23000'/%3E%3Crect x='3' y='4' width='10' height='6' fill='%230000aa'/%3E%3C/svg%3E" alt="">
+                <span>Welcome</span>
+            </button>
+            <button class="start-menu-item" data-window="about">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='3' y='2' width='10' height='12' fill='%23ffffcc' stroke='%23000'/%3E%3Cline x1='5' y1='6' x2='11' y2='6' stroke='%23000'/%3E%3Cline x1='5' y1='9' x2='11' y2='9' stroke='%23000'/%3E%3C/svg%3E" alt="">
+                <span>About Me</span>
+            </button>
+            <button class="start-menu-item" data-window="portfolio">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2 4 L2 13 L14 13 L14 4 L8 4 L7 3 L2 3 Z' fill='%23ffcc00' stroke='%23000'/%3E%3C/svg%3E" alt="">
+                <span>My Portfolio</span>
+            </button>
+            <button class="start-menu-item" data-window="contact">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2' y='4' width='12' height='8' fill='%23fff' stroke='%23000'/%3E%3Cpath d='M2 4 L8 9 L14 4' fill='none' stroke='%23000'/%3E%3C/svg%3E" alt="">
+                <span>Contact</span>
+            </button>
+            <button class="start-menu-item" data-window="projects">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='4' y='2' width='9' height='11' fill='%23fff' stroke='%23000'/%3E%3Crect x='3' y='3' width='9' height='11' fill='%23fff' stroke='%23000'/%3E%3Crect x='2' y='4' width='9' height='11' fill='%23fff' stroke='%23000'/%3E%3C/svg%3E" alt="">
+                <span>Projects</span>
+            </button>
+            <div class="start-menu-divider"></div>
+            <button class="start-menu-item" data-window="minesweeper">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='5' fill='%23404040'/%3E%3Ccircle cx='8' cy='8' r='3.5' fill='%23000'/%3E%3Cline x1='8' y1='2' x2='8' y2='5' stroke='%23404040' stroke-width='1.5'/%3E%3Cline x1='8' y1='11' x2='8' y2='14' stroke='%23404040' stroke-width='1.5'/%3E%3Cline x1='2' y1='8' x2='5' y2='8' stroke='%23404040' stroke-width='1.5'/%3E%3Cline x1='11' y1='8' x2='14' y2='8' stroke='%23404040' stroke-width='1.5'/%3E%3C/svg%3E" alt="">
+                <span>Minesweeper</span>
+            </button>
+            <button class="start-menu-item" data-window="paint">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2' y='2' width='12' height='12' fill='%23fff' stroke='%23000'/%3E%3Crect x='2' y='2' width='12' height='2' fill='%230000aa'/%3E%3Ccircle cx='6' cy='9' r='2' fill='%23ff0000'/%3E%3Ccircle cx='10' cy='8' r='2' fill='%2300ff00'/%3E%3Ccircle cx='8' cy='11' r='2' fill='%230000ff'/%3E%3C/svg%3E" alt="">
+                <span>Paint</span>
+            </button>
+            <div class="start-menu-divider"></div>
+            <button class="start-menu-item" onclick="window.open('https://linkedin.com/in/evan-mishler', '_blank')">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2' y='2' width='12' height='12' fill='%230077b5' stroke='%23000'/%3E%3Ctext x='8' y='11' fill='white' font-size='8' text-anchor='middle' font-weight='bold'%3Ein%3C/text%3E%3C/svg%3E" alt="">
+                <span>LinkedIn</span>
+            </button>
+            <button class="start-menu-item" onclick="window.open('mailto:mishler.evan@gmail.com')">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2' y='4' width='12' height='8' fill='%23fff' stroke='%23000'/%3E%3Cpath d='M2 4 L8 9 L14 4' fill='none' stroke='%23000'/%3E%3C/svg%3E" alt="">
+                <span>Email Me</span>
+            </button>
+            <div class="start-menu-divider"></div>
+            <button class="start-menu-item" id="shutdown-btn">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='none' stroke='%23800000' stroke-width='2'/%3E%3Cline x1='8' y1='2' x2='8' y2='8' stroke='%23800000' stroke-width='2'/%3E%3C/svg%3E" alt="">
+                <span>Shut Down...</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Help Hint -->
+    <div class="mobile-hint hidden" id="mobile-hint">
+        <div class="mobile-hint-content">
+            <p><strong>Welcome to Windows 98!</strong></p>
+            <p>Tap icons to open windows<br>Swipe down on title bar to minimize<br>Use Start menu for navigation</p>
+            <button onclick="dismissMobileHint()">Got it!</button>
+        </div>
+    </div>
+
+    <!-- Desktop Context Menu -->
+    <div class="context-menu hidden" id="context-menu">
+        <button class="context-menu-item" data-action="refresh">Refresh</button>
+        <div class="context-menu-divider"></div>
+        <button class="context-menu-item" data-action="arrange">Arrange Icons</button>
+        <button class="context-menu-item" data-action="line-up">Line up Icons</button>
+        <div class="context-menu-divider"></div>
+        <button class="context-menu-item" data-action="new-folder" disabled>New Folder</button>
+        <div class="context-menu-divider"></div>
+        <button class="context-menu-item" data-action="properties">Properties</button>
+    </div>
+
+    <!-- Properties Dialog -->
+    <div class="window hidden" id="window-properties" style="width: 380px; top: 120px; left: 280px;">
+        <div class="title-bar">
+            <div class="title-bar-text">Display Properties</div>
+            <div class="title-bar-controls">
+                <button aria-label="Close" class="close-btn"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <menu role="tablist">
+                <li role="tab" aria-selected="true">Background</li>
+                <li role="tab">Screen Saver</li>
+                <li role="tab">Appearance</li>
+            </menu>
+            <div class="properties-content">
+                <fieldset>
+                    <legend>Desktop</legend>
+                    <div class="monitor-preview">
+                        <div class="monitor-screen"></div>
+                    </div>
+                    <p style="text-align: center; margin-top: 8px; font-size: 12px;">Evan Mishler Portfolio<br>Windows 98 Edition</p>
+                </fieldset>
+                <div style="display: flex; gap: 8px; justify-content: flex-end; margin-top: 12px;">
+                    <button onclick="hideWindow(document.getElementById('window-properties'))">OK</button>
+                    <button onclick="hideWindow(document.getElementById('window-properties'))">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shutdown Dialog -->
+    <div class="shutdown-overlay hidden" id="shutdown-overlay">
+        <div class="window" style="width: 320px;">
+            <div class="title-bar">
+                <div class="title-bar-text">Shut Down Windows</div>
+            </div>
+            <div class="window-body" style="text-align: center; padding: 16px;">
+                <p style="margin-bottom: 16px;">It's now safe to close this browser tab.</p>
+                <p style="font-size: 12px; color: #808080; margin-bottom: 16px;">Thanks for visiting my portfolio!</p>
+                <button onclick="document.getElementById('shutdown-overlay').classList.add('hidden')">Restart</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/win98.js"></script>
+    <script src="assets/js/minesweeper.js"></script>
+    <script src="assets/js/paint.js"></script>
 </body>
 </html>
