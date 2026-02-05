@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="theme-color" content="#008080">
+    <meta name="theme-color" content="#2a1f3d">
     <title>Evan Mishler - Learning Experience Designer</title>
     <meta name="description" content="Senior Learning Experience Designer specializing in eLearning development, instructional design, and digital content creation for cloud technologies and generative AI.">
     <link rel="stylesheet" href="https://unpkg.com/98.css">
     <link rel="stylesheet" href="assets/css/win98.css">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='1' y='1' width='6' height='6' fill='%23ff0000'/%3E%3Crect x='9' y='1' width='6' height='6' fill='%2300ff00'/%3E%3Crect x='1' y='9' width='6' height='6' fill='%230000ff'/%3E%3Crect x='9' y='9' width='6' height='6' fill='%23ffff00'/%3E%3C/svg%3E" type="image/svg+xml">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='1' y='1' width='6' height='6' fill='%23d06848' rx='1'/%3E%3Crect x='9' y='1' width='6' height='6' fill='%236b9960' rx='1'/%3E%3Crect x='1' y='9' width='6' height='6' fill='%235a8cb0' rx='1'/%3E%3Crect x='9' y='9' width='6' height='6' fill='%23d4a84c' rx='1'/%3E%3C/svg%3E" type="image/svg+xml">
 </head>
 <body>
     <!-- Boot Screen -->
@@ -24,58 +24,71 @@
                     <div class="flag-yellow"></div>
                 </div>
                 <div class="boot-text">
-                    <span class="microsoft">Microsoft</span>
-                    <span class="windows">Windows 98</span>
+                    <span class="microsoft">Portfolio</span>
+                    <span class="windows">Golden Hour</span>
                 </div>
             </div>
             <div class="boot-progress">
                 <div class="boot-progress-bar"></div>
             </div>
-            <p class="boot-message">Starting Evan Mishler Portfolio...</p>
+            <p class="boot-message">Loading Evan Mishler's workspace...</p>
         </div>
     </div>
     <!-- Desktop -->
     <div class="desktop">
+        <!-- Ambient Particles -->
+        <div class="desktop-particle" style="left: 15%; top: 70%;"></div>
+        <div class="desktop-particle" style="left: 45%; top: 85%;"></div>
+        <div class="desktop-particle" style="left: 75%; top: 60%;"></div>
+        <div class="desktop-particle" style="left: 30%; top: 40%;"></div>
+        <div class="desktop-particle" style="left: 60%; top: 75%;"></div>
+        <div class="desktop-particle" style="left: 85%; top: 45%;"></div>
+        <div class="desktop-particle" style="left: 20%; top: 55%;"></div>
+        <div class="desktop-particle" style="left: 50%; top: 30%;"></div>
+
+        <!-- Desktop Glow (mouse-following, enhanced by JS) -->
+        <div class="desktop-glow" id="desktop-glow"></div>
+
         <!-- Desktop Icons -->
         <div class="desktop-icons">
             <button class="desktop-icon" data-window="welcome">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='6' width='24' height='18' fill='%23c0c0c0' stroke='%23000' stroke-width='1'/%3E%3Crect x='6' y='8' width='20' height='12' fill='%230000aa'/%3E%3Crect x='4' y='22' width='24' height='4' fill='%23c0c0c0' stroke='%23000' stroke-width='1'/%3E%3Crect x='12' y='24' width='8' height='2' fill='%23808080'/%3E%3C/svg%3E" alt="My Computer">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='6' width='24' height='18' fill='%23d8cfc4' stroke='%235a5048' stroke-width='1'/%3E%3Crect x='6' y='8' width='20' height='12' fill='%23c06040'/%3E%3Crect x='4' y='22' width='24' height='4' fill='%23d8cfc4' stroke='%235a5048' stroke-width='1'/%3E%3Crect x='12' y='24' width='8' height='2' fill='%23a09888'/%3E%3C/svg%3E" alt="Welcome">
                 <span>Welcome</span>
             </button>
 
             <button class="desktop-icon" data-window="about">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='6' y='4' width='20' height='24' fill='%23ffffcc' stroke='%23000' stroke-width='1'/%3E%3Crect x='6' y='4' width='20' height='4' fill='%230000aa'/%3E%3Cline x1='8' y1='12' x2='24' y2='12' stroke='%23000' stroke-width='1'/%3E%3Cline x1='8' y1='16' x2='24' y2='16' stroke='%23000' stroke-width='1'/%3E%3Cline x1='8' y1='20' x2='20' y2='20' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E" alt="About Me">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='6' y='4' width='20' height='24' fill='%23f5f0e8' stroke='%235a5048' stroke-width='1'/%3E%3Crect x='6' y='4' width='20' height='4' fill='%234a6741'/%3E%3Cline x1='8' y1='12' x2='24' y2='12' stroke='%23a09888' stroke-width='1'/%3E%3Cline x1='8' y1='16' x2='24' y2='16' stroke='%23a09888' stroke-width='1'/%3E%3Cline x1='8' y1='20' x2='20' y2='20' stroke='%23a09888' stroke-width='1'/%3E%3C/svg%3E" alt="About Me">
                 <span>About Me</span>
             </button>
 
             <button class="desktop-icon" data-window="portfolio">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 8 L4 26 L28 26 L28 8 L16 8 L14 6 L4 6 Z' fill='%23ffcc00' stroke='%23000' stroke-width='1'/%3E%3Crect x='4' y='10' width='24' height='16' fill='%23ffdd44' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E" alt="Portfolio">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 8 L4 26 L28 26 L28 8 L16 8 L14 6 L4 6 Z' fill='%23d4a84c' stroke='%235a5048' stroke-width='1'/%3E%3Crect x='4' y='10' width='24' height='16' fill='%23e8c06a' stroke='%235a5048' stroke-width='1'/%3E%3C/svg%3E" alt="Portfolio">
                 <span>My Portfolio</span>
             </button>
 
             <button class="desktop-icon" data-window="contact">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='8' width='24' height='16' fill='%23ffffff' stroke='%23000' stroke-width='1'/%3E%3Cpath d='M4 8 L16 18 L28 8' fill='none' stroke='%23000' stroke-width='1'/%3E%3Cpath d='M4 24 L12 16' fill='none' stroke='%23000' stroke-width='1'/%3E%3Cpath d='M28 24 L20 16' fill='none' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E" alt="Contact">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='8' width='24' height='16' fill='%23f5f0e8' stroke='%235a5048' stroke-width='1'/%3E%3Cpath d='M4 8 L16 18 L28 8' fill='none' stroke='%235a8cb0' stroke-width='1.5'/%3E%3Cpath d='M4 24 L12 16' fill='none' stroke='%235a8cb0' stroke-width='1'/%3E%3Cpath d='M28 24 L20 16' fill='none' stroke='%235a8cb0' stroke-width='1'/%3E%3C/svg%3E" alt="Contact">
                 <span>Contact</span>
             </button>
 
             <button class="desktop-icon" data-window="projects">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='8' y='4' width='18' height='22' fill='%23ffffff' stroke='%23000' stroke-width='1'/%3E%3Crect x='6' y='6' width='18' height='22' fill='%23ffffff' stroke='%23000' stroke-width='1'/%3E%3Crect x='4' y='8' width='18' height='22' fill='%23ffffff' stroke='%23000' stroke-width='1'/%3E%3Cline x1='6' y1='14' x2='20' y2='14' stroke='%23000' stroke-width='1'/%3E%3Cline x1='6' y1='18' x2='20' y2='18' stroke='%23000' stroke-width='1'/%3E%3Cline x1='6' y1='22' x2='16' y2='22' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E" alt="Projects">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='8' y='4' width='18' height='22' fill='%23f5f0e8' stroke='%235a5048' stroke-width='1'/%3E%3Crect x='6' y='6' width='18' height='22' fill='%23f5f0e8' stroke='%235a5048' stroke-width='1'/%3E%3Crect x='4' y='8' width='18' height='22' fill='%23f5f0e8' stroke='%235a5048' stroke-width='1'/%3E%3Cline x1='6' y1='14' x2='20' y2='14' stroke='%239070a8' stroke-width='1'/%3E%3Cline x1='6' y1='18' x2='20' y2='18' stroke='%239070a8' stroke-width='1'/%3E%3Cline x1='6' y1='22' x2='16' y2='22' stroke='%239070a8' stroke-width='1'/%3E%3C/svg%3E" alt="Projects">
                 <span>Projects</span>
             </button>
 
             <button class="desktop-icon" data-window="minesweeper">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='10' fill='%23404040'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23000'/%3E%3Cline x1='16' y1='4' x2='16' y2='10' stroke='%23404040' stroke-width='2'/%3E%3Cline x1='16' y1='22' x2='16' y2='28' stroke='%23404040' stroke-width='2'/%3E%3Cline x1='4' y1='16' x2='10' y2='16' stroke='%23404040' stroke-width='2'/%3E%3Cline x1='22' y1='16' x2='28' y2='16' stroke='%23404040' stroke-width='2'/%3E%3Cline x1='8' y1='8' x2='12' y2='12' stroke='%23404040' stroke-width='2'/%3E%3Cline x1='20' y1='20' x2='24' y2='24' stroke='%23404040' stroke-width='2'/%3E%3Cline x1='8' y1='24' x2='12' y2='20' stroke='%23404040' stroke-width='2'/%3E%3Cline x1='20' y1='12' x2='24' y2='8' stroke='%23404040' stroke-width='2'/%3E%3Ccircle cx='14' cy='14' r='2' fill='%23fff' opacity='0.4'/%3E%3C/svg%3E" alt="Minesweeper">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='10' fill='%23605040'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%232a2420'/%3E%3Cline x1='16' y1='4' x2='16' y2='10' stroke='%23a07848' stroke-width='2'/%3E%3Cline x1='16' y1='22' x2='16' y2='28' stroke='%23a07848' stroke-width='2'/%3E%3Cline x1='4' y1='16' x2='10' y2='16' stroke='%23a07848' stroke-width='2'/%3E%3Cline x1='22' y1='16' x2='28' y2='16' stroke='%23a07848' stroke-width='2'/%3E%3Cline x1='8' y1='8' x2='12' y2='12' stroke='%23a07848' stroke-width='2'/%3E%3Cline x1='20' y1='20' x2='24' y2='24' stroke='%23a07848' stroke-width='2'/%3E%3Cline x1='8' y1='24' x2='12' y2='20' stroke='%23a07848' stroke-width='2'/%3E%3Cline x1='20' y1='12' x2='24' y2='8' stroke='%23a07848' stroke-width='2'/%3E%3Ccircle cx='14' cy='14' r='2' fill='%23e8956a' opacity='0.5'/%3E%3C/svg%3E" alt="Minesweeper">
                 <span>Minesweeper</span>
             </button>
 
             <button class="desktop-icon" data-window="paint">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' fill='%23fff' stroke='%23000' stroke-width='1'/%3E%3Crect x='4' y='4' width='24' height='4' fill='%230000aa'/%3E%3Cellipse cx='12' cy='18' rx='4' ry='3' fill='%23ff0000'/%3E%3Cellipse cx='20' cy='15' rx='3' ry='4' fill='%2300ff00'/%3E%3Cellipse cx='16' cy='22' rx='5' ry='2' fill='%230000ff'/%3E%3Ccircle cx='10' cy='13' r='2' fill='%23ffff00'/%3E%3C/svg%3E" alt="Paint">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' fill='%23f5f0e8' stroke='%235a5048' stroke-width='1'/%3E%3Crect x='4' y='4' width='24' height='4' fill='%23a04060'/%3E%3Cellipse cx='12' cy='18' rx='4' ry='3' fill='%23d06848'/%3E%3Cellipse cx='20' cy='15' rx='3' ry='4' fill='%236b9960'/%3E%3Cellipse cx='16' cy='22' rx='5' ry='2' fill='%235a8cb0'/%3E%3Ccircle cx='10' cy='13' r='2' fill='%23d4a84c'/%3E%3C/svg%3E" alt="Paint">
                 <span>Paint</span>
             </button>
         </div>
 
         <!-- Welcome Window -->
-        <div class="window" id="window-welcome" style="width: 500px; top: 80px; left: 150px;">
+        <div class="window" id="window-welcome" style="width: 520px; top: 80px; left: 150px;">
             <div class="title-bar">
                 <div class="title-bar-text">Welcome - Evan Mishler</div>
                 <div class="title-bar-controls">
@@ -88,7 +101,7 @@
                 <div class="welcome-content">
                     <p class="welcome-label">Learning Experience Designer</p>
                     <h1 class="welcome-title">Hi, I'm <span class="accent">Evan</span></h1>
-                    <p>I've spent the last 13 years making training that actually makes sense. These days I'm mostly working with cloud tech and generative AI — both as subject matter and as tools to build better learning experiences.</p>
+                    <p>I've spent the last 13 years making training that actually makes sense. These days I'm mostly working with cloud tech and generative AI &mdash; both as subject matter and as tools to build better learning experiences.</p>
                     <div class="welcome-buttons">
                         <button class="btn-win98" data-window="portfolio">View My Work</button>
                         <button class="btn-win98" data-window="about">About Me</button>
@@ -115,7 +128,7 @@
         </div>
 
         <!-- About Window -->
-        <div class="window hidden" id="window-about" style="width: 550px; top: 60px; left: 200px;">
+        <div class="window hidden" id="window-about" style="width: 560px; top: 60px; left: 200px;">
             <div class="title-bar">
                 <div class="title-bar-text">About Me - Notepad</div>
                 <div class="title-bar-controls">
@@ -128,7 +141,7 @@
                 <div class="about-content">
                     <h2>About Me</h2>
                     <p><strong>Hi, I'm Evan.</strong> My job is to bridge the gap between "What does this even do?" and "Now I get it, and here's how I can use it."</p>
-                    <p>For more than 13 years, I've specialized in instructional design, helping people understand complex or new topics. These days, I focus on cloud technologies and generative AI—not only as the learning material I build, but as the tools I use to make my work better and faster.</p>
+                    <p>For more than 13 years, I've specialized in instructional design, helping people understand complex or new topics. These days, I focus on cloud technologies and generative AI&mdash;not only as the learning material I build, but as the tools I use to make my work better and faster.</p>
                     <p>My philosophy is simple: <strong>start with the human, not the tech</strong>. I believe the secret to great training is empathy. It's about understanding the learner's starting line to build a clear path to the finish line.</p>
                     <p>With AWS certifications to back up my tech skills and an MBA to understand the business context, I'm ready to take on your complex learning project.</p>
 
@@ -178,7 +191,7 @@
         </div>
 
         <!-- Portfolio Window -->
-        <div class="window hidden" id="window-portfolio" style="width: 650px; top: 40px; left: 120px;">
+        <div class="window hidden" id="window-portfolio" style="width: 660px; top: 40px; left: 120px;">
             <div class="title-bar">
                 <div class="title-bar-text">My Portfolio - Explorer</div>
                 <div class="title-bar-controls">
@@ -291,7 +304,7 @@
         </div>
 
         <!-- Contact Window -->
-        <div class="window hidden" id="window-contact" style="width: 400px; top: 150px; left: 300px;">
+        <div class="window hidden" id="window-contact" style="width: 420px; top: 150px; left: 300px;">
             <div class="title-bar">
                 <div class="title-bar-text">Contact - Address Book</div>
                 <div class="title-bar-controls">
@@ -469,19 +482,19 @@
     <!-- Mobile Quick Access Bar -->
     <div class="quick-access-bar" id="quick-access-bar">
         <button class="quick-access-btn" data-window="welcome">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2' y='3' width='12' height='9' fill='%23c0c0c0' stroke='%23000'/%3E%3Crect x='3' y='4' width='10' height='6' fill='%230000aa'/%3E%3C/svg%3E" alt="">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2' y='3' width='12' height='9' fill='%23d8cfc4' stroke='%235a5048'/%3E%3Crect x='3' y='4' width='10' height='6' fill='%23c06040'/%3E%3C/svg%3E" alt="">
             <span>Home</span>
         </button>
         <button class="quick-access-btn" data-window="about">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='3' y='2' width='10' height='12' fill='%23ffffcc' stroke='%23000'/%3E%3Cline x1='5' y1='6' x2='11' y2='6' stroke='%23000'/%3E%3C/svg%3E" alt="">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='3' y='2' width='10' height='12' fill='%23f5f0e8' stroke='%235a5048'/%3E%3Cline x1='5' y1='6' x2='11' y2='6' stroke='%23a09888'/%3E%3C/svg%3E" alt="">
             <span>About</span>
         </button>
         <button class="quick-access-btn" data-window="portfolio">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2 4 L2 13 L14 13 L14 4 L8 4 L7 3 L2 3 Z' fill='%23ffcc00' stroke='%23000'/%3E%3C/svg%3E" alt="">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2 4 L2 13 L14 13 L14 4 L8 4 L7 3 L2 3 Z' fill='%23d4a84c' stroke='%235a5048'/%3E%3C/svg%3E" alt="">
             <span>Work</span>
         </button>
         <button class="quick-access-btn" data-window="contact">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2' y='4' width='12' height='8' fill='%23fff' stroke='%23000'/%3E%3Cpath d='M2 4 L8 9 L14 4' fill='none' stroke='%23000'/%3E%3C/svg%3E" alt="">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2' y='4' width='12' height='8' fill='%23f5f0e8' stroke='%235a5048'/%3E%3Cpath d='M2 4 L8 9 L14 4' fill='none' stroke='%235a8cb0'/%3E%3C/svg%3E" alt="">
             <span>Contact</span>
         </button>
     </div>
@@ -489,7 +502,7 @@
     <!-- Taskbar -->
     <div class="taskbar">
         <button class="start-button" id="start-button">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='1' y='1' width='6' height='6' fill='%23ff0000'/%3E%3Crect x='9' y='1' width='6' height='6' fill='%2300ff00'/%3E%3Crect x='1' y='9' width='6' height='6' fill='%230000ff'/%3E%3Crect x='9' y='9' width='6' height='6' fill='%23ffff00'/%3E%3C/svg%3E" alt="">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='1' y='1' width='6' height='6' fill='%23d06848' rx='1'/%3E%3Crect x='9' y='1' width='6' height='6' fill='%236b9960' rx='1'/%3E%3Crect x='1' y='9' width='6' height='6' fill='%235a8cb0' rx='1'/%3E%3Crect x='9' y='9' width='6' height='6' fill='%23d4a84c' rx='1'/%3E%3C/svg%3E" alt="">
             <span>Start</span>
         </button>
 
@@ -508,50 +521,50 @@
     <!-- Start Menu -->
     <div class="start-menu hidden" id="start-menu">
         <div class="start-menu-sidebar">
-            <span class="sidebar-text">Windows<strong>98</strong></span>
+            <span class="sidebar-text">Golden<strong>Hour</strong></span>
         </div>
         <div class="start-menu-items">
             <button class="start-menu-item" data-window="welcome">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2' y='3' width='12' height='9' fill='%23c0c0c0' stroke='%23000'/%3E%3Crect x='3' y='4' width='10' height='6' fill='%230000aa'/%3E%3C/svg%3E" alt="">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2' y='3' width='12' height='9' fill='%23d8cfc4' stroke='%235a5048'/%3E%3Crect x='3' y='4' width='10' height='6' fill='%23c06040'/%3E%3C/svg%3E" alt="">
                 <span>Welcome</span>
             </button>
             <button class="start-menu-item" data-window="about">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='3' y='2' width='10' height='12' fill='%23ffffcc' stroke='%23000'/%3E%3Cline x1='5' y1='6' x2='11' y2='6' stroke='%23000'/%3E%3Cline x1='5' y1='9' x2='11' y2='9' stroke='%23000'/%3E%3C/svg%3E" alt="">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='3' y='2' width='10' height='12' fill='%23f5f0e8' stroke='%235a5048'/%3E%3Cline x1='5' y1='6' x2='11' y2='6' stroke='%23a09888'/%3E%3Cline x1='5' y1='9' x2='11' y2='9' stroke='%23a09888'/%3E%3C/svg%3E" alt="">
                 <span>About Me</span>
             </button>
             <button class="start-menu-item" data-window="portfolio">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2 4 L2 13 L14 13 L14 4 L8 4 L7 3 L2 3 Z' fill='%23ffcc00' stroke='%23000'/%3E%3C/svg%3E" alt="">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2 4 L2 13 L14 13 L14 4 L8 4 L7 3 L2 3 Z' fill='%23d4a84c' stroke='%235a5048'/%3E%3C/svg%3E" alt="">
                 <span>My Portfolio</span>
             </button>
             <button class="start-menu-item" data-window="contact">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2' y='4' width='12' height='8' fill='%23fff' stroke='%23000'/%3E%3Cpath d='M2 4 L8 9 L14 4' fill='none' stroke='%23000'/%3E%3C/svg%3E" alt="">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2' y='4' width='12' height='8' fill='%23f5f0e8' stroke='%235a5048'/%3E%3Cpath d='M2 4 L8 9 L14 4' fill='none' stroke='%235a8cb0'/%3E%3C/svg%3E" alt="">
                 <span>Contact</span>
             </button>
             <button class="start-menu-item" data-window="projects">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='4' y='2' width='9' height='11' fill='%23fff' stroke='%23000'/%3E%3Crect x='3' y='3' width='9' height='11' fill='%23fff' stroke='%23000'/%3E%3Crect x='2' y='4' width='9' height='11' fill='%23fff' stroke='%23000'/%3E%3C/svg%3E" alt="">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='4' y='2' width='9' height='11' fill='%23f5f0e8' stroke='%235a5048'/%3E%3Crect x='3' y='3' width='9' height='11' fill='%23f5f0e8' stroke='%235a5048'/%3E%3Crect x='2' y='4' width='9' height='11' fill='%23f5f0e8' stroke='%235a5048'/%3E%3C/svg%3E" alt="">
                 <span>Projects</span>
             </button>
             <div class="start-menu-divider"></div>
             <button class="start-menu-item" data-window="minesweeper">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='5' fill='%23404040'/%3E%3Ccircle cx='8' cy='8' r='3.5' fill='%23000'/%3E%3Cline x1='8' y1='2' x2='8' y2='5' stroke='%23404040' stroke-width='1.5'/%3E%3Cline x1='8' y1='11' x2='8' y2='14' stroke='%23404040' stroke-width='1.5'/%3E%3Cline x1='2' y1='8' x2='5' y2='8' stroke='%23404040' stroke-width='1.5'/%3E%3Cline x1='11' y1='8' x2='14' y2='8' stroke='%23404040' stroke-width='1.5'/%3E%3C/svg%3E" alt="">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='5' fill='%23605040'/%3E%3Ccircle cx='8' cy='8' r='3.5' fill='%232a2420'/%3E%3Cline x1='8' y1='2' x2='8' y2='5' stroke='%23a07848' stroke-width='1.5'/%3E%3Cline x1='8' y1='11' x2='8' y2='14' stroke='%23a07848' stroke-width='1.5'/%3E%3Cline x1='2' y1='8' x2='5' y2='8' stroke='%23a07848' stroke-width='1.5'/%3E%3Cline x1='11' y1='8' x2='14' y2='8' stroke='%23a07848' stroke-width='1.5'/%3E%3C/svg%3E" alt="">
                 <span>Minesweeper</span>
             </button>
             <button class="start-menu-item" data-window="paint">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2' y='2' width='12' height='12' fill='%23fff' stroke='%23000'/%3E%3Crect x='2' y='2' width='12' height='2' fill='%230000aa'/%3E%3Ccircle cx='6' cy='9' r='2' fill='%23ff0000'/%3E%3Ccircle cx='10' cy='8' r='2' fill='%2300ff00'/%3E%3Ccircle cx='8' cy='11' r='2' fill='%230000ff'/%3E%3C/svg%3E" alt="">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2' y='2' width='12' height='12' fill='%23f5f0e8' stroke='%235a5048'/%3E%3Crect x='2' y='2' width='12' height='2' fill='%23a04060'/%3E%3Ccircle cx='6' cy='9' r='2' fill='%23d06848'/%3E%3Ccircle cx='10' cy='8' r='2' fill='%236b9960'/%3E%3Ccircle cx='8' cy='11' r='2' fill='%235a8cb0'/%3E%3C/svg%3E" alt="">
                 <span>Paint</span>
             </button>
             <div class="start-menu-divider"></div>
             <button class="start-menu-item" onclick="window.open('https://linkedin.com/in/evan-mishler', '_blank')">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2' y='2' width='12' height='12' fill='%230077b5' stroke='%23000'/%3E%3Ctext x='8' y='11' fill='white' font-size='8' text-anchor='middle' font-weight='bold'%3Ein%3C/text%3E%3C/svg%3E" alt="">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2' y='2' width='12' height='12' fill='%235a8cb0' stroke='%235a5048' rx='2'/%3E%3Ctext x='8' y='11' fill='white' font-size='8' text-anchor='middle' font-weight='bold'%3Ein%3C/text%3E%3C/svg%3E" alt="">
                 <span>LinkedIn</span>
             </button>
             <button class="start-menu-item" onclick="window.open('mailto:mishler.evan@gmail.com')">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2' y='4' width='12' height='8' fill='%23fff' stroke='%23000'/%3E%3Cpath d='M2 4 L8 9 L14 4' fill='none' stroke='%23000'/%3E%3C/svg%3E" alt="">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2' y='4' width='12' height='8' fill='%23f5f0e8' stroke='%235a5048'/%3E%3Cpath d='M2 4 L8 9 L14 4' fill='none' stroke='%235a8cb0'/%3E%3C/svg%3E" alt="">
                 <span>Email Me</span>
             </button>
             <div class="start-menu-divider"></div>
             <button class="start-menu-item" id="shutdown-btn">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='none' stroke='%23800000' stroke-width='2'/%3E%3Cline x1='8' y1='2' x2='8' y2='8' stroke='%23800000' stroke-width='2'/%3E%3C/svg%3E" alt="">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='none' stroke='%23d06848' stroke-width='2'/%3E%3Cline x1='8' y1='2' x2='8' y2='8' stroke='%23d06848' stroke-width='2'/%3E%3C/svg%3E" alt="">
                 <span>Shut Down...</span>
             </button>
         </div>
@@ -560,7 +573,7 @@
     <!-- Mobile Help Hint -->
     <div class="mobile-hint hidden" id="mobile-hint">
         <div class="mobile-hint-content">
-            <p><strong>Welcome to Windows 98!</strong></p>
+            <p><strong>Welcome to Golden Hour!</strong></p>
             <p>Tap icons to open windows<br>Swipe down on title bar to minimize<br>Use Start menu for navigation</p>
             <button onclick="dismissMobileHint()">Got it!</button>
         </div>
@@ -598,7 +611,7 @@
                     <div class="monitor-preview">
                         <div class="monitor-screen"></div>
                     </div>
-                    <p style="text-align: center; margin-top: 8px; font-size: 12px;">Evan Mishler Portfolio<br>Windows 98 Edition</p>
+                    <p style="text-align: center; margin-top: 8px; font-size: 12px;">Evan Mishler Portfolio<br>Golden Hour Edition</p>
                 </fieldset>
                 <div style="display: flex; gap: 8px; justify-content: flex-end; margin-top: 12px;">
                     <button onclick="hideWindow(document.getElementById('window-properties'))">OK</button>
@@ -610,14 +623,14 @@
 
     <!-- Shutdown Dialog -->
     <div class="shutdown-overlay hidden" id="shutdown-overlay">
-        <div class="window" style="width: 320px;">
+        <div class="window" style="width: 340px;">
             <div class="title-bar">
-                <div class="title-bar-text">Shut Down Windows</div>
+                <div class="title-bar-text">Shut Down</div>
             </div>
-            <div class="window-body" style="text-align: center; padding: 16px;">
-                <p style="margin-bottom: 16px;">It's now safe to close this browser tab.</p>
-                <p style="font-size: 12px; color: #808080; margin-bottom: 16px;">Thanks for visiting my portfolio!</p>
-                <button onclick="document.getElementById('shutdown-overlay').classList.add('hidden')">Restart</button>
+            <div class="window-body" style="text-align: center; padding: 20px;">
+                <p style="margin-bottom: 16px; font-family: 'Instrument Serif', Georgia, serif; font-size: 18px;">It's now safe to close this browser tab.</p>
+                <p style="font-size: 12px; color: #908478; margin-bottom: 16px;">Thanks for visiting my portfolio!</p>
+                <button onclick="document.getElementById('shutdown-overlay').classList.add('hidden')" class="btn-win98">Restart</button>
             </div>
         </div>
     </div>

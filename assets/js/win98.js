@@ -378,13 +378,13 @@
 
     function getWindowIcon(windowId) {
         const icons = {
-            'welcome': '<img src="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\'%3E%3Crect x=\'2\' y=\'3\' width=\'12\' height=\'9\' fill=\'%23c0c0c0\' stroke=\'%23000\'/%3E%3Crect x=\'3\' y=\'4\' width=\'10\' height=\'6\' fill=\'%230000aa\'/%3E%3C/svg%3E" alt="">',
-            'about': '<img src="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\'%3E%3Crect x=\'3\' y=\'2\' width=\'10\' height=\'12\' fill=\'%23ffffcc\' stroke=\'%23000\'/%3E%3Cline x1=\'5\' y1=\'6\' x2=\'11\' y2=\'6\' stroke=\'%23000\'/%3E%3Cline x1=\'5\' y1=\'9\' x2=\'11\' y2=\'9\' stroke=\'%23000\'/%3E%3C/svg%3E" alt="">',
-            'portfolio': '<img src="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\'%3E%3Cpath d=\'M2 4 L2 13 L14 13 L14 4 L8 4 L7 3 L2 3 Z\' fill=\'%23ffcc00\' stroke=\'%23000\'/%3E%3C/svg%3E" alt="">',
-            'contact': '<img src="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\'%3E%3Crect x=\'2\' y=\'4\' width=\'12\' height=\'8\' fill=\'%23fff\' stroke=\'%23000\'/%3E%3Cpath d=\'M2 4 L8 9 L14 4\' fill=\'none\' stroke=\'%23000\'/%3E%3C/svg%3E" alt="">',
-            'projects': '<img src="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\'%3E%3Crect x=\'4\' y=\'2\' width=\'9\' height=\'11\' fill=\'%23fff\' stroke=\'%23000\'/%3E%3Crect x=\'3\' y=\'3\' width=\'9\' height=\'11\' fill=\'%23fff\' stroke=\'%23000\'/%3E%3Crect x=\'2\' y=\'4\' width=\'9\' height=\'11\' fill=\'%23fff\' stroke=\'%23000\'/%3E%3C/svg%3E" alt="">',
-            'minesweeper': '<img src="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\'%3E%3Ccircle cx=\'8\' cy=\'8\' r=\'5\' fill=\'%23404040\'/%3E%3Ccircle cx=\'8\' cy=\'8\' r=\'3.5\' fill=\'%23000\'/%3E%3Cline x1=\'8\' y1=\'2\' x2=\'8\' y2=\'5\' stroke=\'%23404040\' stroke-width=\'1.5\'/%3E%3Cline x1=\'8\' y1=\'11\' x2=\'8\' y2=\'14\' stroke=\'%23404040\' stroke-width=\'1.5\'/%3E%3Cline x1=\'2\' y1=\'8\' x2=\'5\' y2=\'8\' stroke=\'%23404040\' stroke-width=\'1.5\'/%3E%3Cline x1=\'11\' y1=\'8\' x2=\'14\' y2=\'8\' stroke=\'%23404040\' stroke-width=\'1.5\'/%3E%3C/svg%3E" alt="">',
-            'paint': '<img src="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\'%3E%3Crect x=\'2\' y=\'2\' width=\'12\' height=\'12\' fill=\'%23fff\' stroke=\'%23000\'/%3E%3Crect x=\'2\' y=\'2\' width=\'12\' height=\'2\' fill=\'%230000aa\'/%3E%3Ccircle cx=\'6\' cy=\'9\' r=\'2\' fill=\'%23ff0000\'/%3E%3Ccircle cx=\'10\' cy=\'8\' r=\'2\' fill=\'%2300ff00\'/%3E%3C/svg%3E" alt="">'
+            'welcome': '<img src="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\'%3E%3Crect x=\'2\' y=\'3\' width=\'12\' height=\'9\' fill=\'%23d8cfc4\' stroke=\'%23806050\' rx=\'1\'/%3E%3Crect x=\'3\' y=\'4\' width=\'10\' height=\'6\' fill=\'%23c06040\'/%3E%3C/svg%3E" alt="">',
+            'about': '<img src="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\'%3E%3Crect x=\'3\' y=\'2\' width=\'10\' height=\'12\' fill=\'%23f5f0e8\' stroke=\'%23806050\' rx=\'1\'/%3E%3Cline x1=\'5\' y1=\'6\' x2=\'11\' y2=\'6\' stroke=\'%236b9960\'/%3E%3Cline x1=\'5\' y1=\'9\' x2=\'11\' y2=\'9\' stroke=\'%236b9960\'/%3E%3C/svg%3E" alt="">',
+            'portfolio': '<img src="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\'%3E%3Cpath d=\'M2 4 L2 13 L14 13 L14 4 L8 4 L7 3 L2 3 Z\' fill=\'%23d4a84c\' stroke=\'%23806050\' rx=\'1\'/%3E%3C/svg%3E" alt="">',
+            'contact': '<img src="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\'%3E%3Crect x=\'2\' y=\'4\' width=\'12\' height=\'8\' fill=\'%23f5f0e8\' stroke=\'%23806050\' rx=\'1\'/%3E%3Cpath d=\'M2 4 L8 9 L14 4\' fill=\'none\' stroke=\'%235a8cb0\'/%3E%3C/svg%3E" alt="">',
+            'projects': '<img src="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\'%3E%3Crect x=\'4\' y=\'2\' width=\'9\' height=\'11\' fill=\'%23f5f0e8\' stroke=\'%23806050\' rx=\'1\'/%3E%3Crect x=\'3\' y=\'3\' width=\'9\' height=\'11\' fill=\'%23f0ebe3\' stroke=\'%23806050\' rx=\'1\'/%3E%3Crect x=\'2\' y=\'4\' width=\'9\' height=\'11\' fill=\'%23ebe5db\' stroke=\'%239070a8\' rx=\'1\'/%3E%3C/svg%3E" alt="">',
+            'minesweeper': '<img src="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\'%3E%3Ccircle cx=\'8\' cy=\'8\' r=\'5\' fill=\'%23705030\'/%3E%3Ccircle cx=\'8\' cy=\'8\' r=\'3.5\' fill=\'%23302010\'/%3E%3Cline x1=\'8\' y1=\'2\' x2=\'8\' y2=\'5\' stroke=\'%23a07848\' stroke-width=\'1.5\'/%3E%3Cline x1=\'8\' y1=\'11\' x2=\'8\' y2=\'14\' stroke=\'%23a07848\' stroke-width=\'1.5\'/%3E%3Cline x1=\'2\' y1=\'8\' x2=\'5\' y2=\'8\' stroke=\'%23a07848\' stroke-width=\'1.5\'/%3E%3Cline x1=\'11\' y1=\'8\' x2=\'14\' y2=\'8\' stroke=\'%23a07848\' stroke-width=\'1.5\'/%3E%3C/svg%3E" alt="">',
+            'paint': '<img src="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\'%3E%3Crect x=\'2\' y=\'2\' width=\'12\' height=\'12\' fill=\'%23f5f0e8\' stroke=\'%23806050\' rx=\'1\'/%3E%3Crect x=\'2\' y=\'2\' width=\'12\' height=\'2\' fill=\'%23a04060\' rx=\'1 1 0 0\'/%3E%3Ccircle cx=\'6\' cy=\'9\' r=\'2\' fill=\'%23d06848\'/%3E%3Ccircle cx=\'10\' cy=\'8\' r=\'2\' fill=\'%236b9960\'/%3E%3C/svg%3E" alt="">'
         };
         return icons[windowId] || '';
     }
@@ -793,6 +793,120 @@
     }
 
     // ==========================================
+    // DESKTOP GLOW (mouse-following ambient light)
+    // ==========================================
+
+    function setupDesktopGlow() {
+        const glow = document.getElementById('desktop-glow');
+        if (!glow || isMobile) return;
+
+        let glowX = 0, glowY = 0;
+        let targetX = 0, targetY = 0;
+        let animating = false;
+
+        desktop.addEventListener('mousemove', (e) => {
+            targetX = e.clientX;
+            targetY = e.clientY;
+            if (!animating) {
+                animating = true;
+                requestAnimationFrame(updateGlow);
+            }
+        });
+
+        desktop.addEventListener('mouseleave', () => {
+            glow.style.opacity = '0';
+            animating = false;
+        });
+
+        desktop.addEventListener('mouseenter', () => {
+            glow.style.opacity = '1';
+        });
+
+        function updateGlow() {
+            // Smooth easing toward cursor
+            glowX += (targetX - glowX) * 0.12;
+            glowY += (targetY - glowY) * 0.12;
+
+            glow.style.left = glowX + 'px';
+            glow.style.top = glowY + 'px';
+
+            if (Math.abs(targetX - glowX) > 0.5 || Math.abs(targetY - glowY) > 0.5) {
+                requestAnimationFrame(updateGlow);
+            } else {
+                animating = false;
+            }
+        }
+    }
+
+    // ==========================================
+    // ENHANCED BOOT SCREEN
+    // ==========================================
+
+    function setupBootParticles() {
+        const bootScreen = document.getElementById('boot-screen');
+        if (!bootScreen) return;
+
+        // Add subtle shimmer particles to boot screen
+        for (let i = 0; i < 12; i++) {
+            const dot = document.createElement('div');
+            dot.style.cssText = `
+                position: absolute;
+                width: ${2 + Math.random() * 3}px;
+                height: ${2 + Math.random() * 3}px;
+                background: rgba(232, 149, 106, ${0.15 + Math.random() * 0.25});
+                border-radius: 50%;
+                left: ${Math.random() * 100}%;
+                top: ${Math.random() * 100}%;
+                animation: bootSparkle ${3 + Math.random() * 4}s ease-in-out infinite;
+                animation-delay: ${Math.random() * 3}s;
+                pointer-events: none;
+            `;
+            bootScreen.appendChild(dot);
+        }
+    }
+
+    // ==========================================
+    // WINDOW OPEN ANIMATIONS
+    // ==========================================
+
+    // Stagger window content reveal for a polished feel
+    function animateWindowContent(win) {
+        const items = win.querySelectorAll('.tree-item, .portfolio-item, .skills-category, fieldset');
+        items.forEach((item, i) => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(6px)';
+            item.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+            setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+            }, 50 + i * 40);
+        });
+    }
+
+    // Patch showWindow to add content animation
+    const _origShowWindow = showWindow;
+    function showWindowEnhanced(windowId) {
+        _origShowWindow(windowId);
+        const win = document.getElementById('window-' + windowId);
+        if (win) {
+            animateWindowContent(win);
+        }
+    }
+    // Replace references — the event listeners already call showWindow directly,
+    // so we reassign the inner function via a wrapper approach:
+    // We hook into the DOM-level calls by re-binding the data-window handlers
+    document.querySelectorAll('[data-window]').forEach(el => {
+        const windowId = el.dataset.window;
+        // Only add the animation hook — the original click handler still fires showWindow
+        el.addEventListener('click', () => {
+            const win = document.getElementById('window-' + windowId);
+            if (win) {
+                setTimeout(() => animateWindowContent(win), 50);
+            }
+        });
+    });
+
+    // ==========================================
     // UTILITY: Add CSS animation
     // ==========================================
 
@@ -806,6 +920,10 @@
             0% { transform: scale(0.98); }
             50% { transform: scale(1.02); }
             100% { transform: scale(1); }
+        }
+        @keyframes bootSparkle {
+            0%, 100% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1.2); }
         }
 
         /* iOS safe area support */
@@ -827,5 +945,11 @@
         }
     `;
     document.head.appendChild(style);
+
+    // Initialize enhanced features after DOM ready
+    document.addEventListener('DOMContentLoaded', () => {
+        setupDesktopGlow();
+        setupBootParticles();
+    });
 
 })();

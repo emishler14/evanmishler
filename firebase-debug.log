@@ -1,0 +1,6 @@
+[debug] [2025-09-17T16:56:30.054Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-09-17T16:56:30.056Z] > authorizing via signed-in user (evan@mealfinch.com)
+[debug] [2025-09-18T15:39:55.574Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-09-18T15:39:55.575Z] > authorizing via signed-in user (evan@mealfinch.com)
+[debug] [2025-09-18T15:41:04.306Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-09-18T15:41:04.307Z] > authorizing via signed-in user (evan@mealfinch.com)
