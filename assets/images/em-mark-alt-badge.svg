@@ -1,0 +1,11 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">EM Monogram Badge</title>
+  <desc id="desc">Classic badge-style EM logo with decorative frame.</desc>
+  <rect x="7" y="7" width="114" height="114" rx="30" fill="#1E1D1C"/>
+  <rect x="7" y="7" width="114" height="114" rx="30" stroke="#E48961" stroke-opacity="0.45" stroke-width="2"/>
+  <path d="M64 19L102 64L64 109L26 64L64 19Z" stroke="#E48961" stroke-opacity="0.35" stroke-width="2"/>
+  <path d="M38 42V86H66V78H47V67H62V59H47V50H66V42H38Z" fill="#F4EFE6"/>
+  <path d="M70 86V42H79L89 62L99 42H108V86H98V58L89 76L80 58V86H70Z" fill="#F4EFE6"/>
+  <circle cx="64" cy="101" r="3.5" fill="#E48961"/>
+  <circle cx="64" cy="27" r="3.5" fill="#E48961"/>
+</svg>

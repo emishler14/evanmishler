@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500&display=swap');
+
+:root {
+    --bg: #1f1f1d;
+    --bg-soft: #262624;
+    --bg-panel: #2d2d2a;
+    --bg-panel-soft: #33332f;
+    --line: rgba(255, 255, 255, 0.12);
+    --line-strong: rgba(255, 255, 255, 0.2);
+    --text: #f3f0ea;
+    --text-soft: rgba(243, 240, 234, 0.7);
+    --accent: #dc7a52;
+    --accent-soft: rgba(220, 122, 82, 0.22);
+    --focus: #f7b194;
+    --radius-xl: 28px;
+    --radius-lg: 18px;
+    --radius-md: 12px;
+    --shadow: 0 30px 80px rgba(0, 0, 0, 0.38);
+    --trans: 180ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body.home-ai {
+    min-height: 100vh;
+    font-family: 'Manrope', 'Segoe UI', sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(70% 80% at 50% -10%, rgba(220, 122, 82, 0.18), transparent 60%),
+        linear-gradient(180deg, #232321 0%, #1c1c1a 100%);
+}
+
+body.home-ai::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.035) 0.8px, transparent 0.8px);
+    background-size: 3px 3px;
+    opacity: 0.55;
+}
+
+.site-head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px clamp(1rem, 3vw, 2.5rem);
+    background: rgba(24, 24, 22, 0.74);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--line);
+}
+
+.wordmark {
+    text-decoration: none;
+    color: var(--text);
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    letter-spacing: 0.01em;
+}
+
+.site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: clamp(0.9rem, 2vw, 1.5rem);
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: var(--text-soft);
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color var(--trans);
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+    color: var(--text);
+}
+
+.menu-toggle {
+    display: none;
+    border: 1px solid var(--line-strong);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text);
+    border-radius: 999px;
+    padding: 0.45rem 0.8rem;
+    font: inherit;
+    font-size: 0.8rem;
+    letter-spacing: 0.03em;
+}
+
+.home-main {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 110px 1rem 3rem;
+}
+
+.chat-shell {
+    width: min(780px, 100%);
+    display: grid;
+    gap: 1.3rem;
+}
+
+.status-line {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--text-soft);
+    font-size: clamp(1.2rem, 2.9vw, 1.95rem);
+    font-family: 'Fraunces', Georgia, serif;
+}
+
+.status-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.35em;
+    height: 1.35em;
+    border-radius: 0.4em;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.status-icon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+h1 {
+    margin: 0;
+    color: var(--text);
+    font-size: clamp(1.4rem, 2.8vw, 2rem);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+.chat-form {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-xl);
+    background: linear-gradient(135deg, var(--bg-panel) 0%, var(--bg-panel-soft) 100%);
+    box-shadow: var(--shadow);
+    padding: 1rem 1.2rem 0.95rem;
+}
+
+textarea {
+    width: 100%;
+    border: 0;
+    resize: none;
+    background: transparent;
+    color: var(--text);
+    font: inherit;
+    font-size: 1.05rem;
+    line-height: 1.55;
+    min-height: 102px;
+    max-height: 220px;
+    padding: 0.25rem 0.1rem 0.4rem;
+}
+
+textarea::placeholder {
+    color: rgba(243, 240, 234, 0.58);
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.chat-controls {
+    border-top: 1px solid var(--line);
+    margin-top: 0.55rem;
+    padding-top: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.attach-btn,
+.send-btn {
+    border: 1px solid var(--line-strong);
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 999px;
+    font: inherit;
+    transition: border-color var(--trans), background var(--trans), transform var(--trans);
+}
+
+.attach-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.send-btn {
+    font-size: 0.87rem;
+    padding: 0.45rem 0.95rem;
+    letter-spacing: 0.03em;
+}
+
+.attach-btn:hover,
+.send-btn:hover {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+    transform: translateY(-1px);
+}
+
+.model-pill {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.42rem 0.75rem;
+    font-size: 0.78rem;
+    color: var(--text-soft);
+    letter-spacing: 0.02em;
+}
+
+.suggested-chats {
+    display: grid;
+    gap: 0.7rem;
+}
+
+.suggested-label {
+    margin: 0;
+    color: var(--text-soft);
+    font-size: 0.83rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.suggestion-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem;
+}
+
+.suggestion-card {
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.025);
+    border-radius: var(--radius-md);
+    padding: 0.85rem 0.95rem;
+    display: grid;
+    gap: 0.28rem;
+    transition: border-color var(--trans), transform var(--trans), background var(--trans);
+}
+
+.suggestion-card:hover {
+    border-color: var(--line-strong);
+    background: rgba(255, 255, 255, 0.055);
+    transform: translateY(-2px);
+}
+
+.question {
+    color: var(--text);
+    font-size: 0.96rem;
+    line-height: 1.45;
+}
+
+.destination {
+    color: var(--accent);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+a:focus-visible,
+button:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+}
+
+@media (max-width: 860px) {
+    .site-nav ul {
+        gap: 0.85rem;
+    }
+
+    .site-nav a {
+        font-size: 0.75rem;
+    }
+
+    .model-pill {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .site-nav {
+        position: absolute;
+        top: calc(100% + 1px);
+        right: 1rem;
+        width: min(210px, calc(100% - 2rem));
+        display: none;
+        background: rgba(33, 33, 30, 0.98);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        padding: 0.7rem;
+        box-shadow: var(--shadow);
+    }
+
+    .site-nav.is-open {
+        display: block;
+    }
+
+    .site-nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .site-nav li + li {
+        border-top: 1px solid var(--line);
+    }
+
+    .site-nav a {
+        display: block;
+        padding: 0.65rem 0.4rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .chat-form {
+        border-radius: 24px;
+        padding: 0.9rem;
+    }
+
+    .suggestion-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chat-controls {
+        align-items: flex-start;
+    }
+
+    .control-group {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .home-main {
+        padding-top: 102px;
+    }
+
+    h1 {
+        font-size: clamp(1.2rem, 5vw, 1.45rem);
+    }
+}

@@ -1,0 +1,16 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">EM Monogram Orbit</title>
+  <desc id="desc">Circular EM monogram with orbit accents.</desc>
+  <rect width="128" height="128" rx="32" fill="url(#bg)"/>
+  <circle cx="64" cy="64" r="41" stroke="#F4EFE6" stroke-width="4"/>
+  <ellipse cx="64" cy="64" rx="52" ry="24" transform="rotate(-25 64 64)" stroke="#E48961" stroke-opacity="0.65" stroke-width="3"/>
+  <circle cx="103" cy="46" r="4.5" fill="#E48961"/>
+  <path d="M43 45V83H69V75H52V67H66V59H52V53H69V45H43Z" fill="#F4EFE6"/>
+  <path d="M74 83V45H81L90 63L99 45H106V83H97V61L90 75L83 61V83H74Z" fill="#F4EFE6"/>
+  <defs>
+    <linearGradient id="bg" x1="12" y1="8" x2="114" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#262624"/>
+      <stop offset="1" stop-color="#161615"/>
+    </linearGradient>
+  </defs>
+</svg>
