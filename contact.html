@@ -7,52 +7,73 @@
     <meta name="description" content="Get in touch with Evan Mishler for learning experience design projects, instructional design consulting, or collaborations.">
     <link rel="icon" type="image/svg+xml" href="assets/images/em-mark-alt-geo.svg">
     <link rel="shortcut icon" href="assets/images/em-mark-alt-geo.svg">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/site-claude.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Evan Mishler</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+    <header class="site-head">
+        <a class="wordmark" href="index.html">Evan Mishler</a>
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav">Menu</button>
+        <nav class="site-nav" id="primaryNav">
+            <ul>
+                <li><a href="index.html">Assistant</a></li>
+                <li><a href="portfolio.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-                <span></span>
-            </button>
         </nav>
     </header>
 
-    <main>
-        <section class="section contact-section" style="padding-top: 140px; min-height: 70vh; display: flex; align-items: center;">
-            <div class="container">
-                <h1>Get In Touch</h1>
-                <p class="contact-intro">I'd love to hear from you. Whether you have a project in mind or just want to connect, feel free to reach out.</p>
+    <main class="page-main">
+        <div class="container">
+            <section class="page-hero reveal">
+                <p class="eyebrow">Contact</p>
+                <h1>Let's Build Something Useful</h1>
+                <p>If you are planning a learning program or want help making complex topics easier to teach, I would love to connect.</p>
+            </section>
 
-                <div class="contact-grid">
-                    <div class="contact-card fade-in">
-                        <h3>Email</h3>
-                        <a href="mailto:mishler.evan@gmail.com">mishler.evan@gmail.com</a>
+            <section class="section grid grid-2">
+                <article class="card reveal">
+                    <p class="meta">Email</p>
+                    <h3>mishler.evan@gmail.com</h3>
+                    <p class="project-desc">Best for project inquiries, consulting requests, or collaboration ideas.</p>
+                    <div class="btn-row">
+                        <a class="btn btn-primary" href="mailto:mishler.evan@gmail.com">Send Email</a>
                     </div>
+                </article>
 
-                    <div class="contact-card fade-in">
-                        <h3>LinkedIn</h3>
-                        <a href="https://linkedin.com/in/evan-mishler" target="_blank" rel="noopener noreferrer">linkedin.com/in/evan-mishler</a>
+                <article class="card reveal">
+                    <p class="meta">LinkedIn</p>
+                    <h3>/in/evan-mishler</h3>
+                    <p class="project-desc">Message me on LinkedIn if you prefer to start there.</p>
+                    <div class="btn-row">
+                        <a class="btn btn-primary" href="https://linkedin.com/in/evan-mishler" target="_blank" rel="noopener noreferrer">Open LinkedIn</a>
                     </div>
-                </div>
-            </div>
-        </section>
+                </article>
+            </section>
+
+            <section class="section reveal">
+                <article class="card soft">
+                    <p class="meta">Typical Engagements</p>
+                    <div class="tags">
+                        <span class="tag">Instructional Design</span>
+                        <span class="tag">eLearning Development</span>
+                        <span class="tag">Course Media Production</span>
+                        <span class="tag">AI Workflow Integration</span>
+                        <span class="tag">Cloud Learning Content</span>
+                    </div>
+                </article>
+            </section>
+        </div>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <div class="logo">Evan Mishler</div>
+            <a class="wordmark" href="index.html">Evan Mishler</a>
             <p>&copy; 2026 All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/site-ui.js"></script>
 </body>
 </html>

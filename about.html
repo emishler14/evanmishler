@@ -7,150 +7,166 @@
     <meta name="description" content="Learn about Evan Mishler's background in instructional design, certifications, and expertise in creating impactful learning experiences.">
     <link rel="icon" type="image/svg+xml" href="assets/images/em-mark-alt-geo.svg">
     <link rel="shortcut icon" href="assets/images/em-mark-alt-geo.svg">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/site-claude.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Evan Mishler</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+    <header class="site-head">
+        <a class="wordmark" href="index.html">Evan Mishler</a>
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav">Menu</button>
+        <nav class="site-nav" id="primaryNav">
+            <ul>
+                <li><a href="index.html">Assistant</a></li>
+                <li><a href="portfolio.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html" class="active">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-                <span></span>
-            </button>
         </nav>
     </header>
 
-    <main>
-        <!-- About Header -->
-        <section class="section" style="padding-top: 140px;">
-            <div class="container">
-                <div class="about-intro">
-                    <h1>About Me</h1>
-                    <p>Hi, I'm Evan. My job is to bridge the gap between "What does this even do?" and "Now I get it, and here's how I can use it."</p>
-                    <p>For more than 13 years, I've specialized in instructional design, helping people understand complex or new topics. These days, I focus on cloud technologies and generative AI&mdash;not only as the learning material I build, but as the tools I use to make my work better and faster.</p>
-                    <p>My philosophy is simple: <strong>start with the human, not the tech</strong>. I believe the secret to great training is empathy. It's about understanding the learner's starting line to build a clear path to the finish line. I accomplish this using relatable examples, clear language, and hands-on scenarios.</p>
-                    <p>With AWS certifications to back up my tech skills and an MBA to understand the business context, I'm ready to take on your complex learning project.</p>
+    <main class="page-main">
+        <div class="container">
+            <section class="page-hero reveal">
+                <p class="eyebrow">Profile</p>
+                <h1>About Evan</h1>
+                <p>For 13+ years, I have translated technical complexity into clear, useful learning experiences. Today that work focuses heavily on cloud technologies and generative AI.</p>
+                <div class="kpi-grid">
+                    <div class="kpi">
+                        <strong>13+</strong>
+                        <span>Years in L&D</span>
+                    </div>
+                    <div class="kpi">
+                        <strong>AWS</strong>
+                        <span>Certified</span>
+                    </div>
+                    <div class="kpi">
+                        <strong>MBA</strong>
+                        <span>Business Lens</span>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Toolkit Section -->
-        <section class="section skills-section">
-            <div class="container">
-                <div class="text-center mb-4">
+            <section class="section grid grid-2">
+                <article class="card reveal">
+                    <p class="meta">Approach</p>
+                    <h2>Start with the human, not the tech</h2>
+                    <p>My job is to bridge the gap between "What does this even do?" and "Now I get it, and I can use it." I design learning paths around learner context, practical examples, and clear language.</p>
+                    <p class="quote">Great training is empathy in action: understand the learner's starting line, then design a path to confident performance.</p>
+                </article>
+
+                <article class="card reveal">
+                    <p class="meta">Focus Areas</p>
+                    <h3>Where I spend most of my time</h3>
+                    <div class="tags">
+                        <span class="tag">Instructional Design</span>
+                        <span class="tag">Generative AI</span>
+                        <span class="tag">Cloud Foundations</span>
+                        <span class="tag">Storyline & Rise</span>
+                        <span class="tag">Video Production</span>
+                        <span class="tag">Learning Strategy</span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="section">
+                <article class="card soft reveal">
+                    <p class="meta">Toolkit</p>
                     <h2>My Toolkit</h2>
-                    <p style="max-width: 600px; margin: 0 auto;">A blend of classic and cutting-edge platforms that I'm constantly expanding.</p>
-                </div>
-
-                <div class="grid grid-2">
-                    <div class="toolkit-card fade-in">
-                        <h3>Generative AI</h3>
-                        <div class="skills-grid">
-                            <span class="skill-tag">Workflow Integration</span>
-                            <span class="skill-tag">Brainstorming</span>
-                            <span class="skill-tag">Content Creation</span>
-                            <span class="skill-tag">Automation</span>
+                    <div class="grid grid-2">
+                        <div class="card soft">
+                            <h3>Generative AI</h3>
+                            <div class="tags">
+                                <span class="tag">Workflow Integration</span>
+                                <span class="tag">Brainstorming</span>
+                                <span class="tag">Content Creation</span>
+                                <span class="tag">Automation</span>
+                            </div>
+                        </div>
+                        <div class="card soft">
+                            <h3>eLearning Authoring</h3>
+                            <div class="tags">
+                                <span class="tag">Articulate Storyline 360</span>
+                                <span class="tag">Articulate Rise</span>
+                                <span class="tag">SCORM</span>
+                                <span class="tag">xAPI</span>
+                            </div>
+                        </div>
+                        <div class="card soft">
+                            <h3>Adobe Creative Suite</h3>
+                            <div class="tags">
+                                <span class="tag">Premiere Pro</span>
+                                <span class="tag">Audition</span>
+                                <span class="tag">Photoshop</span>
+                                <span class="tag">Illustrator</span>
+                            </div>
+                        </div>
+                        <div class="card soft">
+                            <h3>Cloud Technologies</h3>
+                            <div class="tags">
+                                <span class="tag">AWS Compute</span>
+                                <span class="tag">AWS Storage</span>
+                                <span class="tag">AWS Serverless</span>
+                                <span class="tag">AWS AI/ML</span>
+                            </div>
                         </div>
                     </div>
+                </article>
+            </section>
 
-                    <div class="toolkit-card fade-in">
-                        <h3>eLearning Authoring</h3>
-                        <div class="skills-grid">
-                            <span class="skill-tag">Articulate Storyline 360</span>
-                            <span class="skill-tag">Articulate Rise</span>
-                            <span class="skill-tag">SCORM</span>
-                            <span class="skill-tag">xAPI</span>
-                        </div>
-                    </div>
+            <section class="section grid grid-3">
+                <article class="card reveal">
+                    <p class="meta">Certification</p>
+                    <h3>Google Cloud Generative AI Leader</h3>
+                    <p>Issued 2025</p>
+                    <p class="project-desc">Validates expertise in business transformation and responsible AI adoption.</p>
+                </article>
+                <article class="card reveal">
+                    <p class="meta">Certification</p>
+                    <h3>AWS Certified AI Practitioner</h3>
+                    <p>Issued 2024</p>
+                    <p class="project-desc">Demonstrates AI/ML fundamentals and applied understanding of AWS AI services.</p>
+                </article>
+                <article class="card reveal">
+                    <p class="meta">Certification</p>
+                    <h3>AWS Certified Cloud Practitioner</h3>
+                    <p>Issued 2023</p>
+                    <p class="project-desc">Foundational cloud architecture and service knowledge for AWS ecosystems.</p>
+                </article>
+            </section>
 
-                    <div class="toolkit-card fade-in">
-                        <h3>Adobe Creative Suite</h3>
-                        <div class="skills-grid">
-                            <span class="skill-tag">Premiere Pro</span>
-                            <span class="skill-tag">Audition</span>
-                            <span class="skill-tag">Photoshop</span>
-                            <span class="skill-tag">Lightroom</span>
-                            <span class="skill-tag">Illustrator</span>
-                        </div>
-                    </div>
+            <section class="section grid grid-2">
+                <article class="card reveal">
+                    <p class="meta">Education</p>
+                    <h3>Master of Business Administration</h3>
+                    <p class="project-desc">Virginia Commonwealth University, Richmond, VA (2013)</p>
+                </article>
+                <article class="card reveal">
+                    <p class="meta">Education</p>
+                    <h3>Bachelor of Arts, Economics</h3>
+                    <p class="project-desc">West Virginia University, Morgantown, WV (2009) · Business Minor</p>
+                </article>
+            </section>
 
-                    <div class="toolkit-card fade-in">
-                        <h3>Cloud Technologies</h3>
-                        <div class="skills-grid">
-                            <span class="skill-tag">AWS Compute</span>
-                            <span class="skill-tag">AWS Storage</span>
-                            <span class="skill-tag">AWS Serverless</span>
-                            <span class="skill-tag">AWS AI/ML</span>
-                            <span class="skill-tag">DevOps Concepts</span>
-                        </div>
+            <section class="section reveal">
+                <article class="card">
+                    <h2>Looking for a partner on a learning project?</h2>
+                    <p>I can help shape strategy, design engaging training, and produce polished course assets from concept to launch.</p>
+                    <div class="btn-row">
+                        <a class="btn btn-primary" href="contact.html">Start a Conversation</a>
+                        <a class="btn btn-secondary" href="portfolio.html">View Projects</a>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Certifications Section -->
-        <section class="section">
-            <div class="container">
-                <h2 class="text-center mb-4">Certifications</h2>
-                <div class="grid grid-3">
-                    <div class="cert-card fade-in">
-                        <h3>Google Cloud Generative AI Leader</h3>
-                        <p class="issuer">Google Cloud</p>
-                        <p class="date">Issued 2025</p>
-                        <p class="description">Validates expertise in how generative AI transforms businesses and the ability to drive responsible AI adoption across organizations.</p>
-                    </div>
-
-                    <div class="cert-card fade-in">
-                        <h3>AWS Certified AI Practitioner</h3>
-                        <p class="issuer">Amazon Web Services</p>
-                        <p class="date">Issued 2024</p>
-                        <p class="description">Demonstrates knowledge of AI/ML fundamentals and AWS AI services for business applications.</p>
-                    </div>
-
-                    <div class="cert-card fade-in">
-                        <h3>AWS Certified Cloud Practitioner</h3>
-                        <p class="issuer">Amazon Web Services</p>
-                        <p class="date">Issued 2023</p>
-                        <p class="description">Foundational understanding of AWS Cloud services, architecture, and best practices.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section class="section skills-section">
-            <div class="container">
-                <h2 class="text-center mb-4">Education</h2>
-                <div class="grid grid-2">
-                    <div class="cert-card fade-in" style="background-color: var(--bg-card);">
-                        <h3>Master of Business Administration</h3>
-                        <p class="issuer">Virginia Commonwealth University</p>
-                        <p class="date">Richmond, VA &mdash; December 2013</p>
-                    </div>
-
-                    <div class="cert-card fade-in" style="background-color: var(--bg-card);">
-                        <h3>Bachelor of Arts, Economics</h3>
-                        <p class="issuer">West Virginia University</p>
-                        <p class="date">Morgantown, WV &mdash; December 2009</p>
-                        <p class="description">Business Minor</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                </article>
+            </section>
+        </div>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <div class="logo">Evan Mishler</div>
+            <a class="wordmark" href="index.html">Evan Mishler</a>
             <p>&copy; 2026 All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/site-ui.js"></script>
 </body>
 </html>
