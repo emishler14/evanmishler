@@ -7,51 +7,70 @@
     <meta name="description" content="Thoughts on learning design, cloud technology, and practical uses of generative AI.">
     <link rel="icon" type="image/svg+xml" href="assets/images/em-mark-alt-geo.svg">
     <link rel="shortcut icon" href="assets/images/em-mark-alt-geo.svg">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/site-claude.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Evan Mishler</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
+    <header class="site-head">
+        <a class="wordmark" href="index.html">Evan Mishler</a>
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav">Menu</button>
+        <nav class="site-nav" id="primaryNav">
+            <ul>
+                <li><a href="index.html">Assistant</a></li>
+                <li><a href="portfolio.html">Projects</a></li>
                 <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-                <span></span>
-            </button>
         </nav>
     </header>
 
-    <main>
-        <section class="section" style="padding-top: 140px;">
-            <div class="container">
-                <h1>Blog</h1>
-                <p style="max-width: 760px; margin-bottom: 2rem;">Short, practical notes on instructional design, cloud learning paths, and what I am learning while using generative AI in real workflows.</p>
+    <main class="page-main">
+        <div class="container">
+            <section class="page-hero reveal">
+                <p class="eyebrow">Writing</p>
+                <h1>Notes on Learning Design and AI</h1>
+                <p>Practical reflections on course design, cloud learning strategy, and how generative AI can support better outcomes.</p>
+            </section>
 
-                <article class="project-card fade-in" style="max-width: 920px;">
-                    <div class="project-content">
-                        <span class="project-category">Latest Post</span>
-                        <h2 class="project-title">Designing Better AI-Assisted Learning Experiences</h2>
-                        <p class="project-description">A practical framework for blending instructional design fundamentals with modern AI tools while keeping learner outcomes at the center.</p>
-                        <p style="margin-bottom: 1.5rem; color: var(--text-muted);">Published February 2026</p>
-                        <a href="contact.html" class="btn btn-primary">Ask Me About This Topic</a>
+            <section class="section reveal">
+                <article class="card">
+                    <p class="meta">Latest Post · February 2026</p>
+                    <h2>Designing Better AI-Assisted Learning Experiences</h2>
+                    <p>How to blend instructional design fundamentals with modern AI tools while keeping learner outcomes at the center.</p>
+                    <p class="quote">The goal is not to add AI everywhere. The goal is to remove friction for learners and strengthen transfer.</p>
+                    <div class="btn-row">
+                        <a class="btn btn-primary" href="contact.html">Ask Me About This Topic</a>
                     </div>
                 </article>
-            </div>
-        </section>
+            </section>
+
+            <section class="section grid grid-3">
+                <article class="card reveal">
+                    <p class="meta">Coming Soon</p>
+                    <h3>When to Use Video in Technical Training</h3>
+                    <p class="project-desc">A framework for deciding where motion design clarifies, and where it distracts.</p>
+                </article>
+                <article class="card reveal">
+                    <p class="meta">Coming Soon</p>
+                    <h3>Cloud Concepts Without the Jargon</h3>
+                    <p class="project-desc">Tactics for teaching cloud foundations to mixed technical and non-technical audiences.</p>
+                </article>
+                <article class="card reveal">
+                    <p class="meta">Coming Soon</p>
+                    <h3>Prompting Workflows for L&amp;D Teams</h3>
+                    <p class="project-desc">Reusable prompt patterns for faster design drafts, storyboard ideation, and quality checks.</p>
+                </article>
+            </section>
+        </div>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <div class="logo">Evan Mishler</div>
+            <a class="wordmark" href="index.html">Evan Mishler</a>
             <p>&copy; 2026 All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/site-ui.js"></script>
 </body>
 </html>
