@@ -1,0 +1,9 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">EM Monogram Geometric</title>
+  <desc id="desc">Geometric EM monogram in a rounded square frame.</desc>
+  <rect x="8" y="8" width="112" height="112" rx="26" fill="#171716"/>
+  <rect x="8" y="8" width="112" height="112" rx="26" stroke="#E48961" stroke-opacity="0.5" stroke-width="2"/>
+  <path d="M30 34V94H74V84H42V68H68V58H42V44H74V34H30Z" fill="#F3EDE4"/>
+  <path d="M81 94V34H92L103 55L114 34H124V94H112V58L103 75L94 58V94H81Z" fill="#F3EDE4"/>
+  <circle cx="26" cy="26" r="5" fill="#E48961"/>
+</svg>

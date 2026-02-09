@@ -3,128 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evan Mishler - Learning Experience Designer</title>
-    <meta name="description" content="Senior Learning Experience Designer specializing in eLearning development, instructional design, and digital content creation for cloud technologies and generative AI.">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Evan Mishler | Portfolio Assistant</title>
+    <meta name="description" content="Ask Evan's portfolio assistant about projects, background, and latest writing.">
+    <link rel="icon" type="image/svg+xml" href="assets/images/em-mark-alt-geo.svg">
+    <link rel="shortcut icon" href="assets/images/em-mark-alt-geo.svg">
+    <link rel="stylesheet" href="assets/css/home-claude.css">
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">Evan Mishler</div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
+<body class="home-ai">
+    <header class="site-head">
+        <a class="wordmark" href="index.html">Evan Mishler</a>
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav">Menu</button>
+        <nav class="site-nav" id="primaryNav">
+            <ul>
+                <li><a href="index.html" class="active">Assistant</a></li>
+                <li><a href="portfolio.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-                <span></span>
-            </button>
         </nav>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <span class="hero-label">Learning Experience Designer</span>
-                    <h1>
-                        <span>Hi, I'm <em class="accent">Evan</em></span>
-                    </h1>
-                    <p class="hero-description">
-                        I've spent the last 13 years making training that actually makes sense. These days I'm mostly working with cloud tech and generative AI — both as subject matter and as tools to build better learning experiences.
-                    </p>
-                    <div class="hero-cta">
-                        <a href="portfolio.html" class="btn btn-primary">View My Work</a>
-                        <a href="about.html" class="btn btn-secondary">About Me</a>
+    <main class="home-main">
+        <section class="chat-shell" aria-labelledby="chatHeading">
+            <p class="status-line">
+                <span class="status-icon" aria-hidden="true">
+                    <img src="assets/images/em-mark-alt-geo.svg" alt="">
+                </span>
+                Evan is listening
+            </p>
+            <h1 id="chatHeading">What would you like to know about my work?</h1>
+
+            <form class="chat-form" action="#" method="post">
+                <label for="prompt" class="sr-only">Chat message</label>
+                <textarea id="prompt" name="prompt" rows="3" maxlength="600" placeholder="How can I help you today?"></textarea>
+
+                <div class="chat-controls">
+                    <button class="attach-btn" type="button" aria-label="Attach">+</button>
+                    <div class="control-group">
+                        <span class="model-pill">Portfolio Assistant · Preview</span>
+                        <button class="send-btn" type="submit">Send</button>
                     </div>
                 </div>
-                <div class="hero-decoration" aria-hidden="true"></div>
-            </div>
-        </section>
+            </form>
 
-        <!-- Featured Work Section -->
-        <section class="section">
-            <div class="container">
-                <div class="featured-header">
-                    <h2>Selected Work</h2>
-                    <a href="portfolio.html" class="btn-text">View all projects</a>
+            <section class="suggested-chats" aria-label="Suggested chats">
+                <p class="suggested-label">Suggested chats</p>
+                <div class="suggestion-grid">
+                    <a class="suggestion-card" href="portfolio.html">
+                        <span class="question">What projects have you worked on?</span>
+                        <span class="destination">Open project page</span>
+                    </a>
+                    <a class="suggestion-card" href="blog.html">
+                        <span class="question">What is your latest blog post?</span>
+                        <span class="destination">Read the blog</span>
+                    </a>
+                    <a class="suggestion-card" href="about.html">
+                        <span class="question">Tell me a little bit about you.</span>
+                        <span class="destination">Go to about page</span>
+                    </a>
+                    <a class="suggestion-card" href="contact.html">
+                        <span class="question">Are you available for new projects?</span>
+                        <span class="destination">Start a conversation</span>
+                    </a>
                 </div>
-
-                <div class="grid grid-3">
-                    <div class="project-card fade-in">
-                        <div class="project-image">
-                            <img src="assets/images/Cool Morning Layout-01.png" alt="Articulate Storyline templates preview" loading="lazy">
-                        </div>
-                        <div class="project-content">
-                            <span class="project-category">Articulate Storyline</span>
-                            <h3 class="project-title">Storyline Design Templates</h3>
-                            <p class="project-description">A reusable set of Storyline templates designed for a variety of courses, showcasing clean interactions and layouts for future builds.</p>
-                            <a href="graphic-design-templates.html" class="btn btn-primary">View Project</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card fade-in">
-                        <div class="project-image">
-                            <img src="assets/images/AmazonS3.png" alt="Amazon S3 Course preview" loading="lazy">
-                        </div>
-                        <div class="project-content">
-                            <span class="project-category">Articulate Rise</span>
-                            <h3 class="project-title">Amazon S3 Foundations</h3>
-                            <p class="project-description">Mock course built in Articulate Rise featuring custom illustrations and video graphics. Includes an accompanying ADDIE design presentation.</p>
-                            <a href="https://portfolio-mishler.s3.us-east-1.amazonaws.com/amazon-simple-storage-service-s-3-scorm12-dlGyxMXv+(1)/scormcontent/index.html#/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Open Course</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card fade-in">
-                        <div class="project-image">
-                            <img src="https://img.youtube.com/vi/z3SW13BI75I/hqdefault.jpg" alt="Prompt Engineering video thumbnail" loading="lazy" referrerpolicy="no-referrer">
-                        </div>
-                        <div class="project-content">
-                            <span class="project-category">Video</span>
-                            <h3 class="project-title">Prompt Engineering: Motion Graphics</h3>
-                            <p class="project-description">Motion-graphics opener for a foundations course on prompt engineering, produced in Adobe Premiere Pro and After Effects.</p>
-                            <a href="https://www.youtube.com/watch?v=z3SW13BI75I" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Watch Video</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section class="section skills-section">
-            <div class="container">
-                <div class="text-center mb-4">
-                    <h2>Core Expertise</h2>
-                    <p style="max-width: 600px; margin: 0 auto;">A blend of classic and cutting-edge platforms that I use to create effective learning experiences.</p>
-                </div>
-
-                <div class="skills-grid" style="justify-content: center; max-width: 800px; margin: 0 auto;">
-                    <span class="skill-tag">Articulate Storyline</span>
-                    <span class="skill-tag">Articulate Rise</span>
-                    <span class="skill-tag">Adobe Creative Suite</span>
-                    <span class="skill-tag">Video Production</span>
-                    <span class="skill-tag">Instructional Design</span>
-                    <span class="skill-tag">Generative AI</span>
-                    <span class="skill-tag">AWS Cloud</span>
-                    <span class="skill-tag">UX/UI Design</span>
-                </div>
-
-                <div class="text-center mt-3">
-                    <a href="about.html" class="btn btn-secondary">View Full Background</a>
-                </div>
-            </div>
+            </section>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="logo">Evan Mishler</div>
-            <p>&copy; 2026 All rights reserved.</p>
-        </div>
-    </footer>
+    <script>
+        (function () {
+            var menuToggle = document.getElementById('menuToggle');
+            var siteNav = document.getElementById('primaryNav');
+            var prompt = document.getElementById('prompt');
+            var chatForm = document.querySelector('.chat-form');
 
-    <script src="assets/js/main.js"></script>
+            if (menuToggle && siteNav) {
+                menuToggle.addEventListener('click', function () {
+                    var expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                    menuToggle.setAttribute('aria-expanded', String(!expanded));
+                    siteNav.classList.toggle('is-open');
+                });
+            }
+
+            if (prompt) {
+                prompt.addEventListener('input', function () {
+                    prompt.style.height = 'auto';
+                    prompt.style.height = Math.min(prompt.scrollHeight, 220) + 'px';
+                });
+            }
+
+            if (chatForm) {
+                chatForm.addEventListener('submit', function (event) {
+                    event.preventDefault();
+                });
+            }
+        })();
+    </script>
 </body>
 </html>
