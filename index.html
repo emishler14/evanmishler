@@ -7,98 +7,60 @@
     <meta name="description" content="Ask Evan's portfolio assistant about projects, background, and latest writing.">
     <link rel="icon" type="image/svg+xml" href="assets/images/em-mark-alt-geo.svg">
     <link rel="shortcut icon" href="assets/images/em-mark-alt-geo.svg">
-    <link rel="stylesheet" href="assets/css/home-claude.css">
+    <link rel="stylesheet" href="assets/css/chat-app.css">
 </head>
 <body class="home-ai">
     <header class="site-head">
         <a class="wordmark" href="index.html">Evan Mishler</a>
-        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav">Menu</button>
-        <nav class="site-nav" id="primaryNav">
-            <ul>
-                <li><a href="index.html" class="active">Assistant</a></li>
-                <li><a href="portfolio.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main class="home-main">
-        <section class="chat-shell" aria-labelledby="chatHeading">
-            <p class="status-line">
-                <span class="status-icon" aria-hidden="true">
-                    <img src="assets/images/em-mark-alt-geo.svg" alt="">
-                </span>
-                Evan is listening
-            </p>
-            <h1 id="chatHeading">What would you like to know about my work?</h1>
+        <section class="chat-shell" id="chatShell">
+            <div class="chat-welcome" id="chatWelcome">
+                <p class="status-line">
+                    <span class="status-icon" aria-hidden="true">
+                        <img src="assets/images/em-mark-alt-geo.svg" alt="">
+                    </span>
+                    Evan is listening
+                </p>
+                <h1>What would you like to know about my work?</h1>
+            </div>
 
-            <form class="chat-form" action="#" method="post">
-                <label for="prompt" class="sr-only">Chat message</label>
-                <textarea id="prompt" name="prompt" rows="3" maxlength="600" placeholder="How can I help you today?"></textarea>
+            <div class="chat-messages" id="chatMessages" role="log" aria-live="polite"></div>
 
-                <div class="chat-controls">
-                    <button class="attach-btn" type="button" aria-label="Attach">+</button>
-                    <div class="control-group">
-                        <span class="model-pill">Portfolio Assistant · Preview</span>
+            <div class="chat-bottom">
+                <section class="suggested-chats" aria-label="Suggested">
+                    <p class="suggested-label">Suggested</p>
+                    <div class="suggestion-grid">
+                        <button class="suggestion-card" data-topic="projects" type="button">
+                            <span class="question">What projects have you worked on?</span>
+                        </button>
+                        <button class="suggestion-card" data-topic="blog" type="button">
+                            <span class="question">What is your latest blog post?</span>
+                        </button>
+                        <button class="suggestion-card" data-topic="about" type="button">
+                            <span class="question">Tell me a little bit about you.</span>
+                        </button>
+                        <button class="suggestion-card" data-topic="contact" type="button">
+                            <span class="question">Are you available for new projects?</span>
+                        </button>
+                    </div>
+                </section>
+
+                <form class="chat-form" id="chatForm">
+                    <label for="prompt" class="sr-only">Chat message</label>
+                    <textarea id="prompt" name="prompt" rows="1" placeholder="Ask about Evan's work..."></textarea>
+                    <div class="chat-controls">
+                        <span class="model-pill">Portfolio Assistant</span>
                         <button class="send-btn" type="submit">Send</button>
                     </div>
-                </div>
-            </form>
-
-            <section class="suggested-chats" aria-label="Suggested chats">
-                <p class="suggested-label">Suggested chats</p>
-                <div class="suggestion-grid">
-                    <a class="suggestion-card" href="portfolio.html">
-                        <span class="question">What projects have you worked on?</span>
-                        <span class="destination">Open project page</span>
-                    </a>
-                    <a class="suggestion-card" href="blog.html">
-                        <span class="question">What is your latest blog post?</span>
-                        <span class="destination">Read the blog</span>
-                    </a>
-                    <a class="suggestion-card" href="about.html">
-                        <span class="question">Tell me a little bit about you.</span>
-                        <span class="destination">Go to about page</span>
-                    </a>
-                    <a class="suggestion-card" href="contact.html">
-                        <span class="question">Are you available for new projects?</span>
-                        <span class="destination">Start a conversation</span>
-                    </a>
-                </div>
-            </section>
+                </form>
+            </div>
         </section>
     </main>
 
-    <script>
-        (function () {
-            var menuToggle = document.getElementById('menuToggle');
-            var siteNav = document.getElementById('primaryNav');
-            var prompt = document.getElementById('prompt');
-            var chatForm = document.querySelector('.chat-form');
-
-            if (menuToggle && siteNav) {
-                menuToggle.addEventListener('click', function () {
-                    var expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-                    menuToggle.setAttribute('aria-expanded', String(!expanded));
-                    siteNav.classList.toggle('is-open');
-                });
-            }
-
-            if (prompt) {
-                prompt.addEventListener('input', function () {
-                    prompt.style.height = 'auto';
-                    prompt.style.height = Math.min(prompt.scrollHeight, 220) + 'px';
-                });
-            }
-
-            if (chatForm) {
-                chatForm.addEventListener('submit', function (event) {
-                    event.preventDefault();
-                });
-            }
-        })();
-    </script>
+    <script src="assets/js/content-data.js"></script>
+    <script src="assets/js/chat-responses.js"></script>
+    <script src="assets/js/chat-engine.js"></script>
 </body>
 </html>
