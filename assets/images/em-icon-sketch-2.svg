@@ -1,0 +1,20 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Desk Figure — Single Line</title>
+  <desc id="desc">Continuous single-stroke drawing of a person at a computer.</desc>
+  <rect x="6" y="6" width="116" height="116" rx="26" fill="#1f1f1d"/>
+  <rect x="6" y="6" width="116" height="116" rx="26" stroke="#dc7a52" stroke-opacity="0.35" stroke-width="1.5"/>
+  <!-- single continuous line: desk, up chair, body, head, arm, laptop -->
+  <path d="M22 88C42 86 68 86 106 88
+           M30 88C30 96 30 101 30 101
+           M98 88C98 96 98 101 98 101
+           M38 88C37 78 36 72 38 66C40 60 44 56 48 52
+           M48 52C46 46 46 40 50 36C54 32 60 32 63 36C66 40 65 46 62 50C59 53 54 54 50 52
+           M48 56C50 62 54 66 58 70C62 74 62 80 58 86
+           M52 62C58 64 64 65 70 64
+           M70 48C74 46 80 46 86 47C88 54 88 61 86 67C81 68 75 68 71 66C70 60 70 53 70 48Z
+           M66 68C74 70 84 70 94 68"
+        stroke="#f3f0ea" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- screen content -->
+  <circle cx="78" cy="54" r="2" fill="#dc7a52" fill-opacity="0.6"/>
+  <path d="M74 59C77 59 82 59 84 59" stroke="#dc7a52" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.4"/>
+</svg>

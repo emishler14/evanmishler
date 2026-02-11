@@ -1,0 +1,71 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Desk Doodle — Variant 1</title>
+  <desc id="desc">Childlike doodle of a person at a laptop with a coffee mug.</desc>
+  <style>
+    @keyframes steam1 {
+      0%, 100% { transform: translateY(0); opacity: 0.3; }
+      50% { transform: translateY(-3px); opacity: 0.12; }
+    }
+    @keyframes steam2 {
+      0%, 100% { transform: translateY(0); opacity: 0.22; }
+      50% { transform: translateY(-4px); opacity: 0.08; }
+    }
+    @keyframes screenLine1 {
+      0%, 100% { stroke-dashoffset: 0; opacity: 0.6; }
+      40% { stroke-dashoffset: -6; opacity: 0.35; }
+      80% { stroke-dashoffset: -12; opacity: 0.6; }
+    }
+    @keyframes screenLine2 {
+      0%, 100% { stroke-dashoffset: 0; opacity: 0.4; }
+      50% { stroke-dashoffset: -8; opacity: 0.2; }
+    }
+    @keyframes screenLine3 {
+      0%, 100% { stroke-dashoffset: 0; opacity: 0.3; }
+      60% { stroke-dashoffset: -5; opacity: 0.15; }
+    }
+    .steam-1 { animation: steam1 3.5s ease-in-out infinite; }
+    .steam-2 { animation: steam2 4s ease-in-out 0.8s infinite; }
+    .screen-1 { stroke-dasharray: 4 3; animation: screenLine1 4s ease-in-out infinite; }
+    .screen-2 { stroke-dasharray: 3 2.5; animation: screenLine2 5s ease-in-out 0.5s infinite; }
+    .screen-3 { stroke-dasharray: 2.5 2; animation: screenLine3 4.5s ease-in-out 1s infinite; }
+  </style>
+  <!-- big round head -->
+  <path d="M36 42C34 31 39 21 50 19C62 18 68 26 68 37C68 47 61 53 50 53C41 53 36 49 36 42Z" stroke="#f3f0ea" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- eyes -->
+  <circle cx="45" cy="36" r="2" fill="#f3f0ea"/>
+  <circle cx="56" cy="35" r="2" fill="#f3f0ea"/>
+  <!-- smile -->
+  <path d="M46 42C48 45 54 45 56 42" stroke="#f3f0ea" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- hair tuft -->
+  <path d="M43 20C46 15 54 14 58 17" stroke="#f3f0ea" stroke-width="2.2" stroke-linecap="round" stroke-opacity="0.55"/>
+  <!-- body -->
+  <path d="M50 53C48 60 47 68 50 78" stroke="#f3f0ea" stroke-width="2.8" stroke-linecap="round"/>
+  <!-- legs -->
+  <path d="M48 78C45 84 43 90 42 96" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M52 78C55 84 58 90 60 96" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- arm to keyboard -->
+  <path d="M49 60C56 63 64 65 73 64" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- other arm toward mug -->
+  <path d="M48 62C43 66 38 70 34 72" stroke="#f3f0ea" stroke-width="2.2" stroke-linecap="round" stroke-opacity="0.6"/>
+  <!-- laptop screen - tilted back rectangle -->
+  <path d="M72 38L70 62L92 64L96 40Z" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- screen content - animated -->
+  <path class="screen-1" d="M77 46C82 46 88 46 91 46" stroke="#dc7a52" stroke-width="1.5" stroke-linecap="round"/>
+  <path class="screen-2" d="M76 51C80 51 85 51 89 51" stroke="#dc7a52" stroke-width="1.5" stroke-linecap="round"/>
+  <path class="screen-3" d="M76 56C79 56 82 56 85 56" stroke="#dc7a52" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- laptop keyboard base -->
+  <path d="M70 62C68 66 66 68 64 69" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M92 64C90 67 88 69 86 70" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M64 69C72 70 80 70 86 70" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- desk -->
+  <path d="M18 82C38 79 78 78 110 82" stroke="#f3f0ea" stroke-width="3" stroke-linecap="round"/>
+  <!-- coffee mug - left side -->
+  <path d="M22 72L22 80L34 80L34 72Z" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- mug handle -->
+  <path d="M22 74C18 74 17 77 18 79C19 81 22 80 22 79" stroke="#f3f0ea" stroke-width="2" stroke-linecap="round"/>
+  <!-- steam - animated -->
+  <path class="steam-1" d="M25 70C26 67 25 64 26 61" stroke="#f3f0ea" stroke-width="1.5" stroke-linecap="round"/>
+  <path class="steam-2" d="M30 71C30 68 31 65 30 62" stroke="#f3f0ea" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- chair back -->
+  <path d="M36 56C33 64 32 72 34 80" stroke="#f3f0ea" stroke-width="2" stroke-linecap="round" stroke-opacity="0.35"/>
+</svg>

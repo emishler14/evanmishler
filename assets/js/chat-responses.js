@@ -194,12 +194,47 @@ function renderTemplatesResponse() {
   return html;
 }
 
+function renderChatbotResponse() {
+  var html = '<p class="stream-block">Good question. This whole site is actually an experiment.</p>';
+
+  html += '<div class="stream-block"><h3>Why a chatbot?</h3>';
+  html += '<p>Evan has always been drawn to new technology — not just using it, but understanding how it works and what it can do for people. When tools like conversational AI started becoming more accessible, he didn\'t just want to read about them. He wanted to build something with them.</p></div>';
+
+  html += '<div class="stream-block"><p>This portfolio site started as a traditional page layout, but the idea of turning it into a conversation felt more honest to how Evan actually thinks about his work. Instead of a static "About Me" page, why not let people ask questions and explore on their own terms?</p></div>';
+
+  html += '<div class="stream-block"><h3>How it was built</h3>';
+  html += '<p>The site is hand-coded — HTML, CSS, and vanilla JavaScript. No frameworks, no templates. The chat interface, the streaming text animation, even the little doodle icon with the animated steam — it\'s all custom. Evan designed and built every piece of it, using AI as a collaborator throughout the process.</p></div>';
+
+  html += '<div class="stream-block"><blockquote class="quote">The best way to understand a new technology is to ship something real with it.</blockquote></div>';
+
+  html += '<div class="stream-block"><h3>What\'s next</h3>';
+  html += '<p>The plan is to connect this to a real AI backend so the chatbot can have genuine conversations about Evan\'s work — not just pre-written answers. Think of the current version as a proof of concept with personality.</p></div>';
+
+  html += '<p class="stream-block response-followup">Want to see the actual projects? Or ask about Evan\'s background.</p>';
+
+  return html;
+}
+
+function renderJobFitResponse() {
+  var html = '<p class="stream-block">Great idea — let\'s find out. Paste a job description below and I\'ll compare it against Evan\'s experience, skills, and certifications.</p>';
+
+  html += '<div class="stream-block"><form class="job-desc-form">';
+  html += '<label for="jobDescInput" class="sr-only">Paste job description</label>';
+  html += '<textarea class="job-desc-input" id="jobDescInput" rows="5" placeholder="Paste the job description here..."></textarea>';
+  html += '<div class="btn-row"><button class="btn btn-primary job-desc-submit" type="submit">Analyze Fit</button></div>';
+  html += '</form></div>';
+
+  html += '<p class="stream-block response-followup">I\'ll look for matches across instructional design, eLearning, video production, cloud tech, AI, and more.</p>';
+
+  return html;
+}
+
 function renderFallbackResponse() {
-  return '<p class="stream-block">I can help with questions about Evan\'s projects, background, blog, and availability. Try one of the suggestions below, or ask something like:</p>'
+  return '<p class="stream-block">I\'m Evan\'s digital proxy — I can talk about his experience, show you projects, or even check if he\'d be a good fit for a role. Try something like:</p>'
     + '<ul class="stream-block prose-list">'
-    + '<li>"What projects have you worked on?"</li>'
-    + '<li>"Tell me about your background"</li>'
-    + '<li>"What have you been writing?"</li>'
-    + '<li>"Are you available for new work?"</li>'
+    + '<li>"Is he actually an expert?"</li>'
+    + '<li>"Show me the projects"</li>'
+    + '<li>"What\'s this chatbot all about?"</li>'
+    + '<li>"Is Evan right for my role?"</li>'
     + '</ul>';
 }

@@ -5,25 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evan Mishler | Portfolio Assistant</title>
     <meta name="description" content="Ask Evan's portfolio assistant about projects, background, and latest writing.">
-    <link rel="icon" type="image/svg+xml" href="assets/images/em-mark-alt-geo.svg">
-    <link rel="shortcut icon" href="assets/images/em-mark-alt-geo.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/images/em-icon-doodle-1.svg">
+    <link rel="shortcut icon" href="assets/images/em-icon-doodle-1.svg">
     <link rel="stylesheet" href="assets/css/chat-app.css">
 </head>
 <body class="home-ai">
-    <header class="site-head">
-        <a class="wordmark" href="index.html">Evan Mishler</a>
-    </header>
-
     <main class="home-main">
         <section class="chat-shell" id="chatShell">
             <div class="chat-welcome" id="chatWelcome">
                 <p class="status-line">
                     <span class="status-icon" aria-hidden="true">
-                        <img src="assets/images/em-mark-alt-geo.svg" alt="">
+                        <img src="assets/images/em-icon-doodle-1.svg" alt="">
                     </span>
-                    Evan is listening
+                    Evan is currently offline. I'm his digital proxy.
                 </p>
-                <h1>What would you like to know about my work?</h1>
+                <h1>I've been authorized to share his work with you. Where should we start?</h1>
             </div>
 
             <div class="chat-messages" id="chatMessages" role="log" aria-live="polite"></div>
@@ -32,17 +28,17 @@
                 <section class="suggested-chats" aria-label="Suggested">
                     <p class="suggested-label">Suggested</p>
                     <div class="suggestion-grid">
+                        <button class="suggestion-card" data-topic="expert" type="button">
+                            <span class="question">Is he actually an expert?</span>
+                        </button>
                         <button class="suggestion-card" data-topic="projects" type="button">
-                            <span class="question">What projects have you worked on?</span>
+                            <span class="question">Show me the projects</span>
                         </button>
-                        <button class="suggestion-card" data-topic="blog" type="button">
-                            <span class="question">What is your latest blog post?</span>
+                        <button class="suggestion-card" data-topic="chatbot" type="button">
+                            <span class="question">What's this chatbot all about?</span>
                         </button>
-                        <button class="suggestion-card" data-topic="about" type="button">
-                            <span class="question">Tell me a little bit about you.</span>
-                        </button>
-                        <button class="suggestion-card" data-topic="contact" type="button">
-                            <span class="question">Are you available for new projects?</span>
+                        <button class="suggestion-card" data-topic="jobfit" type="button">
+                            <span class="question">Is Evan right for my role?</span>
                         </button>
                     </div>
                 </section>
