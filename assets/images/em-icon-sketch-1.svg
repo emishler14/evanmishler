@@ -1,0 +1,29 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Desk Figure — Casual Sketch</title>
+  <desc id="desc">Hand-drawn side profile of a person working at a laptop, loose sketch style.</desc>
+  <rect x="6" y="6" width="116" height="116" rx="26" fill="#1f1f1d"/>
+  <rect x="6" y="6" width="116" height="116" rx="26" stroke="#dc7a52" stroke-opacity="0.35" stroke-width="1.5"/>
+  <!-- head -->
+  <path d="M42 38C40 33 42 27 48 25C54 23 59 26 60 32C61 37 58 42 52 43C47 44 43 42 42 38Z" stroke="#f3f0ea" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- body slouch -->
+  <path d="M50 43C48 50 46 57 47 65C48 72 52 78 56 82" stroke="#f3f0ea" stroke-width="2.8" stroke-linecap="round"/>
+  <!-- back arm resting -->
+  <path d="M46 54C42 58 39 63 38 69" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- front arm to keyboard -->
+  <path d="M49 56C55 60 62 63 69 64" stroke="#f3f0ea" stroke-width="2.8" stroke-linecap="round"/>
+  <!-- laptop screen -->
+  <path d="M70 46C73 45 80 44 85 45C86 52 86 59 85 65C80 66 74 66 70 65C69 58 69 52 70 46Z" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- screen glow -->
+  <path d="M74 50C77 50 81 50 83 51" stroke="#dc7a52" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.7"/>
+  <path d="M74 55C78 55 82 55 83 55" stroke="#dc7a52" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.5"/>
+  <path d="M74 60C76 60 79 60 81 60" stroke="#dc7a52" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.35"/>
+  <!-- laptop base -->
+  <path d="M66 66C74 68 82 68 92 66" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- desk -->
+  <path d="M24 82C40 80 72 79 104 82" stroke="#f3f0ea" stroke-width="2.8" stroke-linecap="round"/>
+  <!-- chair hint -->
+  <path d="M36 70C34 76 33 80 34 86C35 90 38 93 42 94" stroke="#f3f0ea" stroke-width="2" stroke-linecap="round" stroke-opacity="0.5"/>
+  <!-- desk legs -->
+  <path d="M30 82C29 90 28 97 28 102" stroke="#f3f0ea" stroke-width="2" stroke-linecap="round" stroke-opacity="0.45"/>
+  <path d="M98 82C99 90 100 97 100 102" stroke="#f3f0ea" stroke-width="2" stroke-linecap="round" stroke-opacity="0.45"/>
+</svg>

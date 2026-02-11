@@ -1,0 +1,40 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Desk Figure — Whimsical Doodle</title>
+  <desc id="desc">Playful hand-drawn person at a desk with slightly exaggerated proportions.</desc>
+  <rect x="6" y="6" width="116" height="116" rx="26" fill="#1f1f1d"/>
+  <rect x="6" y="6" width="116" height="116" rx="26" stroke="#dc7a52" stroke-opacity="0.35" stroke-width="1.5"/>
+  <!-- big round head -->
+  <path d="M38 38C36 29 40 21 50 20C60 19 66 26 66 35C66 44 60 49 50 49C42 49 38 45 38 38Z" stroke="#f3f0ea" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- eyes - simple dots -->
+  <circle cx="46" cy="34" r="1.8" fill="#f3f0ea"/>
+  <circle cx="56" cy="33" r="1.8" fill="#f3f0ea"/>
+  <!-- little smile -->
+  <path d="M47 39C49 41 53 41 55 39" stroke="#f3f0ea" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- hair tuft -->
+  <path d="M44 21C46 17 52 16 56 18" stroke="#f3f0ea" stroke-width="2" stroke-linecap="round" stroke-opacity="0.6"/>
+  <!-- body - compact -->
+  <path d="M50 49C48 56 47 64 50 74" stroke="#f3f0ea" stroke-width="2.8" stroke-linecap="round"/>
+  <!-- legs dangling -->
+  <path d="M48 74C46 80 44 86 44 90" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M52 74C54 80 56 86 58 90" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- arm typing -->
+  <path d="M49 58C56 62 63 64 72 62" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- other arm -->
+  <path d="M48 60C44 64 42 68 42 72" stroke="#f3f0ea" stroke-width="2" stroke-linecap="round" stroke-opacity="0.5"/>
+  <!-- laptop -->
+  <path d="M72 46C76 45 84 45 90 46C91 54 91 60 90 66C84 67 77 67 73 66C72 59 72 52 72 46Z" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- screen face/emoji -->
+  <circle cx="79" cy="53" r="1.5" fill="#dc7a52" fill-opacity="0.6"/>
+  <circle cx="85" cy="53" r="1.5" fill="#dc7a52" fill-opacity="0.6"/>
+  <path d="M79 58C81 60 83 60 85 58" stroke="#dc7a52" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.5"/>
+  <!-- laptop base -->
+  <path d="M68 67C76 69 86 69 96 67" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- desk -->
+  <path d="M22 78C40 76 74 75 106 78" stroke="#f3f0ea" stroke-width="3" stroke-linecap="round"/>
+  <!-- chair -->
+  <path d="M36 52C34 60 33 68 34 76" stroke="#f3f0ea" stroke-width="2" stroke-linecap="round" stroke-opacity="0.4"/>
+  <!-- tiny plant on desk -->
+  <path d="M98 74C97 70 98 66 100 64" stroke="#dc7a52" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.5"/>
+  <path d="M100 64C102 62 100 60 98 62" stroke="#dc7a52" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.4"/>
+  <path d="M96 74C96 72 100 72 100 74" stroke="#f3f0ea" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.4"/>
+</svg>

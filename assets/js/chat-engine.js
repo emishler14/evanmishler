@@ -7,12 +7,14 @@
 
   var STREAM_INTERVAL = 80; // ms between each block reveal
 
-  // Keyword routing map
+  // Keyword routing map (order matters — more specific routes first)
   var routes = [
+    { keywords: ['chatbot', 'this chat', 'this site', 'built this', 'how was this'], handler: renderChatbotResponse },
+    { keywords: ['right for', 'job fit', 'right for my role', 'job description', 'candidate'], handler: renderJobFitResponse },
     { keywords: ['template', 'storyline template', 'design template', 'visual framework'], handler: renderTemplatesResponse },
-    { keywords: ['project', 'portfolio', 'work', 'projects'], handler: renderPortfolioResponse },
+    { keywords: ['project', 'portfolio', 'work', 'projects', 'show me'], handler: renderPortfolioResponse },
     { keywords: ['blog', 'post', 'writing', 'wrote', 'article', 'read'], handler: renderBlogResponse },
-    { keywords: ['about', 'background', 'who', 'tell me', 'yourself', 'experience', 'bio'], handler: renderAboutResponse },
+    { keywords: ['expert', 'about', 'background', 'who', 'tell me', 'yourself', 'experience', 'bio', 'actually an expert'], handler: renderAboutResponse },
     { keywords: ['contact', 'available', 'hire', 'email', 'reach', 'connect', 'linkedin'], handler: renderContactResponse }
   ];
 
@@ -23,10 +25,10 @@
 
   // Topic-to-question mapping for suggestion cards
   var topicQuestions = {
-    projects: 'What projects have you worked on?',
-    blog: 'What is your latest blog post?',
-    about: 'Tell me a little bit about you.',
-    contact: 'Are you available for new projects?'
+    expert: 'Is he actually an expert?',
+    projects: 'Show me the projects',
+    chatbot: "What's this chatbot all about?",
+    jobfit: 'Is Evan right for my role?'
   };
 
   function route(text) {
@@ -56,7 +58,7 @@
     bodyDiv.className = 'msg-body';
     bodyDiv.innerHTML = html;
 
-    msg.innerHTML = '<div class="msg-avatar"><img src="assets/images/em-mark-alt-geo.svg" alt="EM"></div>';
+    msg.innerHTML = '<div class="msg-avatar"><img src="assets/images/em-icon-doodle-1.svg" alt="EM"></div>';
     msg.appendChild(bodyDiv);
     chatMessages.appendChild(msg);
 
@@ -94,7 +96,7 @@
     var indicator = document.createElement('div');
     indicator.className = 'typing-indicator';
     indicator.id = 'typingIndicator';
-    indicator.innerHTML = '<div class="msg-avatar"><img src="assets/images/em-mark-alt-geo.svg" alt=""></div>'
+    indicator.innerHTML = '<div class="msg-avatar"><img src="assets/images/em-icon-doodle-1.svg" alt=""></div>'
       + '<div class="typing-dots"><span></span><span></span><span></span></div>';
     chatMessages.appendChild(indicator);
     scrollToBottom();
@@ -121,12 +123,40 @@
 
   function activateChatState() {
     if (!chatShell.classList.contains('has-messages')) {
-      // Animate welcome out, then switch layout
+      var chatBottom = document.querySelector('.chat-bottom');
+
+      // Capture form position before layout change
+      var startRect = chatBottom.getBoundingClientRect();
+
+      // Animate welcome out
       if (chatWelcome) {
         chatWelcome.classList.add('departing');
       }
+
       setTimeout(function () {
+        // Apply the layout change
         chatShell.classList.add('has-messages');
+
+        // Capture new position and FLIP animate
+        var endRect = chatBottom.getBoundingClientRect();
+        var deltaY = startRect.top - endRect.top;
+
+        if (deltaY !== 0) {
+          chatBottom.style.transition = 'none';
+          chatBottom.style.transform = 'translateY(' + deltaY + 'px)';
+
+          // Force reflow so the browser registers the starting transform
+          chatBottom.offsetHeight; // eslint-disable-line no-unused-expressions
+
+          chatBottom.style.transition = 'transform 500ms cubic-bezier(0.22, 1, 0.36, 1)';
+          chatBottom.style.transform = 'translateY(0)';
+
+          chatBottom.addEventListener('transitionend', function handler() {
+            chatBottom.style.transition = '';
+            chatBottom.style.transform = '';
+            chatBottom.removeEventListener('transitionend', handler);
+          });
+        }
       }, 300);
     }
   }
@@ -142,6 +172,22 @@
         if (actionDef) {
           handleSubmit(actionDef.question);
         }
+      });
+    }
+
+    // Job description form
+    var jobForms = chatMessages.querySelectorAll('.job-desc-form:not([data-bound])');
+    for (var j = 0; j < jobForms.length; j++) {
+      jobForms[j].setAttribute('data-bound', '1');
+      jobForms[j].addEventListener('submit', function (e) {
+        e.preventDefault();
+        var textarea = e.currentTarget.querySelector('.job-desc-input');
+        var text = textarea.value.trim();
+        if (!text) return;
+        // Disable the form after submission
+        textarea.disabled = true;
+        e.currentTarget.querySelector('.job-desc-submit').disabled = true;
+        handleJobDescriptionSubmit(text);
       });
     }
 
@@ -190,6 +236,76 @@
     }
   }
 
+  function handleJobDescriptionSubmit(jobText) {
+    var lower = jobText.toLowerCase();
+
+    // Skill matching against Evan's background
+    var skillMap = [
+      { keywords: ['instructional design', 'learning design', 'curriculum', 'training design', 'l&d', 'learning and development', 'learning & development'], label: 'Instructional Design', strength: 'core' },
+      { keywords: ['elearning', 'e-learning', 'articulate', 'storyline', 'rise', 'scorm', 'xapi', 'lms'], label: 'eLearning Development', strength: 'core' },
+      { keywords: ['video', 'motion graphics', 'premiere', 'after effects', 'animation', 'video production', 'media production'], label: 'Video & Motion Design', strength: 'core' },
+      { keywords: ['aws', 'amazon web services', 'cloud', 'azure', 'gcp'], label: 'Cloud Technologies', strength: 'core' },
+      { keywords: ['ai', 'artificial intelligence', 'generative ai', 'machine learning', 'llm', 'prompt', 'chatgpt', 'genai'], label: 'Generative AI', strength: 'core' },
+      { keywords: ['adobe', 'photoshop', 'illustrator', 'creative suite', 'graphic design'], label: 'Adobe Creative Suite', strength: 'strong' },
+      { keywords: ['project management', 'stakeholder', 'cross-functional', 'agile', 'program management'], label: 'Project Management', strength: 'strong' },
+      { keywords: ['mba', 'business', 'strategy', 'operations', 'leadership'], label: 'Business Strategy (MBA)', strength: 'strong' },
+      { keywords: ['content', 'writing', 'copywriting', 'technical writing', 'documentation'], label: 'Content Development', strength: 'strong' },
+      { keywords: ['web', 'html', 'css', 'javascript', 'frontend', 'front-end'], label: 'Web Development', strength: 'growing' }
+    ];
+
+    var matches = [];
+    var partials = [];
+    for (var i = 0; i < skillMap.length; i++) {
+      for (var k = 0; k < skillMap[i].keywords.length; k++) {
+        if (lower.indexOf(skillMap[i].keywords[k]) > -1) {
+          if (skillMap[i].strength === 'core') {
+            matches.push(skillMap[i].label);
+          } else {
+            partials.push(skillMap[i].label);
+          }
+          break;
+        }
+      }
+    }
+
+    var html = '';
+    if (matches.length >= 2) {
+      html += '<p class="stream-block">This looks like a strong match. Based on the job description, Evan\'s experience directly aligns in <strong>' + matches.length + ' core areas</strong>:</p>';
+      html += '<div class="stream-block"><div class="tags">';
+      for (var m = 0; m < matches.length; m++) {
+        html += '<span class="tag" style="border-color: var(--accent); color: var(--text);">' + matches[m] + '</span>';
+      }
+      html += '</div></div>';
+    } else if (matches.length === 1) {
+      html += '<p class="stream-block">There\'s a solid connection here. Evan\'s background aligns clearly with <strong>' + matches[0] + '</strong>.</p>';
+    } else {
+      html += '<p class="stream-block">Evan\'s background doesn\'t match this role\'s core requirements directly, but there may be adjacent skills worth exploring.</p>';
+    }
+
+    if (partials.length > 0) {
+      html += '<p class="stream-block">He also brings relevant supporting experience in:</p>';
+      html += '<div class="stream-block"><div class="tags">';
+      for (var p = 0; p < partials.length; p++) {
+        html += '<span class="tag">' + partials[p] + '</span>';
+      }
+      html += '</div></div>';
+    }
+
+    html += '<div class="stream-block"><p>With 13+ years in L&D, an MBA, and AWS + Google Cloud certifications, Evan brings both depth and breadth. He\'s especially strong when the role involves translating complex technical topics into clear learning experiences.</p></div>';
+    html += '<p class="stream-block response-followup">Want to <a href="mailto:' + SITE_DATA.contact.email + '">reach out directly</a>? Or ask me anything else about his background.</p>';
+
+    addUserMessage('Here\'s the job description I\'d like to check.');
+    scrollToBottom();
+    showTypingIndicator();
+
+    setTimeout(function () {
+      hideTypingIndicator();
+      addBotMessage(html, function () {
+        initResponseInteractions();
+      });
+    }, 500 + Math.floor(Math.random() * 300));
+  }
+
   function handleSubmit(text) {
     text = text.trim();
     if (!text) return;
@@ -200,7 +316,7 @@
     var handler = route(text);
 
     // Wait for layout transition on first message, then show messages
-    var layoutDelay = isFirst ? 350 : 0;
+    var layoutDelay = isFirst ? 550 : 0;
 
     setTimeout(function () {
       addUserMessage(text);

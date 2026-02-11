@@ -1,0 +1,30 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Desk Figure — Ink Brush</title>
+  <desc id="desc">Bold ink-brush style person at a computer with expressive thick strokes.</desc>
+  <rect x="6" y="6" width="116" height="116" rx="26" fill="#1f1f1d"/>
+  <rect x="6" y="6" width="116" height="116" rx="26" stroke="#dc7a52" stroke-opacity="0.35" stroke-width="1.5"/>
+  <!-- head - filled circle, hand-drawn feel -->
+  <path d="M44 36C42 30 45 24 52 23C59 22 63 27 63 33C63 39 59 43 52 44C46 44 44 41 44 36Z" fill="#f3f0ea"/>
+  <!-- neck + torso - thick brush -->
+  <path d="M52 44C50 48 48 52 47 58C46 64 48 72 52 80" stroke="#f3f0ea" stroke-width="4" stroke-linecap="round"/>
+  <!-- arm reaching forward -->
+  <path d="M48 56C54 60 62 63 72 63" stroke="#f3f0ea" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- other arm down -->
+  <path d="M47 58C43 64 40 70 40 76" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.6"/>
+  <!-- laptop screen - bold -->
+  <path d="M72 44C76 43 84 43 90 44C91 52 91 60 90 67C84 68 77 68 73 67C72 60 72 52 72 44Z" stroke="#f3f0ea" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- screen content - accent lines -->
+  <path d="M77 50C80 50 86 50 88 50" stroke="#dc7a52" stroke-width="2" stroke-linecap="round" stroke-opacity="0.65"/>
+  <path d="M77 55C81 55 85 55 87 55" stroke="#dc7a52" stroke-width="2" stroke-linecap="round" stroke-opacity="0.45"/>
+  <path d="M77 60C79 60 82 60 84 60" stroke="#dc7a52" stroke-width="2" stroke-linecap="round" stroke-opacity="0.3"/>
+  <!-- laptop base -->
+  <path d="M68 68C76 70 86 70 96 68" stroke="#f3f0ea" stroke-width="3" stroke-linecap="round"/>
+  <!-- desk - bold expressive -->
+  <path d="M20 84C36 81 70 80 108 84" stroke="#f3f0ea" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- coffee mug -->
+  <path d="M26 76C26 72 29 70 32 70C35 70 38 72 38 76C38 80 35 82 32 82C29 82 26 80 26 76Z" stroke="#f3f0ea" stroke-width="2" stroke-linecap="round" stroke-opacity="0.5"/>
+  <path d="M38 73C40 73 41 75 40 77" stroke="#f3f0ea" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.4"/>
+  <!-- steam -->
+  <path d="M30 68C31 65 30 63 31 60" stroke="#f3f0ea" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.25"/>
+  <path d="M34 69C34 66 35 64 34 61" stroke="#f3f0ea" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.2"/>
+</svg>

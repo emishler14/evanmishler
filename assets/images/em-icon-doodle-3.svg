@@ -1,0 +1,57 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Desk Doodle — Variant 3</title>
+  <desc id="desc">Childlike doodle of a person at a laptop with coffee, scratchier pen style.</desc>
+  <!-- head - slightly lopsided for hand-drawn feel -->
+  <path d="M34 40C33 30 38 20 50 19C62 18 68 27 67 38C66 48 59 53 49 52C40 51 35 47 34 40Z" stroke="#f3f0ea" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- eyes - uneven dots like a kid would draw -->
+  <circle cx="44" cy="34" r="1.8" fill="#f3f0ea"/>
+  <circle cx="55" cy="33" r="2.2" fill="#f3f0ea"/>
+  <!-- crooked smile -->
+  <path d="M45 41C48 44 53 45 57 42" stroke="#f3f0ea" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- spiky hair -->
+  <path d="M40 21C42 15 46 13 50 14" stroke="#f3f0ea" stroke-width="2" stroke-linecap="round" stroke-opacity="0.5"/>
+  <path d="M48 14C52 12 56 13 59 16" stroke="#f3f0ea" stroke-width="2" stroke-linecap="round" stroke-opacity="0.45"/>
+  <path d="M57 16C61 15 64 18 65 22" stroke="#f3f0ea" stroke-width="1.8" stroke-linecap="round" stroke-opacity="0.4"/>
+  <!-- body - wobbly line -->
+  <path d="M50 52C48 59 47 67 49 76" stroke="#f3f0ea" stroke-width="3" stroke-linecap="round"/>
+  <!-- legs - slightly different angles for charm -->
+  <path d="M47 76C44 83 41 90 40 96" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M51 76C55 83 59 90 62 96" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- shoes -->
+  <path d="M40 96C37 97 35 96 34 95" stroke="#f3f0ea" stroke-width="2.2" stroke-linecap="round" stroke-opacity="0.5"/>
+  <path d="M62 96C65 97 67 96 68 95" stroke="#f3f0ea" stroke-width="2.2" stroke-linecap="round" stroke-opacity="0.5"/>
+  <!-- arm to laptop -->
+  <path d="M49 60C57 63 65 65 74 64" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- arm to coffee -->
+  <path d="M48 62C42 66 36 69 30 71" stroke="#f3f0ea" stroke-width="2.3" stroke-linecap="round"/>
+  <!-- laptop screen - boxy, kid-drawn rectangle -->
+  <path d="M74 38L73 64L98 65L100 39Z" stroke="#f3f0ea" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- power light on screen -->
+  <circle cx="86" cy="41" r="1.5" fill="#dc7a52" fill-opacity="0.6"/>
+  <!-- screen lines -->
+  <path d="M78 48C82 47 90 47 95 48" stroke="#dc7a52" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.5"/>
+  <path d="M78 53C81 53 87 53 93 53" stroke="#dc7a52" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.35"/>
+  <path d="M78 58C80 58 84 58 88 58" stroke="#dc7a52" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.25"/>
+  <!-- hinge -->
+  <path d="M73 64C73 66 73 67 73 68" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M98 65C98 67 98 68 98 69" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- keyboard base -->
+  <path d="M67 72L73 68" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M93 73L98 69" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M67 72C75 73 86 73 93 73" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- trackpad rectangle -->
+  <path d="M77 69C77 70 77 71 77 72C80 72 84 72 87 72C87 71 87 70 87 69" stroke="#f3f0ea" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.3"/>
+  <!-- desk -->
+  <path d="M12 84C34 81 78 80 116 84" stroke="#f3f0ea" stroke-width="3.2" stroke-linecap="round"/>
+  <!-- coffee mug - tall mug shape on left -->
+  <path d="M18 66L18 82L32 82L32 66Z" stroke="#f3f0ea" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- mug rim -->
+  <path d="M17 66C21 64 29 64 33 66" stroke="#f3f0ea" stroke-width="2" stroke-linecap="round"/>
+  <!-- handle - round C shape -->
+  <path d="M32 70C37 69 38 73 38 76C38 79 36 82 32 80" stroke="#f3f0ea" stroke-width="2" stroke-linecap="round"/>
+  <!-- steam - wiggly -->
+  <path d="M22 64C23 60 21 57 23 53C25 50 23 47 24 44" stroke="#f3f0ea" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.2"/>
+  <path d="M28 63C28 59 30 56 28 53" stroke="#f3f0ea" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.18"/>
+  <!-- chair back -->
+  <path d="M35 56C33 64 32 72 34 82" stroke="#f3f0ea" stroke-width="1.8" stroke-linecap="round" stroke-opacity="0.3"/>
+</svg>

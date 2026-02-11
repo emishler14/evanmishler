@@ -1,0 +1,20 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Desk Figure — Minimal Gesture</title>
+  <desc id="desc">Very minimal gestural drawing of a person at a desk, just a few strokes.</desc>
+  <rect x="6" y="6" width="116" height="116" rx="26" fill="#1f1f1d"/>
+  <rect x="6" y="6" width="116" height="116" rx="26" stroke="#dc7a52" stroke-opacity="0.35" stroke-width="1.5"/>
+  <!-- head - slightly squished circle -->
+  <circle cx="48" cy="34" r="11" stroke="#f3f0ea" stroke-width="2.8" stroke-linecap="round"/>
+  <!-- body - single confident stroke -->
+  <path d="M48 45C47 55 48 65 52 78" stroke="#f3f0ea" stroke-width="3" stroke-linecap="round"/>
+  <!-- arm to laptop -->
+  <path d="M48 58C56 62 64 63 72 62" stroke="#f3f0ea" stroke-width="2.8" stroke-linecap="round"/>
+  <!-- laptop - simple open angle -->
+  <path d="M72 46L72 66L92 68" stroke="#f3f0ea" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- screen glow dot -->
+  <circle cx="78" cy="54" r="2.5" fill="#dc7a52" fill-opacity="0.7"/>
+  <!-- desk - single expressive line -->
+  <path d="M22 82C38 79 76 78 106 82" stroke="#f3f0ea" stroke-width="3" stroke-linecap="round"/>
+  <!-- chair back - subtle -->
+  <path d="M34 48C32 58 32 68 34 80" stroke="#f3f0ea" stroke-width="2" stroke-linecap="round" stroke-opacity="0.4"/>
+</svg>
