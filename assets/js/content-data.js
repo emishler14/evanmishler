@@ -105,7 +105,7 @@ var SITE_DATA = {
   },
 
   about: {
-    intro: 'For 13+ years, I have translated technical complexity into clear, useful learning experiences. Today that work focuses heavily on cloud technologies and generative AI.',
+    intro: 'For 13+ years, Evan has translated technical complexity into clear, useful learning experiences. Today that work focuses heavily on cloud technologies and generative AI.',
     kpis: [
       { value: '13+', label: 'Years in L&D' },
       { value: 'AWS', label: 'Certified' },
@@ -113,7 +113,7 @@ var SITE_DATA = {
     ],
     approach: {
       heading: 'Start with the human, not the tech',
-      text: 'My job is to bridge the gap between "What does this even do?" and "Now I get it, and I can use it." I design learning paths around learner context, practical examples, and clear language.',
+      text: 'Evan\'s work bridges the gap between "What does this even do?" and "Now I get it, and I can use it." He designs learning paths around learner context, practical examples, and clear language.',
       quote: 'Great training is empathy in action: understand the learner\'s starting line, then design a path to confident performance.'
     },
     focusAreas: [
@@ -155,7 +155,7 @@ var SITE_DATA = {
 
   contact: {
     email: 'mishler.evan@gmail.com',
-    linkedin: 'https://linkedin.com/in/evan-mishler',
+    linkedin: 'https://www.linkedin.com/in/evan-mishler-32699651/',
     linkedinLabel: '/in/evan-mishler',
     engagementTypes: [
       'Instructional Design',
@@ -168,7 +168,7 @@ var SITE_DATA = {
 
   templates: {
     intro: 'Custom visual frameworks designed to improve engagement, trust, and clarity across digital learning experiences.',
-    approach: 'I enjoy building design systems that make learning feel professional, approachable, and easy to navigate. Each template is crafted to support instructional goals, not just aesthetics.',
+    approach: 'Evan enjoys building design systems that make learning feel professional, approachable, and easy to navigate. Each template is crafted to support instructional goals, not just aesthetics.',
     approachQuote: 'Learners form trust in seconds. A strong visual framework helps them feel oriented and ready to learn.',
     items: [
       { title: 'City Life', theme: 'Urban, modern, dynamic', desc: 'Best for workplace scenarios, operational training, and practical corporate modules.', image: 'assets/images/City Life Layout-01.png' },

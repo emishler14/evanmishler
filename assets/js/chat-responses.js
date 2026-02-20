@@ -136,7 +136,7 @@ function renderAboutResponse() {
 function renderContactResponse() {
   var contact = SITE_DATA.contact;
 
-  var html = '<p class="stream-block">Evan is open to new projects. If you\'re planning a learning program or want help making complex topics easier to teach, here\'s how to connect:</p>';
+  var html = '<p class="stream-block">Want to get in touch with Evan? Here\'s how to reach him:</p>';
 
   html += '<div class="stream-block contact-channels">';
   html += '<div class="contact-channel">';
